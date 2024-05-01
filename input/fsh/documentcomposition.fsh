@@ -9,19 +9,32 @@ Alias: $list-empty-reason = http://terminology.hl7.org/CodeSystem/list-empty-rea
 Profile: MedComDocumentComposition
 Parent: Composition
 Description: "An example profile of the MedCom Document Composition."
+* status = #final
+* type MS
+* subject 1.. MS
+* subject only Reference(MedComCorePatient)
+* subject ^type.aggregation = #bundled
+* author 1.. MS 
+* author only Reference(MedComDocumentAuthorPerson or MedComCoreOrganization)
+* author ^type.aggregation = #bundled
+* title MS
+* section 1.. MS
+* section.text 1.. MS
 
-Instance: CompositionExample
+
+/* Instance: CompositionExample
 InstanceOf: MedComDocumentComposition
 Usage: #example
 // * identifier.system = "http://healthintersections.com.au/test" // ? -Establishes the namespace for the value - that is, a URL that describes a set values that are unique.
 // * identifier.value = "1" // ? -The portion of the identifier typically relevant to the user and which is unique within the context of the system.
+* meta.profile = "1.0"
 * status = #final
 * type = $loinc#11488-4 "Consult note"
 // * category = $loinc#LP173421-1 "Report" 
-// * subject = Reference(Patient/xcda) "Ingrid Andersen"
+* subject = Reference(69e475df-20c8-4f54-8cea-9843568205fd)
 // * encounter = Reference(Encounter/xcda)
 * date = "2012-01-04T09:10:14Z"
-* author = Reference(Practitioner/xcda-author) "Harold Hippocrates, MD"
+* author = Reference(Practitioner/xcda-author)
 * title = "Example composition"
 // * confidentiality = #N
 // * attester.mode = #legal
@@ -37,18 +50,18 @@ Usage: #example
 // * event.period.start = "2010-07-18"
 // * event.period.end = "2012-11-12"
 // * event.detail = Reference(Observation/example)
-* section[0].title = "History of present illness"
+* section[0].title = "Deling af diagnoser"
 * section[=].code = $loinc#11348-0 "History of past illness Narrative"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t<table>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t<b>Code</b>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t<b>Date</b>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t<b>Type</b>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t<b>BodySite</b>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t<b>Severity</b>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Stroke</td>\n\t\t\t\t\t\t<td>2010-07-18</td>\n\t\t\t\t\t\t<td>Diagnosis</td>\n\t\t\t\t\t\t<td/>\n\t\t\t\t\t\t<td/>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Burnt Ear</td>\n\t\t\t\t\t\t<td>2012-05-24</td>\n\t\t\t\t\t\t<td>Diagnosis</td>\n\t\t\t\t\t\t<td>Left Ear</td>\n\t\t\t\t\t\t<td/>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Asthma</td>\n\t\t\t\t\t\t<td>2012-11-12</td>\n\t\t\t\t\t\t<td>Finding</td>\n\t\t\t\t\t\t<td/>\n\t\t\t\t\t\t<td>Mild</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</table>\n\t\t\t</div>"
 * section[=].mode = #snapshot
-* section[=].orderedBy = $list-order#event-date "Sorted by Event Date"
+// * section[=].orderedBy = $list-order#event-date "Sorted by Event Date"
 * section[=].entry[0] = Reference(Condition/stroke)
 * section[=].entry[+] = Reference(Condition/example)
 * section[=].entry[+] = Reference(Condition/example2)
-* section[+].title = "History of family member diseases"
+/* * section[+].title = "History of family member diseases"
 * section[=].code = $loinc#10157-6 "History of family member diseases Narrative"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t<p>History of family member diseases - not available</p>\n\t\t\t</div>"
 * section[=].mode = #snapshot
-* section[=].emptyReason = $list-empty-reason#withheld "Information Withheld"
+* section[=].emptyReason = $list-empty-reason#withheld "Information Withheld" */
