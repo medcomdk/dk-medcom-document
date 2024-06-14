@@ -37,3 +37,5 @@ The link below gives an overview of the included profiles, what their purpose is
 ### 1.3 Mapping from CDA??? ( HUSK OGSÅ INDHOLDSFORTEGNELSEN) to FHIR
 Short description concerning the previous XXXXX standard??? that is replaced by the MedCom Document. 
 The document is intended to help translate the previous standard to the new FHIR standard. Furthermore, not all elements from the FHIR elements are represented in the MedCom Document; thus, it cannot stand alone for implementation.
+
+[Mapping from IHE-XDS metadata to FHIR.](assets/documents/Mapping_from_IHE-XDS_metadata_to_FHIR.md) <br>
