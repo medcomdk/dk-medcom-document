@@ -20,10 +20,10 @@ This document describes mapping between the IHE-XDS metadata(<a href="LINK" targ
 <table class="tg" style="undefined;table-layout: fixed; width: 942px" id="Tab1">
 <caption style="color:#2c415c;font-weight:bold"> Table 1: Mapping from IHE-XDS metadata to FHIR </caption>
 <colgroup>
-<col style="width: 200.88889px">
-<col style="width: 184.88889px">
-<col style="width: 409.88889px">
-<col style="width: 207.88889px">
+<col style="width: 260.88889px">
+<col style="width: 100.88889px">
+<col style="width: 220.88889px">
+<col style="width: 100.88889px">
 </colgroup>
 <thead>
   <tr>
@@ -106,12 +106,13 @@ This document describes mapping between the IHE-XDS metadata(<a href="LINK" targ
 <td class="tg-on52"><span style="background-color:#FFF">authenticator</span></td>
 <td class="tg-on52">0..1</td>
 </tr>
+<tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.confidentialityCode</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">securityLabel</span></td>
 <td class="tg-on52">1..1</td>
 </tr>
-</tr>
+<tr>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content</span></td>
