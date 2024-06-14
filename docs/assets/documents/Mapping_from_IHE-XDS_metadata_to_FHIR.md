@@ -1,7 +1,7 @@
 [Return](../../index.md)
 # Mapping from IHE-XDS metadata to FHIR
 
-This document describes mapping between the IHE-XDS metadata(<a href="https://svn.medcom.dk/svn/releases/Standarder/Det%20gode%20kommuneadvis/XDIS20/Dokumentation/" target="_blank">IHE-XDS metadata</a>) and FHIR. Not all elements from IHE-XDS metadata are relevant in FHIR. The purpose of this table is to help implementers of FHIR. The actual implementation guide, which includes all requirements for the MedCom FHIR Document, can be found <a href="LINK" target="_blank">here</a>.
+This document describes mapping between the IHE-XDS metadata(<a href="https://svn.medcom.dk/svn/releases/Standarder/Det%20gode%20kommuneadvis/XDIS20/Dokumentation/" target="_blank">IHE-XDS metadata</a>) and FHIR DocumentReference. Not all elements from IHE-XDS metadata are relevant in FHIR. The purpose of this table is to help implementers of FHIR. The actual implementation guide, which includes all requirements for the MedCom FHIR DocumentReference, can be found <a href="LINK" target="_blank">here</a>.
 
 > Please notice XXXXXXXXXXXXXX
 
