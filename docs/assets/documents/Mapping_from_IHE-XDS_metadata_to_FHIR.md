@@ -20,13 +20,13 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <table class="tg" style="undefined;table-layout: fixed; width: 942px" id="Tab1">
 <caption style="color:#2c415c;font-weight:bold"> Table 1: Mapping from IHE-XDS metadata to FHIR </caption>
 <colgroup>
-<col style="width: 240.88889px">
-<col style="width: 75.88889px">
+<col style="width: 250.88889px">
+<col style="width: 150.88889px">
 <col style="width: 200.88889px">
-<col style="width: 75.88889px">
+<col style="width: 150.88889px">
 <col style="width: 200.88889px">
-<col style="width: 160.88889px">
-<col style="width: 75.88889px">
+<col style="width: 150.88889px">
+<col style="width: 210.88889px">
 </colgroup>
 <thead>
   <tr>
@@ -313,9 +313,9 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.serviceStartTime</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R2</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">period.start</span>Composition.event.period.start</td>
+<td class="tg-on52"><span style="background-color:#FFF">period.start</span></td>
 <td class="tg-on52">0..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span>Composition.event.period.start</th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..1</td>
 </tr>
