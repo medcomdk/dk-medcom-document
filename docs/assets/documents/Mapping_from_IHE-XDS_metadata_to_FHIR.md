@@ -107,6 +107,36 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
+<td class="tg-on52"><span style="background-color:#FFF"></span></td>
+<td class="tg-on52"><span style="background-color:#FFF"></span></td>
+<td class="tg-on52"><span style="background-color:#FFF">custodian</span></td>
+<td class="tg-on52"></td>
+</tr>
+<tr>
+<td class="tg-on52"><span style="background-color:#FFF">DocumentEntry Associations</span></td>
+<td class="tg-on52"><span style="background-color:#FFF"></span></td>
+<td class="tg-on52"><span style="background-color:#FFF">relatesTo</span></td>
+<td class="tg-on52"></td>
+</tr>
+<tr>
+<td class="tg-on52"><span style="background-color:#FFF">DocumentEntry Associations type</span></td>
+<td class="tg-on52"><span style="background-color:#FFF"></span></td>
+<td class="tg-on52"><span style="background-color:#FFF">code</span></td>
+<td class="tg-on52"></td>
+</tr>
+<tr>
+<td class="tg-on52"><span style="background-color:#FFF">DocumentEntry Associations reference</span></td>
+<td class="tg-on52"><span style="background-color:#FFF"></span></td>
+<td class="tg-on52"><span style="background-color:#FFF">target</span></td>
+<td class="tg-on52"></td>
+</tr>
+<tr>
+<td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.comments</span></td>
+<td class="tg-on52"><span style="background-color:#FFF"></span></td>
+<td class="tg-on52"><span style="background-color:#FFF">description</span></td>
+<td class="tg-on52"></td>
+</tr>
+<tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.confidentialityCode</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">securityLabel</span></td>
@@ -165,6 +195,18 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">attachment.creation</span></td>
 <td class="tg-on52">1..1</td>
+</tr>
+<tr>
+<td class="tg-on52"><span style="background-color:#FFF"></span></td>
+<td class="tg-on52"><span style="background-color:#FFF"></span></td>
+<td class="tg-on52"><span style="background-color:#FFF">context</span></td>
+<td class="tg-on52"></td>
+</tr>
+<tr>
+<td class="tg-on52"><span style="background-color:#FFF"></span></td>
+<td class="tg-on52"><span style="background-color:#FFF"></span></td>
+<td class="tg-on52"><span style="background-color:#FFF">encounter</span></td>
+<td class="tg-on52"></td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.eventCodeList</span></td>
