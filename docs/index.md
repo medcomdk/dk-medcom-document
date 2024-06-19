@@ -5,7 +5,7 @@
 * [1 Standard Documentation](#standard)
   * [1.1 Use Cases](#12-use-cases)
   * [1.2 Technical specification](#13-technical-specification)
-  * [1.3 Mapping from XXX? to FHIR](#14-mapping-from-oioxml-to-fhir)
+  * [1.3 Mapping from IHE-XDS metadata to FHIR to FHIR](#14-mapping-from-oioxml-to-fhir)
 
 This page represents the document profiles (Danish: dokumentprofiler) used in MedComs FHIR®© standards. These profiles describe fundamental information when exchanging information as MedCom Documents. Therefore one or more document profiles are included in all MedCom’s FHIR documents. The MedCom Document profiles do not alone compose a standard but are used to describe important information in MedCom’s standards. Thus, this page includes the IG solely, and technical uses cases and does not include clinical guidelines and test protocols.
  
@@ -34,8 +34,8 @@ The link below gives an overview of the included profiles, what their purpose is
 
 [Click here to read an introduction to the technical specificationscan be found here.](assets/documents/Intro-Technical-Spec-ENG.md)
 
-### 1.3 Mapping from CDA??? ( HUSK OGSÅ INDHOLDSFORTEGNELSEN) to FHIR
+### 1.3 Mapping from IHE-XDS metadata to FHIR to FHIR
 Short description concerning the previous XXXXX standard??? that is replaced by the MedCom Document. 
 The document is intended to help translate the previous standard to the new FHIR standard. Furthermore, not all elements from the FHIR elements are represented in the MedCom Document; thus, it cannot stand alone for implementation.
 
-[Mapping from IHE-XDS metadata to FHIR.](assets/documents/Mapping_from_IHE-XDS_metadata_to_FHIR.md) <br>
+[Mapping from IHE-XDS metadata to FHIR DocumentReference, FHIR Composition and FHIR Bundle..](assets/documents/Mapping_from_IHE-XDS_metadata_to_FHIR.md) <br>

@@ -1,7 +1,10 @@
 [Return](../../index.md)
 # Mapping from IHE-XDS metadata to FHIR
 
-This document describes mapping between the IHE-XDS metadata(<a href="https://svn.medcom.dk/svn/releases/Standarder/Det%20gode%20kommuneadvis/XDIS20/Dokumentation/" target="_blank">IHE-XDS metadata</a>) and FHIR DocumentReference. Not all elements from IHE-XDS metadata are relevant in FHIR. The purpose of this table is to help implementers of FHIR. The actual implementation guide, which includes all requirements for the MedCom FHIR DocumentReference, can be found <a href="LINK" target="_blank">here</a>.
+This table describes the mapping between the IHE-XDS metadata(<a href="https://svn.medcom.dk/svn/releases/Standarder/Det%20gode%20kommuneadvis/XDIS20/Dokumentation/" target="_blank">IHE-XDS metadata</a>) and FHIR DocumentReference, FHIR Composition, and FHIR Bundle.
+The purpose of this mapping is to ensure that information from IHE-XDS Metadata corresponds to the correct elements in FHIR. Mapping to the FHIR resources "Composition" and "Bundle", ensures that the existing requirements and standards applicable to IHE-XDS metadata are also adhered to in the FHIR documents. This ensures consistency and integrity between the two standards. The table illustrates the relevant elements and their corresponding counterparts in FHIR, where such exist.
+
+The purpose of this table is to help implementers of FHIR. The actual implementation guides, which includes all requirements for the MedCom FHIR DocumentReference, Composition and Bundle can be found <a href="LINK" target="_blank">here</a>. **(OBS: TILFØJ ALLE LINKS)**
 
 > Please notice XXXXXXXXXXXXXX
 
@@ -18,21 +21,21 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 </style>
 <div style="overflow-x:auto;">
 <table class="tg" style="undefined;table-layout: fixed; width: 942px" id="Tab1">
-<caption style="color:#2c415c;font-weight:bold"> Table 1: Mapping from IHE-XDS metadata to FHIR </caption>
+<caption style="color:#2c415c;font-weight:bold"> Table 1: Mapping from IHE-XDS metadata to FHIR DocumentReference, FHIR Composition and FHIR Bundle.</caption>
 <colgroup>
-<col style="width: 250.88889px">
+<col style="width: 260.88889px">
 <col style="width: 150.88889px">
 <col style="width: 200.88889px">
 <col style="width: 150.88889px">
 <col style="width: 200.88889px">
 <col style="width: 150.88889px">
-<col style="width: 210.88889px">
+<col style="width: 200.88889px">
 </colgroup>
 <thead>
   <tr>
     <th class="tg-ippy"><span style="font-weight:bold">IHE-XDS metadata</span></th>
     <th class="tg-ippy"><span style="font-weight:bold">Optionality<br/>IHE-XDS metadata</span></th>
-    <th class="tg-ippy"><span style="font-weight:bold">MedCom DocumentReference</span></th>
+    <th class="tg-ippy"><span style="font-weight:bold">DocumentReference</span></th>
     <th class="tg-ztr9">Optionality<br/>DocumentReference</th>
     <th class="tg-ippy"><span style="font-weight:bold">Composition</span></th>
     <th class="tg-ippy"><span style="font-weight:bold">Bundle</span></th>
