@@ -1,10 +1,10 @@
 [Return](../../index.md)
 # Mapping from IHE-XDS metadata to FHIR
 
-This table describes the mapping between the IHE-XDS metadata(<a href="https://svn.medcom.dk/svn/releases/Standarder/Det%20gode%20kommuneadvis/XDIS20/Dokumentation/" target="_blank">IHE-XDS metadata</a>) and FHIR DocumentReference, FHIR Composition, and FHIR Bundle.
-The purpose of this mapping is to ensure that information from IHE-XDS Metadata corresponds to the correct elements in FHIR. Mapping to the FHIR resources "Composition" and "Bundle", ensures that the existing requirements and standards applicable to IHE-XDS metadata are also adhered to in the FHIR documents. This ensures consistency and integrity between the two standards. The table illustrates the relevant elements and their corresponding counterparts in FHIR, where such exist.
+This table describes the mapping between the IHE-XDS metadata(<a href="https://svn.medcom.dk/svn/releases/Standarder/Det%20gode%20kommuneadvis/XDIS20/Dokumentation/" target="_blank">IHE-XDS metadata</a>) and FHIR DocumentReference, FHIR Composition, and FHIR Bundle of type Document. **(OBS: TILFØJ ALLE LINKS)**
+The purpose of this mapping is to ensure that information from IHE-XDS Metadata corresponds to the correct elements in FHIR. Mapping to the FHIR resources "Composition" and "Bundle" ensures that the requirements are adhered to in the FHIR documents, as the metadata information must also be included in the FHIR document. This ensures consistency and integrity between the two standards. The table illustrates the relevant elements and their corresponding counterparts in FHIR, where such exist.
 
-The purpose of this table is to help implementers of FHIR. The actual implementation guides, which includes all requirements for the MedCom FHIR DocumentReference, Composition and Bundle can be found <a href="LINK" target="_blank">here</a>. **(OBS: TILFØJ ALLE LINKS)**
+The purpose of this table is to help implementers of FHIR. The actual implementation guides, which includes all requirements for the MedCom FHIR Document, DocumentReference, Composition and Bundle can be found <a href="LINK" target="_blank">here</a>. **(OBS: TILFØJ ALLE LINKS)**
 
 > Please notice XXXXXXXXXXXXXX
 
