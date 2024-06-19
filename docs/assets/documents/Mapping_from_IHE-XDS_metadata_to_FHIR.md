@@ -20,17 +20,23 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <table class="tg" style="undefined;table-layout: fixed; width: 942px" id="Tab1">
 <caption style="color:#2c415c;font-weight:bold"> Table 1: Mapping from IHE-XDS metadata to FHIR </caption>
 <colgroup>
-<col style="width: 260.88889px">
-<col style="width: 100.88889px">
-<col style="width: 220.88889px">
-<col style="width: 100.88889px">
+<col style="width: 240.88889px">
+<col style="width: 75.88889px">
+<col style="width: 200.88889px">
+<col style="width: 75.88889px">
+<col style="width: 200.88889px">
+<col style="width: 160.88889px">
+<col style="width: 75.88889px">
 </colgroup>
 <thead>
   <tr>
-    <th class="tg-ippy"><span style="font-weight:bold">IHE-XDS metadata element</span></th>
-    <th class="tg-ippy"><span style="font-weight:bold">Optionality</span></th>
-    <th class="tg-ippy"><span style="font-weight:bold">DocumentReference element</span></th>
-    <th class="tg-ztr9">Optionality</th>
+    <th class="tg-ippy"><span style="font-weight:bold">IHE-XDS metadata</span></th>
+    <th class="tg-ippy"><span style="font-weight:bold">Optionality<br/>IHE-XDS metadata</span></th>
+    <th class="tg-ippy"><span style="font-weight:bold">MedCom DocumentReference</span></th>
+    <th class="tg-ztr9">Optionality<br/>DocumentReference</th>
+    <th class="tg-ippy"><span style="font-weight:bold">Composition</span></th>
+    <th class="tg-ippy"><span style="font-weight:bold">Bundle</span></th>
+    <th class="tg-ztr9">Optionality<br/>Composition or Bundle</th>
   </tr>
 </thead>
 <tbody>
@@ -39,11 +45,17 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">masterIdentifier</span></td>
 <td class="tg-on52">0..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span>Composition.identifier</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52">0..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.entryUUID</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">identifier</span></td>
+<td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span>Bundle.identifier</th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -51,11 +63,17 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">status</span></td>
 <td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52">1..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"><span style="background-color:#FFF">docStatus</span></td>
+<td class="tg-on52"></td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
 <tr>
@@ -63,11 +81,17 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">type</span></td>
 <td class="tg-on52">1..0</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52">1..0</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.class</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">category</span></td>
+<td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -75,11 +99,17 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">subject</span></td>
 <td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span>Composition.subject</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52">1..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"><span style="background-color:#FFF">date</span></td>
+<td class="tg-on52"></td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
 <tr>
@@ -87,11 +117,17 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">author</span></td>
 <td class="tg-on52">1..2</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span>Composition.author</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52">1..2</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.author.authorInstitution</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">author</span></td>
+<td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span>Composition.author</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -99,11 +135,17 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF">R2</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">author</span></td>
 <td class="tg-on52">0..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span>Composition.author</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52">0..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.legalAuthenticator</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R2</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">authenticator</span></td>
+<td class="tg-on52">0..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span>Composition.attester</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
@@ -111,11 +153,17 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"><span style="background-color:#FFF">custodian</span></td>
 <td class="tg-on52"></td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52"></td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry Associations</span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"><span style="background-color:#FFF">relatesTo</span></td>
+<td class="tg-on52"></td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
 <tr>
@@ -123,11 +171,17 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"><span style="background-color:#FFF">code</span></td>
 <td class="tg-on52"></td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52"></td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry Associations reference</span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"><span style="background-color:#FFF">target</span></td>
+<td class="tg-on52"></td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
 <tr>
@@ -135,23 +189,35 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"><span style="background-color:#FFF">description</span></td>
 <td class="tg-on52"></td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52"></td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.confidentialityCode</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">securityLabel</span></td>
 <td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span>Composition.confidentiality</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52">1..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content</span></td>
-<td class="tg-on52"></td>
+<td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52">1..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.mimeType</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">attachment.contentType</span></td>
+<td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -159,11 +225,17 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">attachment.languageCode</span></td>
 <td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span>Composition.language</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52">1..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.URI</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">O</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">attachment.url</span></td>
+<td class="tg-on52">0..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
@@ -171,11 +243,17 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF">O</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">attachment.size</span></td>
 <td class="tg-on52">0..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52">0..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.hash</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">O</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">attachment.hash</span></td>
+<td class="tg-on52">0..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
@@ -183,11 +261,17 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">attachment.title</span></td>
 <td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span>Composition.title</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52">1..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.formatCode</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">format</span></td>
+<td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span>Composition.date</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -195,11 +279,17 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">attachment.creation</span></td>
 <td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52">1..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"><span style="background-color:#FFF">context</span></td>
+<td class="tg-on52"></td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
 <tr>
@@ -207,17 +297,26 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"><span style="background-color:#FFF">encounter</span></td>
 <td class="tg-on52"></td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52"></td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.eventCodeList</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R2</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">event</span></td>
 <td class="tg-on52">0..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span>Composition.event.code</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52">0..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.serviceStartTime</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R2</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">period.start</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">period.start</span>Composition.event.period.start</td>
+<td class="tg-on52">0..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
@@ -225,11 +324,17 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"><span style="background-color:#FFF">period.end</span></td>
 <td class="tg-on52">0..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span>Composition.event.period.end</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52">0..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.healthcareFacilityTypeCode</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">facilityType</span></td>
+<td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -237,11 +342,17 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">practiceSetting</span></td>
 <td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52">1..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.sourcePatientInfo</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">sourcePatientInfo</span></td>
+<td class="tg-on52"></td>
+<th class="tg-ippy"><span style="font-weight:bold"></span>Composition.subject</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
 <tr>
@@ -249,11 +360,17 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">sourcePatientInfo</span></td>
 <td class="tg-on52"></td>
+<th class="tg-ippy"><span style="font-weight:bold"></span>Composition.subject</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52"></td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.referenceIdList</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">O</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">related</span></td>
+<td class="tg-on52">0..*</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..*</td>
 </tr>
 <tr>
@@ -261,11 +378,17 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"></td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52"></td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.homeCommunityId</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">extension.homeCommunityId</span></td>
+<td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -273,17 +396,26 @@ This document describes mapping between the IHE-XDS metadata(<a href="https://sv
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"></td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52"></td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">DocumentEntry.repositoryUniqueId</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"></td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<td class="tg-on52"></td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">submissionTime</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
+<td class="tg-on52"></td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
 </tbody>
