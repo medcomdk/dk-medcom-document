@@ -1,5 +1,5 @@
 Instance: 42cb9200-f421-4d08-8391-7d51a2503cb4
-InstanceOf: XDSAuthorPerson
+InstanceOf: MedComDocumentAuthorPerson
 Title: "Author Person"
 Description: "Instance of an author person"
 Usage: #example
@@ -20,8 +20,8 @@ InstanceOf: XDSSourcePatient
 Title: "Source Patient"
 Description: "Instance of a source patient"
 Usage: #example
-* identifier.system = "urn:oid:1.2.208.176.1.2"
-* identifier.value = "0201919990"
+* identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
+* identifier[cpr].value = "0201919990"
 * name[official].use = #official
 * name[official].family = "Lauridsen"
 * name[official].given[0] = "Else"

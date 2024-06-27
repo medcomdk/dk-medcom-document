@@ -1,6 +1,6 @@
-Profile: CoreDocumentReference
+Profile: MedComCoreDocumentReference
 Parent: DocumentReference
-Id: core-documentreference
+Id: medcom-core-documentreference
 Description: "A profile stating the rules, when exchanging a CDA document."
 * masterIdentifier 1..1 MS
 * masterIdentifier.value 1..1 MS
@@ -18,7 +18,7 @@ Description: "A profile stating the rules, when exchanging a CDA document."
 * type.coding.code 1.. MS
 * authenticator 0..1 MS
 * authenticator ^short = "[DocumentEntry.legalAuthenticator] Who authenticated the document"
-* authenticator only Reference(XDSAuthorPerson)
+* authenticator only Reference(MedComDocumentAuthorPerson)
 * authenticator ^type.aggregation = #contained
 // ClassCode
 * category 1..1 MS 
@@ -35,9 +35,9 @@ Description: "A profile stating the rules, when exchanging a CDA document."
 * author contains
     institution 1..1 and
     person 0..1
-* author[institution] only Reference(XDSAuthorOrganization)
+* author[institution] only Reference(MedComDocumentAuthorOrganization)
 * author[institution] ^short = "[DocumentEntry.author.authorInstitution] The organization who authored the document"
-* author[person] only Reference(XDSAuthorPerson)
+* author[person] only Reference(MedComDocumentAuthorPerson)
 * author[person] ^short = "[DocumentEntry.author.authorPerson] The person who authored the document"
 * securityLabel 1.. MS  
 * securityLabel = #N

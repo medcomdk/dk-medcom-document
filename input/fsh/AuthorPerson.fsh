@@ -1,6 +1,6 @@
-Profile: XDSAuthorPerson
+Profile: MedComDocumentAuthorPerson
 Parent: MedComCorePractitioner
-Id: xds-author-person
+Id: medcom-document-author-person
 Description: "A profile including requirements for an XDS author person"
 * name 1..
 * name.given 1.. MS
