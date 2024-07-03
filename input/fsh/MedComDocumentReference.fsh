@@ -1,6 +1,6 @@
-Profile: MedComCoreDocumentReference
+Profile: MedComDocumentReference
 Parent: DocumentReference
-Id: medcom-core-documentreference
+Id: medcom-documentreference
 Description: "A profile stating the rules, when exchanging a CDA document."
 * masterIdentifier 1..1 MS
 * masterIdentifier.value 1..1 MS
@@ -18,7 +18,7 @@ Description: "A profile stating the rules, when exchanging a CDA document."
 * type.coding.code 1.. MS
 * authenticator 0..1 MS
 * authenticator ^short = "[DocumentEntry.legalAuthenticator] Who authenticated the document"
-* authenticator only Reference(MedComDocumentAuthorPerson)
+* authenticator only Reference(MedComDocumentPractitioner)
 * authenticator ^type.aggregation = #contained
 // ClassCode
 * category 1..1 MS 
@@ -35,15 +35,15 @@ Description: "A profile stating the rules, when exchanging a CDA document."
 * author contains
     institution 1..1 and
     person 0..1
-* author[institution] only Reference(MedComDocumentAuthorOrganization)
+* author[institution] only Reference(MedComDocumentOrganization)
 * author[institution] ^short = "[DocumentEntry.author.authorInstitution] The organization who authored the document"
-* author[person] only Reference(MedComDocumentAuthorPerson)
+* author[person] only Reference(MedComDocumentPractitioner)
 * author[person] ^short = "[DocumentEntry.author.authorPerson] The person who authored the document"
 * securityLabel 1.. MS  
 * securityLabel = #N
 * securityLabel ^short = "[DocumentEntry.confidentialityCode] Document security-tags"
 * subject 1..1 MS
-* subject only Reference(XDSSourcePatient)
+* subject only Reference(MedComDocumentSourcePatient)
 * subject ^type.aggregation = #contained
 * subject ^short = "[DocumentEntry.sourcePatientInfo, DocumentEntry.sourcePatientId] Who/what is the subject of the document"
 * content MS
@@ -91,8 +91,8 @@ Description: "A profile stating the rules, when exchanging a CDA document."
 * context.sourcePatientInfo 1..1 MS
 * context.sourcePatientInfo ^short = "[DocumentEntry.sourcePatientId and DocumentEntry.sourcePatientInfo] Patient demographics from source. Must be the same reference as in DocumentReference.subject."
 * extension contains 
-    medcom-xds-homecommunityid-extension named homeCommunityid 1..1 MS SU and
-    medcom-xds-version-id-extension named versionid 1..1 MS SU
+    medcom-document-homecommunityid-extension named homeCommunityid 1..1 MS SU and
+    medcom-document-version-id-extension named versionid 1..1 MS SU
 * extension[homeCommunityid] ^short = "[DocumentEntry.homeCommunityId] A unique identifier for a community where the DocumentEntry and document can be accessed"
 * extension[versionid] ^short = "Specifies the version of the DocumentReference for a standard."
 

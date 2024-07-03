@@ -8,6 +8,7 @@ Alias: $list-empty-reason = http://terminology.hl7.org/CodeSystem/list-empty-rea
 
 Profile: MedComDocumentComposition
 Parent: Composition
+Id: medcom-document-composition
 Description: "An example profile of the MedCom Document Composition."
 //* meta.language 0..1 MS
 * meta.profile 0..1 MS
@@ -18,7 +19,7 @@ Description: "An example profile of the MedCom Document Composition."
 * subject ^type.aggregation = #bundled
 * date 1..1 MS
 * author 1.. MS //(skal slices)
-* author only Reference(MedComDocumentAuthorPerson or MedComCoreOrganization)
+* author only Reference(MedComDocumentPractitioner or MedComCoreOrganization)
 * author ^type.aggregation = #bundled
 * title MS
 * section 1.. MS

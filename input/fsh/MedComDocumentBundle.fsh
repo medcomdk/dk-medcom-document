@@ -3,7 +3,10 @@
 // SUSHI will look for definitions in any file using the .fsh ending.
 Profile: MedComDocumentBundle
 Parent: Bundle
+Id: medcom-document-bundle
 Description: "The Bundle profile for a document"
+* id 1..
+* id MS
 * type MS 
 * type = #document
 * type ^short = "Always a document"
