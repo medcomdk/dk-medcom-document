@@ -54,7 +54,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">masterIdentifier</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>identifier</th>
-<td class="tg-on52">0..1</td>
+<td class="tg-on52">1..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">entryUUID <a href="#section1">[1]</a> </span></td>
