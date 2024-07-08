@@ -40,7 +40,6 @@ Description: "A profile stating the rules, when exchanging a CDA document."
 * author[person] only Reference(MedComDocumentPractitioner)
 * author[person] ^short = "[DocumentEntry.author.authorPerson] The person who authored the document"
 * securityLabel 1.. MS  
-* securityLabel = #N
 * securityLabel ^short = "[DocumentEntry.confidentialityCode] Document security-tags"
 * subject 1..1 MS
 * subject only Reference(MedComDocumentSourcePatient)

@@ -11,17 +11,37 @@ Parent: Composition
 Id: medcom-document-composition
 Description: "An example profile of the MedCom Document Composition."
 //* meta.language 0..1 MS
-* meta.profile 0..1 MS
+* meta.profile 1..1 MS
+* confidentiality 1..1 MS
 * status = #final
 * type 1..1 MS
+* category 1..1 MS
 * subject 1.. MS
 * subject only Reference(MedComCorePatient)
 * subject ^type.aggregation = #bundled
 * date 1..1 MS
-* author 1.. MS //(skal slices)
-* author only Reference(MedComDocumentPractitioner or MedComCoreOrganization)
+* event 0..1 MS
+* event.code 0..1 MS
+* event.period.start 0..1 MS
+* event.period.end 0..1 MS
+* event.detail 0..1 MS
+* author ^slicing.discriminator.type = #type
+  * ^slicing.discriminator.path = "$this.resolve()"
+  * ^slicing.rules = #closed
+* author contains
+    institution 1..1 and
+    person 0..1
+* author[institution] only Reference(MedComDocumentOrganization)
+* author[institution] ^short = "The organization who authored the document"
+* author[person] only Reference(MedComDocumentPractitioner)
+* author[person] ^short = "The person who authored the document"
 * author ^type.aggregation = #bundled
+* attester 0..1 MS
+* attester.party 0..1 MS
+* attester.party only Reference(MedComDocumentPractitioner)
+* attester.party ^type.aggregation = #bundled
 * title MS
+* language 1..1 MS
 * section 1.. MS
 * section.text 1.. MS
 
