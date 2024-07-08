@@ -14,6 +14,7 @@ The table contains in:
 * the two columns in the middle, the requirements for the metadata represented in the DocumentReference profile, which is not a part of the standard nor the metadata, but may be used for validation of the metadata, and
 * the two columns on the rigth, a path to finding the necesary information in the Composition profile.
 
+
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0; width:50%;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
@@ -29,7 +30,7 @@ The table contains in:
 <table class="tg" style="undefined;table-layout: fixed; width: 942px" id="Tab1">
 <caption style="color:#2c415c;font-weight:bold">Table 1: Mapping from IHE-XDS metadata to FHIR DocumentReference, and FHIR Composition.</caption>
 <colgroup>
-<col style="width: 260.88889px">
+<col style="width: 230.88889px">
 <col style="width: 150.88889px">
 <col style="width: 250.88889px">
 <col style="width: 150.88889px">
@@ -56,7 +57,7 @@ The table contains in:
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">entryUUID <a href="#section2">[2]</a> </span></td>
+<td class="tg-on52"><span style="background-color:#FFF">entryUUID <a href="#section1">[1]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">identifier</span></td>
 <td class="tg-on52">1..1</td>
@@ -64,12 +65,12 @@ The table contains in:
 <td class="tg-on52"></td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">availabilityStatus <a href="#section2">[2]</a> </span></td>
+<td class="tg-on52"><span style="background-color:#FFF">availabilityStatus <a href="#section1">[1]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">status</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..1</td>
+<td class="tg-on52"></td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">typeCode</span></td>
@@ -84,7 +85,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">category</span></td>
 <td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold">category</span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span>category</th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -92,7 +93,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">subject</span></td>
 <td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold">subject</span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span>subject</th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -136,7 +137,7 @@ The table contains in:
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">mimeType <a href="#section2">[2]</a> </span></td>
+<td class="tg-on52"><span style="background-color:#FFF">mimeType <a href="#section1">[1]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.contentType</span></td>
 <td class="tg-on52">1..1</td>
@@ -148,19 +149,19 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.language</span></td>
 <td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold">language</span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span>language</th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">URI <a href="#section2">[2]</a> </span></td>
+<td class="tg-on52"><span style="background-color:#FFF">URI <a href="#section1">[1]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">O</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.url</span></td>
 <td class="tg-on52">0..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">0..1</td>
+<td class="tg-on52"></td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">size <a href="#section1">[1]</a><a href="#section2">[2]</a> </span></td>
+<td class="tg-on52"><span style="background-color:#FFF">size <a href="#section2">[2]</a><a href="#section1">[1]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">O</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.size</span></td>
 <td class="tg-on52">0..1</td>
@@ -168,7 +169,7 @@ The table contains in:
 <td class="tg-on52"></td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">hash <a href="#section1">[1]</a><a href="#section2">[2]</a> </span></td>
+<td class="tg-on52"><span style="background-color:#FFF">hash <a href="#section2">[2]</a><a href="#section1">[1]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">O</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.hash</span></td>
 <td class="tg-on52">0..1</td>
@@ -180,7 +181,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.title</span></td>
 <td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold">title</span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span>title</th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -188,7 +189,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.format</span></td>
 <td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold">meta.profile</span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span>meta.profile</th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -204,7 +205,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">R2</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">context.event</span></td>
 <td class="tg-on52">0..1</td>
-<th class="tg-ippy"><span style="font-weight:bold">event.code</span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span>event.code</th>
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
@@ -217,7 +218,7 @@ The table contains in:
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">serviceStopTime</span></td>
-<td class="tg-on52"><span style="background-color:#FFF"></span></td>
+<td class="tg-on52"><span style="background-color:#FFF">R2</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">context.period.end</span></td>
 <td class="tg-on52">0..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>event.period.end</th>
@@ -260,11 +261,11 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">O</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">context.related</span></td>
 <td class="tg-on52">0..*</td>
-<th class="tg-ippy"><span style="font-weight:bold">event.detail</span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span>event.detail</th>
 <td class="tg-on52">0..*</td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">homeCommunityId <a href="#section2">[2]</a> </span></td>
+<td class="tg-on52"><span style="background-color:#FFF">homeCommunityId <a href="#section1">[1]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">extension.homeCommunityId</span></td>
 <td class="tg-on52">1..1</td>
@@ -272,7 +273,7 @@ The table contains in:
 <td class="tg-on52"></td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">objectType <a href="#section2">[2]</a> </span></td>
+<td class="tg-on52"><span style="background-color:#FFF">objectType <a href="#section1">[1]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"></td>
@@ -280,7 +281,7 @@ The table contains in:
 <td class="tg-on52"></td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">repositoryUniqueId <a href="#section2">[2]</a> </span></td>
+<td class="tg-on52"><span style="background-color:#FFF">repositoryUniqueId <a href="#section1">[1]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"></td>
@@ -288,7 +289,7 @@ The table contains in:
 <td class="tg-on52"></td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">submissionTime <a href="#section2">[2]</a> </span></td>
+<td class="tg-on52"><span style="background-color:#FFF">submissionTime <a href="#section1">[1]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"></td>
@@ -300,5 +301,5 @@ The table contains in:
 </div>
 <br><br>
 
-<p id="section1">[1] According to the IHE XDS metadata standard, this attribute is prohibited for On Demand documents</p>
-<p id="section2">[2] Information for this attribute is not expected to be in the document.</p>
+<p id="section2">[2] According to the IHE XDS metadata standard, this attribute is prohibited for On Demand documents</p>
+<p id="section1">[1] Information for this attribute is not expected to be in the document.</p>
