@@ -75,13 +75,13 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">typeCode</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">type</span></td>
-<td class="tg-on52">1..0</td>
+<td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..0</td>
+<td class="tg-on52">1..1</td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">class</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">classCode</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">category</span></td>
 <td class="tg-on52">1..1</td>
@@ -171,7 +171,7 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">size</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">size <a href="#section1">[1]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">O</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.size</span></td>
 <td class="tg-on52">0..1</td>
@@ -180,7 +180,7 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">hash</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">hash <a href="#section1">[1]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">O</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.hash</span></td>
 <td class="tg-on52">0..1</td>
@@ -264,7 +264,7 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">sourcePatientInfo</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">context.sourcePatientInfo</span></td>
-<td class="tg-on52"></td>
+<td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>Composition.subject</th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
@@ -273,7 +273,7 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">sourcePatientId</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">context.sourcePatientInfo</span></td>
-<td class="tg-on52"></td>
+<td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>Composition.subject</th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
@@ -297,7 +297,7 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">objectType</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">objectType <a href="#section2">[2]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"></td>
@@ -306,7 +306,7 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"></td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">repositoryUniqueId</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">repositoryUniqueId <a href="#section2">[2]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"></td>
@@ -315,7 +315,7 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"></td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">submissionTime</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">submissionTime <a href="#section2">[2]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"></td>
@@ -327,3 +327,6 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 </table>
 </div>
 <br><br>
+
+<p id="section1">[1] Accprding to the IHE XDS metadata standard, this attribute is prohibited for On Demand doucments</p>
+<p id="section2">[2] Information for this attribute is not expected to be in the document.</p>
