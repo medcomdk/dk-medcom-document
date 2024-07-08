@@ -7,35 +7,26 @@
   * [1.2 Technical specification](#13-technical-specification)
   * [1.3 Mapping from IHE-XDS metadata to FHIR to FHIR](#14-mapping-from-oioxml-to-fhir)
 
-This page represents the document profiles (Danish: dokumentprofiler) used in MedComs FHIR®© standards. These profiles describe fundamental information when exchanging information as MedCom Documents. Therefore one or more document profiles are included in all MedCom’s FHIR documents. The MedCom Document profiles do not alone compose a standard but are used to describe important information in MedCom’s standards. Thus, this page includes the IG solely, and technical uses cases and does not include clinical guidelines and test protocols.
+This page represents the document profiles (Danish: dokumentprofiler) used in MedComs FHIR®© standards. These profiles describe fundamental information when exchanging information in documents. The MedCom Document profiles do not alone compose a standard but are used to information generic acrosse in MedCom’s document standards. Thus, this page includes the IG, and technical uses cases and does not include clinical guidelines and test protocols. 
  
-> Clinical Guidelines for application and use cases are in both Danish and English. The remaining documentation will be in English.
-
 ## 1 Standard Documentation {#standard}
 
 ### 1.1 Use Cases
 
-Use cases describe the different scenarios a standard support. For a certain real-world scenario, it describes the requirements for the content of a Medcom Document. The purpose of the use cases is to ensure a coherent implementation and use of the MedCom Document. The descriptions are targeted IT-system vendors and the people responsible for the implementation in regions and municipalities.
+Use cases describe how to exchange documents over an [IHE XDS infrastructure](https://profiles.ihe.net/ITI/TF/Volume1/index.html). These use cases are agnostic to actual implementations and current usage and to which standardformat (CDA, FHIR and others) is exchanged over the infrastructure. The purpose of the use cases is to understand how documents are exchanged. The descriptions are targeted IT-system vendors and the people responsible for the implementation.
 
-The use cases are qualified in collaboration with EPR- and vendors catering to the municipalities.
+Below, you can find the use cases in English:
 
-Below, you can find the use cases in Danish and English:
-
-[Danish: Use cases](assets/documents/UseCases-DA.md) <br> 
 [English: Use cases](assets/documents/UseCases-ENG.md) 
 
 ### 1.2 Technical specification
 
-The technical specifications for the MedCom Document profiles are defined in an IG.
-The profiles that are part of the technical specification for a MedCom Document are: 
- * *Insert link to ImplemantationGuides*
+The technical specifications describes which information constitutest the foundation for MedCom FHIR Documents. These  these are defined in an IG:
+ * <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-document/profiles.html" target="_blank">MedCom Document Implementation Guide</a>
 
-The link below gives an overview of the included profiles, what their purpose is, and which elements the system should support. Further, the structure of the standard is described and supported with examples in different degree of technical skills.
+The MedCom Document Implementation Guide builds upon the [document specifications](https://hl7.org/fhir/R4/documents.html) that has already been developed by HL7 International. 
 
-[Click here to read an introduction to the technical specificationscan be found here.](assets/documents/Intro-Technical-Spec-ENG.md)
-
-### 1.3 Mapping from IHE-XDS metadata to FHIR to FHIR
-Short description concerning the previous XXXXX standard??? that is replaced by the MedCom Document. 
-The document is intended to help translate the previous standard to the new FHIR standard. Furthermore, not all elements from the FHIR elements are represented in the MedCom Document; thus, it cannot stand alone for implementation.
+### 1.3 Mapping from IHE XDS metadata to FHIR to FHIR
+There already exists a standard for <a href="https://svn.medcom.dk/svn/releases/Standarder/IHE/DK_profil_metadata/" target="_blank">IHE XDS metadata in Denmark</a>, which is valid for every type of document exchanged over the [national service platform (NSP)](https://www.nspop.dk/display/Web3/Introduktion+til+NSP-platformen). The metadata must to a wide extend be found in the document. To express how this is done, a mapping between the IHE XDS Metadata standard and the profiles MedComDocumentBundle and MedComDocumentComposition is created. The mapping follows the recommendations from HL7 International. Not all elements from the FHIR profiles are represented in the mapping and therefore it cannot stand alone for implementation.
 
 [Mapping from IHE-XDS metadata to FHIR DocumentReference, FHIR Composition and FHIR Bundle..](assets/documents/Mapping_from_IHE-XDS_metadata_to_FHIR.md) <br>
