@@ -7,6 +7,7 @@ Description: "A profile including requirements for a MedCom Document Patient."
 * identifier[cpr] 1..1 MS
 * identifier[cpr].value 1..1 MS
 * name 1..1
+* name[official] 1..1 MS
 * name[official].given 1.. MS SU
 * name[official].family 1.. MS SU
 * birthDate 1.. MS

@@ -85,7 +85,7 @@ Description: "A profile stating the rules, when exchanging a CDA document."
 * context.practiceSetting.coding.system 1.. MS
 * context.practiceSetting.coding.system from $PracticeSetting (extensible)
 * context.practiceSetting ^short = "[DocumentEntry.practiceSettingCode] Additional details about where the content was created (e.g. clinical specialty)"
-* context.related 0..1 MS
+* context.related 0..* MS
 * context.related ^short = "[DocumentEntry.referenceIdList] Related identifiers or resources"
 * context.sourcePatientInfo 1..1 MS
 * context.sourcePatientInfo ^short = "[DocumentEntry.sourcePatientId and DocumentEntry.sourcePatientInfo] Patient demographics from source. Must be the same reference as in DocumentReference.subject."

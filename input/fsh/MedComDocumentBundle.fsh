@@ -11,8 +11,6 @@ Description: "The Bundle profile for a document"
 * type = #document
 * type ^short = "Always a document"
 * timestamp 1..1 MS 
-* identifier 1..1
-* identifier.value 1..1 MS
 * entry 1.. MS 
 * entry.fullUrl 1..1 MS
 * entry.resource 1.. MS

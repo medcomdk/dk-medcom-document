@@ -13,7 +13,10 @@ Description: "An example profile of the MedCom Document Composition."
 //* meta.language 0..1 MS
 * meta.profile 1..1 MS
 * confidentiality 1..1 MS
+* identifier 1..1
+* identifier.value 1..1 MS
 * status = #final
+* status MS
 * type 1..1 MS
 * category 1..1 MS
 * subject 1.. MS
@@ -24,7 +27,7 @@ Description: "An example profile of the MedCom Document Composition."
 * event.code 0..1 MS
 * event.period.start 0..1 MS
 * event.period.end 0..1 MS
-* event.detail 0..1 MS
+* event.detail 0..* MS
 * author ^slicing.discriminator.type = #type
   * ^slicing.discriminator.path = "$this.resolve()"
   * ^slicing.rules = #closed
