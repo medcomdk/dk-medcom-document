@@ -9,6 +9,11 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 
 > Please notice, not all elements from the FHIR profiles are represented in the mapping and therefore it cannot stand alone for implementation. Attributes which are not used in the IHE XDS metadata standard are not included in the mapping.
 
+The table contains in: 
+* the two columns on the left, the requirement for metadata in the IHE XDS metadata, 
+* the two columns in the middle, the requirements for the metadata represented in the DocumentReference profile, which is not a part of the standard nor the metadata, but may be used for validation of the metadata, and
+* the two columns on the rigth, a path to finding the necesary information in the Composition profile.
+
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0; width:50%;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
@@ -22,13 +27,12 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 </style>
 <div style="overflow-x:auto;">
 <table class="tg" style="undefined;table-layout: fixed; width: 942px" id="Tab1">
-<caption style="color:#2c415c;font-weight:bold">Table 1: Mapping from IHE-XDS metadata to FHIR DocumentReference, FHIR Composition and FHIR Bundle.</caption>
+<caption style="color:#2c415c;font-weight:bold">Table 1: Mapping from IHE-XDS metadata to FHIR DocumentReference, and FHIR Composition.</caption>
 <colgroup>
 <col style="width: 260.88889px">
 <col style="width: 150.88889px">
 <col style="width: 250.88889px">
 <col style="width: 150.88889px">
-<col style="width: 200.88889px">
 <col style="width: 150.88889px">
 <col style="width: 200.88889px">
 </colgroup>
@@ -39,8 +43,7 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
     <th class="tg-ippy"><span style="font-weight:bold">DocumentReference</span></th>
     <th class="tg-ztr9">Optionality<br/>DocumentReference</th>
     <th class="tg-ippy"><span style="font-weight:bold">Composition</span></th>
-    <th class="tg-ippy"><span style="font-weight:bold">Bundle</span></th>
-    <th class="tg-ztr9">Optionality<br/>Composition or Bundle</th>
+    <th class="tg-ztr9">Optionality<br/>Composition</th>
   </tr>
 </thead>
 <tbody>
@@ -50,24 +53,21 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">masterIdentifier</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>identifier</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">entryUUID</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">entryUUID <a href="#section2">[2]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">identifier</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span>Bundle.identifier</th>
-<td class="tg-on52">1..1</td>
+<td class="tg-on52"></td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">availabilityStatus <a href="#section2">[2]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">status</span></td>
 <td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
@@ -77,7 +77,6 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">type</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>type</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -85,8 +84,7 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">category</span></td>
 <td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold">class</span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold">category</span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -94,8 +92,7 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">subject</span></td>
 <td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>subject</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold">subject</span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -104,7 +101,6 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">author</span></td>
 <td class="tg-on52">1..2</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>author</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..2</td>
 </tr>
 <tr>
@@ -113,7 +109,6 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">author</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>author</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -122,7 +117,6 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">author</span></td>
 <td class="tg-on52">0..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>author</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
@@ -131,7 +125,6 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">authenticator</span></td>
 <td class="tg-on52">0..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>attester</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
@@ -140,61 +133,54 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">securityLabel</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>confidentiality</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">mimeType</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">mimeType <a href="#section2">[2]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.contentType</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..1</td>
+<td class="tg-on52"></td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">languageCode</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.language</span></td>
 <td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>language</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold">language</span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">URI</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">URI <a href="#section2">[2]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">O</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.url</span></td>
 <td class="tg-on52">0..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">size <a href="#section1">[1]</a> </span></td>
+<td class="tg-on52"><span style="background-color:#FFF">size <a href="#section1">[1]</a><a href="#section2">[2]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">O</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.size</span></td>
 <td class="tg-on52">0..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">0..1</td>
+<td class="tg-on52"></td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">hash <a href="#section1">[1]</a> </span></td>
+<td class="tg-on52"><span style="background-color:#FFF">hash <a href="#section1">[1]</a><a href="#section2">[2]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">O</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.hash</span></td>
 <td class="tg-on52">0..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">0..1</td>
+<td class="tg-on52"></td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">title</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.title</span></td>
 <td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>title</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold">title</span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -203,7 +189,6 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">content.format</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold">meta.profile</span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -212,7 +197,6 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.creation</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>date</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -220,8 +204,7 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">R2</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">context.event</span></td>
 <td class="tg-on52">0..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>event.code</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold">event.code</span></th>
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
@@ -230,7 +213,6 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">context.period.start</span></td>
 <td class="tg-on52">0..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>event.period.start</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
@@ -239,7 +221,6 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">context.period.end</span></td>
 <td class="tg-on52">0..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>event.period.end</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
@@ -248,8 +229,7 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">context.facilityType</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..1</td>
+<td class="tg-on52"></td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">practiceSettingCode</span></td>
@@ -257,8 +237,7 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">context.practiceSetting</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..1</td>
+<td class="tg-on52"></td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">sourcePatientInfo</span></td>
@@ -266,8 +245,7 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">context.sourcePatientInfo</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>subject</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52"></td>
+<td class="tg-on52">1..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">sourcePatientId</span></td>
@@ -275,17 +253,15 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">context.sourcePatientInfo</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>subject</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52"></td>
+<td class="tg-on52">1..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">referenceIdList</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">O</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">context.related</span></td>
-<td class="tg-on52">0..1</td>
+<td class="tg-on52">0..*</td>
 <th class="tg-ippy"><span style="font-weight:bold">event.detail</span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">0..1</td>
+<td class="tg-on52">0..*</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">homeCommunityId <a href="#section2">[2]</a> </span></td>
@@ -293,15 +269,13 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">extension.homeCommunityId</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..1</td>
+<td class="tg-on52"></td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">objectType <a href="#section2">[2]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"></td>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
@@ -311,7 +285,6 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"></td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
 <tr>
@@ -319,7 +292,6 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"></td>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
