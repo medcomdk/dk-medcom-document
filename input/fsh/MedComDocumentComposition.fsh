@@ -17,7 +17,7 @@ Description: "An example profile of the MedCom Document Composition."
 * type 1..1 MS
 * category 1..1 MS
 * subject 1.. MS
-* subject only Reference(MedComCorePatient)
+* subject only Reference(MedComDocumentPatient)
 * subject ^type.aggregation = #bundled
 * date 1..1 MS
 * event 0..1 MS

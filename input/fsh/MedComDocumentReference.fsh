@@ -42,7 +42,7 @@ Description: "A profile stating the rules, when exchanging a CDA document."
 * securityLabel 1.. MS  
 * securityLabel ^short = "[DocumentEntry.confidentialityCode] Document security-tags"
 * subject 1..1 MS
-* subject only Reference(MedComDocumentSourcePatient)
+* subject only Reference(MedComDocumentPatient)
 * subject ^type.aggregation = #contained
 * subject ^short = "[DocumentEntry.sourcePatientInfo, DocumentEntry.sourcePatientId] Who/what is the subject of the document"
 * content MS

@@ -16,7 +16,7 @@ Usage: #example
 * name = "Lægerne Hasseris Bymidte"
 
 Instance: 37628912-7816-47a3-acd8-396b610be142
-InstanceOf: MedComDocumentSourcePatient
+InstanceOf: MedComDocumentPatient
 Title: "Source Patient"
 Description: "Instance of a source patient"
 Usage: #example
