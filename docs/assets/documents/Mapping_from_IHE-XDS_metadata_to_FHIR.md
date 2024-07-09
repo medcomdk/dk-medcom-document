@@ -35,6 +35,7 @@ The table contains in:
 <col style="width: 250.88889px">
 <col style="width: 150.88889px">
 <col style="width: 150.88889px">
+<col style="width: 150.88889px">
 <col style="width: 200.88889px">
 </colgroup>
 <thead>
@@ -44,23 +45,26 @@ The table contains in:
     <th class="tg-ippy"><span style="font-weight:bold">DocumentReference</span></th>
     <th class="tg-ztr9">Optionality<br/>DocumentReference</th>
     <th class="tg-ippy"><span style="font-weight:bold">Composition</span></th>
-    <th class="tg-ztr9">Optionality<br/>Composition</th>
+    <th class="tg-ippy"><span style="font-weight:bold">Bundle</span></th>
+    <th class="tg-ztr9">Optionality<br/>Composition and Bundle</th>
   </tr>
 </thead>
 <tbody>
   <tr>
 <td class="tg-on52"><span style="background-color:#FFF">uniqueId</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">masterIdentifier</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">identifier</span></td>
 <td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <th class="tg-ippy"><span style="font-weight:bold"></span>identifier</th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">entryUUID <a href="#section1">[1]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">identifier</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">masterIdentifier</span></td>
 <td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
@@ -70,6 +74,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">status</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
 <tr>
@@ -78,6 +83,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">type</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>type</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -86,6 +92,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">category</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>category</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -94,6 +101,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">subject</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>subject</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -102,6 +110,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">author</span></td>
 <td class="tg-on52">1..2</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>author</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..2</td>
 </tr>
 <tr>
@@ -110,6 +119,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">author</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>author</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -118,6 +128,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">author</span></td>
 <td class="tg-on52">0..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>author</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
@@ -126,6 +137,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">authenticator</span></td>
 <td class="tg-on52">0..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>attester</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
@@ -134,6 +146,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">securityLabel</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>confidentiality</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -141,6 +154,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.contentType</span></td>
 <td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
@@ -150,6 +164,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.language</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>language</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -157,6 +172,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">O</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.url</span></td>
 <td class="tg-on52">0..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
@@ -166,6 +182,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.size</span></td>
 <td class="tg-on52">0..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
 <tr>
@@ -173,6 +190,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">O</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.hash</span></td>
 <td class="tg-on52">0..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
@@ -182,6 +200,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.title</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>title</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -190,6 +209,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">content.format</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>meta.profile</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -197,7 +217,8 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.creation</span></td>
 <td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>date</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span>timestamp</th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -206,6 +227,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">context.event</span></td>
 <td class="tg-on52">0..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>event.code</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
@@ -214,6 +236,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">context.period.start</span></td>
 <td class="tg-on52">0..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>event.period.start</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
@@ -222,6 +245,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">context.period.end</span></td>
 <td class="tg-on52">0..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>event.period.end</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..1</td>
 </tr>
 <tr>
@@ -229,6 +253,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">context.facilityType</span></td>
 <td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
@@ -238,6 +263,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">context.practiceSetting</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
 <tr>
@@ -246,6 +272,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">context.sourcePatientInfo</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>subject</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -254,6 +281,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">context.sourcePatientInfo</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>subject</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
@@ -262,6 +290,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">context.related</span></td>
 <td class="tg-on52">0..*</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>event.detail</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..*</td>
 </tr>
 <tr>
@@ -269,6 +298,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">extension.homeCommunityId</span></td>
 <td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
@@ -278,6 +308,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"></td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
 <tr>
@@ -286,6 +317,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"></td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
 <tr>
@@ -293,6 +325,7 @@ The table contains in:
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"></td>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
 </tr>
