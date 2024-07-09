@@ -7,6 +7,7 @@ Id: medcom-document-bundle
 Description: "The Bundle profile for a document"
 * id 1..
 * id MS
+* identifier 1..1 MS
 * type MS 
 * type = #document
 * type ^short = "Always a document"

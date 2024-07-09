@@ -4,7 +4,7 @@ This Implementation Guide (IG) is provided by MedCom to describe the use of FHIR
 
 The IG contains profiles which are used to define a general model for FHIR documents. The use case  specific profiles, such as [ConditionList](https://build.fhir.org/ig/medcomdk/dk-medcom-shareddiagnoses/), are maintained in an individuel IG.
 
-The profiles builds upon the knowledge obtained through the use of CDA in Denmark and the work around FHIR documents from HL7 International.
+The profiles builds upon the knowledge obtained through the use of CDA in Denmark and the work around [FHIR documents from HL7 International](https://hl7.org/fhir/R4/documents.html).
 
 #### General Document Model
 
@@ -16,10 +16,11 @@ The figure below illustrates a general document model, which all MedCom document
 
 A Bundle resource defined to be of the type 'document'. All profiles included in a message shall be referenced from the entry element in the profile, with a Composition as the first resource. 
 
-__Note:__ Be aware that entries in a document in general are unordered. Recipients of a message cannot assume any sequences of profiles.
+__Note:__ Be aware that entries in a document in general are unordered.
 
 ##### MedComDocumentCompostition
 
+When the Bundle is of the type 'document', the Composition resource must be the first resource. The Composition resource creates the structure for the document and references the relevant clinical information. 
 
 ##### MedComDocumentOrganization
 
@@ -36,6 +37,14 @@ This profile desribes the basic requirements for information about citizens and 
 ##### MedComDocumentReference
 
 This profil must not be exchanged, but can be used for internal validation of the metadata associated with a document, as the DocumentReference contains the same information as the IHE XDS metadata standard. 
+
+#### General document assumptions
+
+Once a document is assembled into a Bundle, the document is immutable, meaning its content cannot be changed, and the document id (Bundle.identifier) can never be reused. 
+
+Note that the document may be represented in either XML or JSON and interconverted between these or have its character encoding changed, all the while remaining the same document. 
+
+It is a key element in documents that they contain a narrative text. The requirements concerning the narrative text, follows the [recommendations from HL7 for narrative text](https://hl7.org/fhir/R4/documents.html#presentation). This states that there must be narrative text included in the subject resource, which is the Patient resource in this IG, the Composition resource and for each Composition.section.text.
 
 #### Terminology
 On [MedCom Terminology IG](http://medcomfhir.dk/ig/terminology/) all referenced CodeSystem and ValueSets developed by MedCom can be found.

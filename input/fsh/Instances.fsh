@@ -17,8 +17,8 @@ Usage: #example
 
 Instance: 37628912-7816-47a3-acd8-396b610be142
 InstanceOf: MedComDocumentPatient
-Title: "Source Patient"
-Description: "Instance of a source patient"
+Title: "Patient"
+Description: "Instance of a patient"
 Usage: #example
 * identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
 * identifier[cpr].value = "0201919990"
