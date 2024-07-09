@@ -10,7 +10,7 @@ The profiles builds upon the knowledge obtained through the use of CDA in Denmar
 
 The figure below illustrates a general document model, which all MedCom document will comply to. Document profiles are all prefixed "MedComDocument". Beside the profiles on the figure, a MedCom document will also include some MedComCore profiles and profiles made to support a specific use case. All together they constitute the actual content of a MedCom document. The following sections describe the overall purpose of each document profile.
 
-<img alt="Shows the general MedCom messaging model. Each message must at least contain the following resources: Bundle, MessageHeader, Organization and Provenance." src="./MessagingModel.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
+<img alt="Shows the general MedCom document model. Each document must at least contain the following resources: Bundle, Composition, Organization, Patient and use case specific resources." src="/input/pagecontent/DocumentModel.svg" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
 
 ##### MedComDocumentBundle
 
@@ -40,11 +40,11 @@ This profil must not be exchanged, but can be used for internal validation of th
 
 #### General document assumptions
 
-Once a document is assembled into a Bundle, the document is immutable, meaning its content cannot be changed, and the document id (Bundle.identifier) can never be reused. 
+**Bundle.identifier:** Once a document is assembled into a Bundle, the document is immutable, meaning its content cannot be changed, and the document id (Bundle.identifier) can never be reused. 
 
-Note that the document may be represented in either XML or JSON and interconverted between these or have its character encoding changed, all the while remaining the same document. 
+**XML and JSON:** Note that the document may be represented in either XML or JSON and interconverted between these or have its character encoding changed, all the while remaining the same document. 
 
-It is a key element in documents that they contain a narrative text. The requirements concerning the narrative text, follows the [recommendations from HL7 for narrative text](https://hl7.org/fhir/R4/documents.html#presentation). This states that there must be narrative text included in the subject resource, which is the Patient resource in this IG, the Composition resource and for each Composition.section.text.
+**Narrative:** It is a key element in documents that they contain a narrative text. The requirements concerning the narrative text, follows the [recommendations from HL7 for narrative text](https://hl7.org/fhir/R4/documents.html#presentation). This states that there must be narrative text included in the subject resource, which is the Patient resource in this IG, the Composition resource and for each Composition.section.text.
 
 #### Terminology
 On [MedCom Terminology IG](http://medcomfhir.dk/ig/terminology/) all referenced CodeSystem and ValueSets developed by MedCom can be found.

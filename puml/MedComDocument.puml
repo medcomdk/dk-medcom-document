@@ -1,0 +1,22 @@
+@startuml DocumentModel
+
+hide empty members
+
+package "MedComDocumentBundle" as document {
+    class "MedComDocumentComposition" as composition
+    class "MedComDocumentOrganization" as organization <<MedComCoreOrganization>>
+    class "MedComDocumentPractitioner" as practitioner <<MedComCorePractitioner>>
+    class "MedComDocumentPatient" as patient <<DkCorePatient>>
+    class "*use case specific content*" as clinical 
+
+    composition -down- organization : "authorInstitution"
+    composition -down- practitioner : "authorPerson"
+    composition -down- patient : "subject"
+    composition -right- clinical : "section.entry"
+
+
+}
+
+
+
+@enduml
