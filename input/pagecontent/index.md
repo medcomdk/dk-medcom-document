@@ -10,7 +10,7 @@ The profiles builds upon the knowledge obtained through the use of CDA in Denmar
 
 The figure below illustrates a general document model, which all MedCom document will comply to. Document profiles are all prefixed "MedComDocument". Beside the profiles on the figure, a MedCom document will also include some MedComCore profiles and profiles made to support a specific use case. All together they constitute the actual content of a MedCom document. The following sections describe the overall purpose of each document profile.
 
-<img alt="Shows the general MedCom document model. Each document must at least contain the following resources: Bundle, Composition, Organization, Patient and use case specific resources." src="../images/DocumentModel.svg" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
+<img alt="Shows the general MedCom document model. Each document must at least contain the following resources: Bundle, Composition, Organization, Patient and use case specific resources." src="./DocumentModel.svg" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
 
 ##### MedComDocumentBundle
 
