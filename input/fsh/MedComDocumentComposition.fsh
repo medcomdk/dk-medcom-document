@@ -40,12 +40,13 @@ Description: "An example profile of the MedCom Document Composition."
 * author ^type.aggregation = #bundled
 * attester 0..1 MS
 * attester.party 0..1 MS
+* attester.mode MS
 * attester.party only Reference(MedComDocumentPractitioner)
 * attester.party ^type.aggregation = #bundled
 * title MS
 * language 1..1 MS
 * section 1.. MS
-* section.text 1.. MS
+* section.text MS
 * section.entry MS
 
 
