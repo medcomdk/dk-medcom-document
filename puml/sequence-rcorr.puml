@@ -1,0 +1,17 @@
+@startuml
+actor "Content Sender" as CS
+participant "Document Source" as DS
+participant "Document Repository" as DR
+participant "Document Registry" as DReg
+
+CS -> DS: Identify need to replace existing document
+DS -> DS: Prepare updated document and metadata
+DS -> DR: Send update request with updated document and metadata
+DR -> DR: Process request
+DR -> DReg: Send update request with updated metadata
+DReg -> DReg: Validate updated metadata
+DReg -> DReg: Update metadata and set availabilityStatus to 'deprecated'
+DReg -> DR: Return successful response
+DR -> DR: Replace documents
+DR -> DS: Return successful response
+@enduml

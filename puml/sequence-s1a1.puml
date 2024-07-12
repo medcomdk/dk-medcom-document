@@ -1,0 +1,11 @@
+@startuml
+actor "Content Sender" as CS
+participant "Document Source" as DS
+participant "Document Repository" as DR
+
+CS -> DS: Initiate submission
+DS -> DS: Collect document & metadata
+DS -> DR: Submit document & metadata
+DR -> DR: Process request & identify error
+DR -> DS: Error response
+@enduml

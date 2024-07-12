@@ -1,0 +1,11 @@
+@startuml
+actor "Content Receiver" as CR
+participant "Document Consumer" as DC
+participant "Document Registry" as DReg
+
+CR -> DC: Trigger to perform query
+DC -> DC: Identify search parameters
+DC -> DReg: Submit request with parameters
+DReg -> DReg: Verify included parameters
+DReg -> DC: Return metadata response
+@enduml

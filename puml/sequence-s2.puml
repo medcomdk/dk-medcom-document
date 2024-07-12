@@ -1,0 +1,11 @@
+@startuml
+actor "Content Sender" as CS
+participant "On-Demand Document Source" as ODDS
+participant "Document Registry" as DReg
+
+CS -> ODDS: Trigger to register document
+ODDS -> DReg: Submit request with metadata
+DReg -> DReg: Validate metadata
+DReg -> DReg: Store relevant metadata
+DReg -> ODDS: Return successful response
+@enduml

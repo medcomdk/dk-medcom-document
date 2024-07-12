@@ -1,0 +1,10 @@
+@startuml
+actor "Content Receiver" as CR
+participant "Document Consumer" as DC
+participant "Document Repository" as DR
+
+CR -> DC: Obtain necessary document(s) information from use case R1
+DC -> DR: Submit request based on information from use case R1
+DR -> DR: Validate request
+DR -> DC: Return requested document(s)
+@enduml
