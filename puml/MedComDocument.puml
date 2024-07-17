@@ -2,21 +2,18 @@
 
 hide empty members
 
-package "MedComDocumentBundle" as document {
-    class "MedComDocumentComposition" as composition
-    class "MedComDocumentOrganization" as organization <<MedComCoreOrganization>>
-    class "MedComDocumentPractitioner" as practitioner <<MedComCorePractitioner>>
-    class "MedComDocumentPatient" as patient <<DkCorePatient>>
-    class "*use case specific content*" as clinical 
+class "MedComDocumentBundle" as document
+class "MedComConditionListComposition" as composition
+class "MedComConditionListOrganization" as organization <<MedComCoreOrganization>>
+class "MedComDocumentPractitioner" as practitioner <<MedComCorePractitioner>>
+class "MedComDocumentPatient" as patient <<DkCorePatient>>
+class "*use case specific content*" as clinical
 
-    composition -down- organization : "authorInstitution"
-    composition -down- practitioner : "authorPerson"
-    composition -down- patient : "subject"
-    composition -right- clinical : "section.entry"
-
-
-}
-
+document -- composition : "entry"
+composition -- organization : "authorInstitution"
+composition -- practitioner : "authorPerson"
+composition -- patient : "subject"
+composition -- clinical : "section.entry"
 
 
 @enduml
