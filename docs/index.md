@@ -2,14 +2,14 @@
 # MedCom Document 
 <!-- below is the table of content. Ensure to update it. -->
 **Table of Content**
-- [1 Standard Documentation {#standard}](#1-standard-documentation-standard)
+- [1 Standard Documentation](#1-standard-documentation)
   * [1.1 Use Cases](#11-use-cases)
   * [1.2 Technical specification](#12-technical-specification)
   * [1.3 Mapping from IHE XDS metadata to FHIR to FHIR](#13-mapping-from-ihe-xds-metadata-to-fhir-to-fhir)
 
 This page represents the document profiles (Danish: dokumentprofiler) used in MedComs FHIR®© standards. These profiles describe fundamental information when exchanging information in documents. The MedCom Document profiles do not alone compose a standard but are used to information generic acrosse in MedCom’s document standards. Thus, this page includes the IG, and technical uses cases and does not include clinical guidelines and test protocols. 
  
-## 1 Standard Documentation {#standard}
+## 1 Standard Documentation
 
 ### 1.1 Use Cases
 
