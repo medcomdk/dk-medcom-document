@@ -1,6 +1,6 @@
 ### Scope and usage 
 
-MedComDocumentPatient profile describes information about a patient or citizen used in a MedComs Document standard. 
+The MedComDocumentPatient profile describes information about a patient or citizen used in a MedComs Document standard. 
 The MedComDocumentPatient is inherited from the [DkCorePatient](https://hl7.dk/fhir/core/3.2.0/StructureDefinition-dk-core-patient.html) profile defined by HL7 Denmark. 
 
 #### Required information
