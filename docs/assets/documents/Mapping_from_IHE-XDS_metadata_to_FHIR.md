@@ -177,7 +177,7 @@ The table contains in:
 <td class="tg-on52"></td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">size <a href="#section2">[2]</a><a href="#section1">[1]</a> </span></td>
+<td class="tg-on52"><span style="background-color:#FFF">size <a href="#section1">[1]<a href="#section2">[2]</a></a></span></td>
 <td class="tg-on52"><span style="background-color:#FFF">O</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.size</span></td>
 <td class="tg-on52">0..1</td>
@@ -186,7 +186,7 @@ The table contains in:
 <td class="tg-on52"></td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">hash <a href="#section2">[2]</a><a href="#section1">[1]</a> </span></td>
+<td class="tg-on52"><span style="background-color:#FFF">hash <a href="#section1">[1]</a><a href="#section2">[2]</a></span></td>
 <td class="tg-on52"><span style="background-color:#FFF">O</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.attachment.hash</span></td>
 <td class="tg-on52">0..1</td>
@@ -334,5 +334,5 @@ The table contains in:
 </div>
 <br><br>
 
-<p id="section2">[2] According to the IHE XDS metadata standard, this attribute is prohibited for On Demand documents</p>
 <p id="section1">[1] Information for this attribute is not expected to be in the document.</p>
+<p id="section2">[2] According to the IHE XDS metadata standard, this attribute is prohibited for On Demand documents</p>
