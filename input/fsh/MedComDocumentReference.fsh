@@ -1,7 +1,7 @@
 Profile: MedComDocumentReference
 Parent: DocumentReference
 Id: medcom-documentreference
-Description: "A profile stating the rules, when exchanging a CDA document."
+Description: "A profile stating the rules, when exchanging a FHIR document."
 * masterIdentifier 1..1 MS
 * masterIdentifier.value 1..1 MS
 * masterIdentifier ^short = "[DocumentEntry.uniqueId] Master Version Specific Identifier"
