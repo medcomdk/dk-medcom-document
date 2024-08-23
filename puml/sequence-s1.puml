@@ -5,13 +5,13 @@ participant "Document Repository" as DR
 participant "Document Registry" as DReg
 
 CS -> DS: Initiate submission
-DS -> DS: Collect documents & metadata
-DS -> DR: Submit documents & metadata
+DS -> DS: Collect document(s) & metadata
+DS -> DR: Submit document(s) & metadata
 DR -> DR: Process request
 DR -> DReg: Submit metadata
 DReg -> DReg: Validate metadata
 DReg -> DReg: Store metadata
 DReg -> DR: Success response
 DR -> DS: Success response
-DS -> DS: Documents ready for retrieval by consumer
+DS -> DS: Document(s) ready for retrieval by consumer
 @enduml

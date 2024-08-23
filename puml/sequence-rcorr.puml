@@ -1,6 +1,6 @@
 @startuml
 actor "Content Sender" as CS
-participant "Document Source" as DS
+participant "Document Administrator" as DS
 participant "Document Repository" as DR
 participant "Document Registry" as DReg
 
