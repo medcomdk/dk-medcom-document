@@ -54,7 +54,7 @@ This IG has a dependency to the [MedComCore IG](http://medcomfhir.dk/ig/core/) a
 
 ### Documentation
 
-[More information about MedCom Document](https://medcomdk.github.io/dk-medcom-documents/) can be found here. MedCom document profiles does not alone constitute a standard, why the documentation is limited.
+[More information about MedCom Document](https://medcomdk.github.io/dk-medcom-document/) can be found here. MedCom document profiles does not alone constitute a standard, why the documentation is limited.
 
 ### Governance
 
