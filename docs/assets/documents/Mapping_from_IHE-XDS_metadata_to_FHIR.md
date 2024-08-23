@@ -9,11 +9,14 @@ The purpose of this table is to help implementers of FHIR. The actual implementa
 
 > Please notice, not all elements from the FHIR profiles are represented in the mapping and therefore it cannot stand alone for implementation. Attributes which are not used in the IHE XDS metadata standard are not included in the mapping.
 
-The table contains in: 
-* the two columns on the left, the requirement for metadata in the IHE XDS metadata, 
-* the two columns in the middle, the requirements for the metadata represented in the DocumentReference profile, which is not a part of the standard nor the metadata, but may be used for validation of the metadata, and
-* the two columns on the rigth, a path to finding the necesary information in the Composition profile.
-
+The table contains: 
+* 1.: Data elements from the metadata in the <a href="https://svn.medcom.dk/svn/releases/Standarder/IHE/DK_profil_metadata/" target="_blank">IHE XDS metadata standard</a>.
+* 2.: Optionalities for the data elements from the IHE XDS metadata standard.
+* 3.: Data elements from the <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-documentreference.html" target="_blank">MedComDocumentReference profile</a>. This profile is not a part of the standard nor the metadata, but may be used for validation of the metadata.
+* 4.: Optionalities for the data elements from the MedComDocumentReference.
+* 5.: Data elements from the MedComDocumentComposition profile.
+* 6.: Data elements from the MedComDocumentBundle profile.
+* 7.: Optionalities for the data elements in MedComDocumentComposition and MedComDocumentBundle.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0; width:50%;}
@@ -40,13 +43,13 @@ The table contains in:
 </colgroup>
 <thead>
   <tr>
-    <th class="tg-ippy"><span style="font-weight:bold">IHE-XDS metadata</span></th>
-    <th class="tg-ippy"><span style="font-weight:bold">Optionality<br/>IHE-XDS metadata</span></th>
-    <th class="tg-ippy"><span style="font-weight:bold">DocumentReference</span></th>
-    <th class="tg-ztr9">Optionality<br/>DocumentReference</th>
-    <th class="tg-ippy"><span style="font-weight:bold">Composition</span></th>
-    <th class="tg-ippy"><span style="font-weight:bold">Bundle</span></th>
-    <th class="tg-ztr9">Optionality<br/>Composition and Bundle</th>
+    <th class="tg-ippy"><span style="font-weight:bold">1. IHE-XDS metadata</span></th>
+    <th class="tg-ippy"><span style="font-weight:bold">2. Optionality<br/>IHE-XDS metadata</span></th>
+    <th class="tg-ippy"><span style="font-weight:bold">3. MedComDocumentReference</span></th>
+    <th class="tg-ztr9">4. Optionality<br/>MedComDocumentReference</th>
+    <th class="tg-ippy"><span style="font-weight:bold">5. MedComDocumentComposition</span></th>
+    <th class="tg-ippy"><span style="font-weight:bold">6. MedComDocumentBundle</span></th>
+    <th class="tg-ztr9">7. Optionality<br/>MedComDocumentComposition and MedComDocumentBundle</th>
   </tr>
 </thead>
 <tbody>
