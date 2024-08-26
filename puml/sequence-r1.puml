@@ -1,5 +1,5 @@
 @startuml
-actor "Content Receiver" as CR
+actor "Content Retriever" as CR
 participant "Document Consumer" as DC
 participant "Document Registry" as DReg
 

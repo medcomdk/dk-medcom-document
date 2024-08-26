@@ -1,5 +1,5 @@
 @startuml
-actor "Content Sender" as CS
+actor "Content Provider" as CS
 participant "Document Administrator" as DS
 participant "Document Repository" as DR
 participant "Document Registry" as DReg

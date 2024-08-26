@@ -1,14 +1,11 @@
 @startuml
-actor "Content Sender" as CS
+actor "Document Administrator" as DA
 participant "Document Source" as DS
-participant "Document Repository" as DR
 participant "Document Registry" as DReg
 
-CS -> DS: Identify need to deprecate existing document
-DS -> DR: Send deprecation request
-DR -> DR: Process request
-DR -> DReg: Send deprecation request
+DA -> DS: Identify need to deprecate existing document
+DA -> DReg: Send request to deprecate a document
+DReg -> DReg: Process deprecation request
 DReg -> DReg: Update availabilityStatus to 'deprecated' for document
-DReg -> DR: Return successful response
-DR -> DS: Return successful response
+DReg -> DA: Return successful response
 @enduml

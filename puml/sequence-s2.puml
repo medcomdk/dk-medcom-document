@@ -1,5 +1,5 @@
 @startuml
-actor "Content Sender" as CS
+actor "Content Provider" as CS
 participant "On-Demand Document Source" as ODDS
 participant "Document Registry" as DReg
 
