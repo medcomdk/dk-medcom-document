@@ -17,7 +17,6 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * status = #final
 * status MS
 * type 1..1 MS
-* category 1..1 MS
 * subject 1.. MS
 * subject only Reference(MedComDocumentPatient)
 * subject ^type.aggregation = #bundled
