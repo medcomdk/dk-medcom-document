@@ -3,6 +3,7 @@ Parent: DkCorePatient
 Id: medcom-document-patient
 Description: "A profile including requirements for a MedCom Document Patient."
 * text MS
+* identifier 1..1
 * identifier[cpr] ^short = "Unique identification number for all citizens in Denmark, called civil person register (CPR-number)."
 * identifier 1..1 MS
 * identifier[cpr] 1..1 MS
