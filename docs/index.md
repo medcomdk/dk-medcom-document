@@ -17,7 +17,7 @@ Use cases describe how to exchange documents over an [IHE XDS infrastructure](ht
 
 Below, you can find the use cases in English:
 
-[English: Use cases (docx)](assets/documents/UseCases-ENG.docx) 
+[English: Use cases (pdf)](assets/documents/UseCases-ENG.pdf) 
 
 ### 1.2 Technical specification
 
