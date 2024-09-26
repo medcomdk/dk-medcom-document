@@ -70,3 +70,4 @@ In the Quality Assurance report (QA-report) for this IG, there is an error with 
 
 If you have any questions, please contact <fhir@medcom.dk> or write to MedCom's stream in [Zulip](https://chat.fhir.org/#narrow/stream/315677-denmark.2Fmedcom.2FFHIRimplementationErfaGroup).
 
+
