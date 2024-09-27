@@ -2,7 +2,7 @@
 
 This Implementation Guide (IG) is provided by MedCom to describe the use of FHIR ®© in document based exchange of data in Danish healthcare.
 
-The IG contains profiles which are used to define a general model for FHIR documents. The use case  specific profiles, such as [ConditionList](https://build.fhir.org/ig/medcomdk/dk-medcom-conditionlist/), are maintained in an individuel IG.
+The IG contains profiles which are used to define a general model for FHIR documents. The use case specific profiles, such as [ConditionList](https://build.fhir.org/ig/medcomdk/dk-medcom-conditionlist/), are maintained in an individuel IG.
 
 The profiles builds upon the knowledge obtained through the use of CDA in Denmark and the work around [FHIR documents from HL7 International](https://hl7.org/fhir/R4/documents.html).
 
@@ -20,7 +20,7 @@ __Note:__ Be aware that entries in a document in general are unordered.
 
 ##### MedComDocumentCompostition
 
-When the Bundle is of the type 'document', the [MedComDocumentCompostition](https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-document-composition.html) Composition resource must be the first resource. The resource creates the structure for the document and references the relevant clinical information. 
+When the Bundle is of the type 'document', the [MedComDocumentCompostition](https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-document-composition.html) resource must be the first resource. The resource creates the structure for the document and references the relevant clinical information.
 
 ##### MedComDocumentOrganization
 

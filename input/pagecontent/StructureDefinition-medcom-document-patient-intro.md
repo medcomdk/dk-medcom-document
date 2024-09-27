@@ -5,6 +5,6 @@ The MedComDocumentPatient is inherited from the [DkCorePatient](https://hl7.dk/f
 
 #### Required information
 
-There are certain requirements to which data must be present in a FHIR document. These requirements comes from the IHE XDS metadata standard (sourcePatientInfo attribute) that requires for a Danish CPR-number (unique identifier), given and family name, birthdate and gender to be present. Therefore, does these informationhave a minimum cardinality of 1. 
+There are certain requirements to which data must be present in a FHIR document. These requirements come from the IHE XDS metadata standard (sourcePatientInfo attribute) that requires for a Danish CPR-number (unique identifier), given and family name, birthdate and gender to be present. Therefore, this information has a minimum cardinality of 1.
 
 It is not allowed to add a replacement-CPR (Danish: erstatningsCPR), as this is not supported in the infrastructure.
