@@ -96,7 +96,7 @@ The table contains:
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>category</th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..1</td>
+<td class="tg-on52"></td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">patientId</span></td>
