@@ -9,7 +9,7 @@ Alias: $list-empty-reason = http://terminology.hl7.org/CodeSystem/list-empty-rea
 Profile: MedComDocumentComposition
 Parent: Composition
 Id: medcom-document-composition
-Description: "An example profile of the MedCom Document Composition."
+Description: "The profile of the MedCom Document Composition containing the minimum allowed content."
 //* meta.language 0..1 MS
 * meta.profile 1..1 MS
 * confidentiality 1..1 MS
@@ -17,7 +17,6 @@ Description: "An example profile of the MedCom Document Composition."
 * status = #final
 * status MS
 * type 1..1 MS
-* category 1..1 MS
 * subject 1.. MS
 * subject only Reference(MedComDocumentPatient)
 * subject ^type.aggregation = #bundled

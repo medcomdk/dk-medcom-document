@@ -6,6 +6,5 @@ participant "Document Registry" as DReg
 CS -> ODDS: Trigger to register document
 ODDS -> DReg: Submit request with metadata (ITI-61)
 DReg -> DReg: Validate metadata
-DReg -> DReg: Store relevant metadata
-DReg -> ODDS: Return successful response (ITI-61)
+DReg -> ODDS: Error response (ITI-61)
 @enduml

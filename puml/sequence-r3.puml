@@ -1,10 +1,11 @@
 @startuml
-actor "Content Receiver" as CR
+actor "Content Retriever" as CR
 participant "Document Consumer" as DC
 participant "On-Demand Document Source" as ODDS
 
 CR -> DC: Obtain necessary document(s) information from use case R1
-DC -> ODDS: Submit request based on information from use case R1
+DC -> ODDS: Submit request (ITI-43)
 ODDS -> ODDS: Validate request
-ODDS -> DC: Return requested document(s)
+ODDS -> ODDS: Produce document
+ODDS -> DC: Return requested document(s) (ITI-43)
 @enduml

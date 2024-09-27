@@ -1,17 +1,18 @@
 @startuml
-actor "Content Sender" as CS
+actor "Content Provider" as CS
 participant "Document Source" as DS
 participant "Document Repository" as DR
 participant "Document Registry" as DReg
 
 CS -> DS: Initiate submission
-DS -> DS: Collect documents & metadata
-DS -> DR: Submit documents & metadata
+DS -> DS: Collect document(s) & metadata
+DS -> DR: Submit document(s) & metadata (ITI-41)
 DR -> DR: Process request
-DR -> DReg: Submit metadata
+DR -> DR: Store document(s)
+DR -> DReg: Submit metadata (ITI-42)
 DReg -> DReg: Validate metadata
 DReg -> DReg: Store metadata
-DReg -> DR: Success response
-DR -> DS: Success response
-DS -> DS: Documents ready for retrieval by consumer
+DReg -> DR: Success response (ITI-42)
+DR -> DS: Success response (ITI-41)
+DS -> DS: Document(s) ready for retrieval by consumer
 @enduml
