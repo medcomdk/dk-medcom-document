@@ -57,7 +57,7 @@ Alias: $PracticeSetting = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ih
 
 Alias: $FacilityType = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-HealthcareFacilityTypeCode-VS
 
-Alias: $DanishiheOID = urn:oid:1.2.208.184.100.9 
+Alias: $DanishiheOID = urn:oid:1.2.208.184.100.9
 Alias: $SnomedctOID = urn:oid:2.16.840.1.113883.6.96
 Alias: $LoincOID = urn:oid:2.16.840.1.113883.6.1
 Alias: $MedComOID = urn:oid:1.2.208.184.100.1
