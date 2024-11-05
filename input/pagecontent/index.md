@@ -36,7 +36,7 @@ The [MedComDocumentPractitioner](https://build.fhir.org/ig/medcomdk/dk-medcom-do
 
 ##### MedComDocumentReference
 
-The [MedComDocumentReference](https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-documentreference.html) profile must not be exchanged, but can be used for internal validation of the metadata associated with a document, as the DocumentReference contains the same information as the IHE XDS metadata standard. 
+The [MedComDocumentReference](https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-documentreference.html) profile should not be exchanged, but can be used for internal validation of the metadata associated with a document, as the DocumentReference contains the same information as the IHE XDS metadata standard. 
 
 #### General document assumptions
 
