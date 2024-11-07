@@ -35,8 +35,10 @@ Description: "A profile stating the rules, when exchanging a FHIR document."
 * author contains
     institution 1..1 and
     person 0..1
+* author[institution] MS
 * author[institution] only Reference(MedComDocumentOrganization)
 * author[institution] ^short = "[DocumentEntry.author.authorInstitution] The organization who authored the document"
+* author[person] MS
 * author[person] only Reference(MedComDocumentPractitioner)
 * author[person] ^short = "[DocumentEntry.author.authorPerson] The person who authored the document"
 * securityLabel 1.. MS  
