@@ -2,7 +2,7 @@
 
 This Implementation Guide (IG) is provided by MedCom to describe the use of FHIR ®© in document based exchange of data in Danish healthcare.
 
-The IG contains profiles which are used to define a general model for FHIR documents. The use case specific profiles, such as [ConditionList](https://build.fhir.org/ig/medcomdk/dk-medcom-conditionlist/), are maintained in an individuel IG.
+The IG contains profiles which are used to define a general model for FHIR documents. The use case specific profiles, such as [ConditionList](http://medcomfhir.dk/ig/conditionlist), are maintained in an individuel IG.
 
 The profiles builds upon the knowledge obtained through the use of CDA in Denmark and the work around [FHIR documents from HL7 International](https://hl7.org/fhir/R4/documents.html).
 
@@ -14,29 +14,29 @@ The figure below illustrates a general document model, which all MedCom document
 
 ##### MedComDocumentBundle
 
-[MedComDocumentBundle](https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-document-bundle.html) is a Bundle resource defined to be of the type 'document'. All profiles included in a message shall be referenced from the entry element in the profile, with a Composition as the first resource. 
+[MedComDocumentBundle](./StructureDefinition-medcom-document-bundle.html) is a Bundle resource defined to be of the type 'document'. All profiles included in a message shall be referenced from the entry element in the profile, with a Composition as the first resource. 
 
 __Note:__ Be aware that entries in a document in general are unordered.
 
 ##### MedComDocumentCompostition
 
-When the Bundle is of the type 'document', the [MedComDocumentCompostition](https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-document-composition.html) resource must be the first resource. The resource creates the structure for the document and references the relevant clinical information.
+When the Bundle is of the type 'document', the [MedComDocumentCompostition](./StructureDefinition-medcom-document-composition-intro.html) resource must be the first resource. The resource creates the structure for the document and references the relevant clinical information.
 
 ##### MedComDocumentOrganization
 
-The [MedComDocumentOrganization](https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-document-organization.html) profile inherits from MedComCoreOrganization and is used to describe author organization. The resource constrains the MedComCoreOrganization profile to contain a SOR identifier and a name.
+The [MedComDocumentOrganization](./StructureDefinition-medcom-document-organization.html) profile inherits from MedComCoreOrganization and is used to describe author organization. The resource constrains the MedComCoreOrganization profile to contain a SOR identifier and a name.
 
 ##### MedComDocumentPatient
 
-The [MedComDocumentPatient](https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-document-patient.html) profile desribes the basic requirements for information about citizens and patients when exhancging a document. The profile inherits from DkCorePatient and furhter limit the requirements, e.g. may documents only be exchanged for patients with a CPR-number. To limit the MustSupport elements, this profiles does not inherit from MedComCorePatient.
+The [MedComDocumentPatient](./StructureDefinition-medcom-document-patient.html) profile desribes the basic requirements for information about citizens and patients when exhancging a document. The profile inherits from DkCorePatient and furhter limit the requirements, e.g. may documents only be exchanged for patients with a CPR-number. To limit the MustSupport elements, this profiles does not inherit from MedComCorePatient.
 
 ##### MedComDocumentPractitioner
 
-The [MedComDocumentPractitioner](https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-document-practitioner.html) profile inherits from MedComCorePractitioner and further requires a given and family name to be present. 
+The [MedComDocumentPractitioner](./StructureDefinition-medcom-document-practitioner.html) profile inherits from MedComCorePractitioner and further requires a given and family name to be present. 
 
 ##### MedComDocumentReference
 
-The [MedComDocumentReference](https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-documentreference.html) profile should not be exchanged, but can be used for internal validation of the metadata associated with a document, as the DocumentReference contains the same information as the IHE XDS metadata standard. 
+The [MedComDocumentReference](./StructureDefinition-medcom-documentreference.html) profile should not be exchanged, but can be used for internal validation of the metadata associated with a document, as the DocumentReference contains the same information as the IHE XDS metadata standard. 
 
 #### General document assumptions
 
