@@ -30,8 +30,8 @@ Description: "The profile of the MedCom Document Composition containing the mini
   * ^slicing.discriminator.path = "$this.resolve()"
   * ^slicing.rules = #closed
 * author contains
-    institution 1..1 and
-    person 0..1
+    institution 1..1 MS and
+    person 0..1 MS 
 * author[institution] only Reference(MedComDocumentOrganization)
 * author[institution] ^short = "The organization who authored the document"
 * author[person] only Reference(MedComDocumentPractitioner)
