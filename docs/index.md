@@ -22,7 +22,7 @@ Below, you can find the use cases in English:
 ### 1.2 Technical specification
 
 The technical specifications describes which information constitutes the foundation for MedCom FHIR Documents. These  these are defined in an IG:
- * <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-document/index.html" target="_blank">MedCom Document Implementation Guide</a>
+ * <a href="https://medcomfhir.dk/ig/document/index.html" target="_blank">MedCom Document Implementation Guide</a>
 
 The MedCom Document Implementation Guide builds upon the [document specifications](https://hl7.org/fhir/R4/documents.html) that has already been developed by HL7 International. 
 
