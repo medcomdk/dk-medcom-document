@@ -39,23 +39,23 @@ Alias: $ActCodes = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $RequestPriority = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-careCommunication-requestPriority 
 */
 //Alias: $ClassCode = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-apd-classcode-VS
-Alias: $ClassCode = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-classcode-VS
+Alias: $ClassCode = https://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-classcode-VS
 
 //Alias: $ContentType = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-apd-mimetype-VS
-Alias: $ContentType = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-mimetype-VS
+Alias: $ContentType = https://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-mimetype-VS
 
 //Alias: $Language = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-apd-languagecode-VS
-Alias: $Language = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-languagecode-VS
+Alias: $Language = https://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-languagecode-VS
 
 //Alias: $FormatCode = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-apd-formatcode-VS
-Alias: $FormatCode = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-formatcode-VS
+Alias: $FormatCode = https://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-formatcode-VS
 
 //Alias: $HomeCommunityID = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-apd-homeCommunityId-VS
-Alias: $HomeCommunityID = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-homeCommunityId-VS
+Alias: $HomeCommunityID = https://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-homeCommunityId-VS
 
-Alias: $PracticeSetting = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-PracticeSettingCode-VS
+Alias: $PracticeSetting = https://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-PracticeSettingCode-VS
 
-Alias: $FacilityType = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-HealthcareFacilityTypeCode-VS
+Alias: $FacilityType = https://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-HealthcareFacilityTypeCode-VS
 
 Alias: $DanishiheOID = urn:oid:1.2.208.184.100.9
 Alias: $SnomedctOID = urn:oid:2.16.840.1.113883.6.96
