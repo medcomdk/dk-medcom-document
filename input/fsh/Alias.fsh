@@ -42,7 +42,7 @@ Alias: $RequestPriority = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-ca
 Alias: $ClassCode = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-classcode-VS
 
 //Alias: $ContentType = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-apd-mimetype-VS
-//Alias: $ContentType = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-mimeType-VS
+Alias: $ContentType = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-mimetype-VS
 
 //Alias: $Language = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-apd-languagecode-VS
 Alias: $Language = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-languagecode-VS

@@ -20,7 +20,7 @@ __Note:__ Be aware that entries in a document in general are unordered.
 
 ##### MedComDocumentCompostition
 
-When the Bundle is of the type 'document', the [MedComDocumentCompostition](./StructureDefinition-medcom-document-composition-intro.html) resource must be the first resource. The resource creates the structure for the document and references the relevant clinical information.
+When the Bundle is of the type 'document', the [MedComDocumentCompostition](./StructureDefinition-medcom-document-composition.html) resource must be the first resource. The resource creates the structure for the document and references the relevant clinical information.
 
 ##### MedComDocumentOrganization
 

@@ -50,7 +50,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document."
 * content MS
 * content.attachment.contentType ^short = "[DocumentEntry.mimeType] Mime type of the content, with charset etc."
 * content.attachment.contentType 1.. MS
-//* content.attachment.contentType from $ContentType
+* content.attachment.contentType from $ContentType
 * content.attachment.language ^short = "[DocumentEntry.languageCode] Human language of the content"
 * content.attachment.language 1.. MS
 * content.attachment.language from $Language (extensible)
