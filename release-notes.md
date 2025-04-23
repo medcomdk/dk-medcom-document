@@ -1,1 +1,1 @@
-Initial commit of DK MedCom Document IG
+Fixes pathing issues of the package and publishes it properly
