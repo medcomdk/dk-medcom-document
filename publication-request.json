@@ -8,7 +8,7 @@
     "ci-build" : "https://build.fhir.org/ig/medcomdk/dk-medcom-document",
     "mode" : "milestone",
     "title": "DK MedCom Document",
-    "category": "MedCom Document",
+    "category": "Clinical Documents",
     "introduction": "The MedCom Document Implementation Guide includes profiles developed to be used in MedCom documents.",
     "descmd": "@release-notes.md"
 }
