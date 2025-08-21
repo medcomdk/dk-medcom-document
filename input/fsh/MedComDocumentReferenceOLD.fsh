@@ -1,6 +1,6 @@
-Profile: MedComDocumentReference
-Parent: MedComBasicDocumentReference
-Id: medcom-documentreference
+Profile: MedComDocumentReferenceOLD
+Parent: DocumentReference
+Id: medcom-documentreference-OLD
 Description: "A profile stating the rules, when exchanging a FHIR document."
 * masterIdentifier 1..1 MS
 * masterIdentifier.value 1..1 MS
@@ -8,7 +8,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document."
 * identifier 1..1 MS
 * identifier.value 1..1 MS 
 * identifier ^short = "[DocumentEntry.entryUUID] Identifier for the document"
-* identifier obeys uuid
+* identifier obeys uuidOLD
 * status MS 
 * status ^short = "[DocumentEntry.availabilityStatus] current = active | superseded = deprecated"
 // TypeCode
@@ -105,7 +105,7 @@ Severity: #error
 Expression: "where(type.coding.where(system = 'http://medcomfhir.dk/ig/xdsmetadata/CodeSystem/dk-ihe-typecode-de-regenstrief').code = '56446-8').context.event.coding.code = 'ALAL01'"
 */
 
-Invariant: uuid
+Invariant: uuidOLD
 Description: "General UUID expression"
 Severity: #error
 Expression: "value.matches('[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}')"
