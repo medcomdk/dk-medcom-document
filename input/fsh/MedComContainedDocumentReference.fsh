@@ -1,7 +1,7 @@
-Profile: MedComDocumentReference
-Parent: MedComBasicDocumentReference
-Id: medcom-documentreference
-Description: "A profile stating the rules, when exchanging a FHIR document."
+Profile: MedComContainedDocumentReference
+Parent: MedComMinimalDocumentReference
+Id: medcom-contained-documentreference
+Description: "A profile stating the rules, when exchanging a FHIR document in the Danish Healthcare sector using  IHE MHD and IHE XDS based document sharing."
 * masterIdentifier 1..1 MS
 * masterIdentifier.value 1..1 MS
 * masterIdentifier ^short = "[DocumentEntry.uniqueId] Master Version Specific Identifier"
