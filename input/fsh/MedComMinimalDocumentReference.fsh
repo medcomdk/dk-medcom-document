@@ -1,14 +1,19 @@
 Profile: MedComMinimalDocumentReference
 Parent: MinimalDocumentReference
 Id: medcom-minimal-documentreference
-Title: "HL7 Denmark DK Core MinimalDocumentReference Profile"
+Title: "A replication of HL7 Denmark DK Core MinimalDocumentReference Profile"
 Description: "A replication of DK Core MinimalDocumentReference"
-//DKCore content OUTDATED
-* extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.version named version 1..1 //Bruges til at angive en version af det dokument, som DocumentReference peger på. Hvis der findes flere versioner af samme dokument, kan man vha. denne extension skelne dem fra hinanden.
+* extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.version named versionid 1..1
+* extension[versionid] ^short = "Specifies the version of the DocumentReference profile for a standard."
 * context.facilityType from SorOrganizationType (extensible)
-* context.practiceSetting from SorPracticeSettingCode (extensible)
+* context.practiceSetting from MedComSorPracticeSettingCode (extensible)
+* context.event from $v3-ActCode3.0.0 
+* author 1..*
 * author only Reference(DkCorePatient or DkCorePractitioner or DkCorePractitionerRole or DkCoreRelatedPerson or DkCoreOrganization or Device)
-
-* authenticator only Reference(DkCorePractitioner)
+* authenticator only Reference(DkCorePractitioner or DkCorePractitionerRole or DkCoreOrganization)
+* subject 1..1
 * subject only Reference(DkCorePatient)
-//MedCom content
+* context.sourcePatientInfo only Reference(DkCorePatient)
+
+
+//Autofortolkninger inkl disclaimer

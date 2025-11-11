@@ -68,3 +68,6 @@ Alias: $MedComFormatOID = urn:oid:1.2.208.184.100.10
 Alias: $DanishxdsOID = urn:oid:1.2.208.176.8.1
 Alias: $IANALanguageOID = urn:oid:2.16.840.1.113883.6.121
 Alias: $IANAMediaOID = urn:oid:2.16.840.1.113883.5.79
+
+Alias: $v3-ActCode3.0.0 = http://terminology.hl7.org/ValueSet/v3-ActCode|3.0.0
+Alias: $sct = http://snomed.info/sct|http://snomed.info/sct/554471000005108 // Danish version - append e.g. /version/20240331 to get a more specific version 
