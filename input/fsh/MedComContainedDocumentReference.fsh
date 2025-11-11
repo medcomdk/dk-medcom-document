@@ -64,7 +64,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * content.format.coding.system 1.. MS */
 * content.attachment.size 0.. MS
 * content.attachment.title 1.. MS
-* content.attachment.url 0.. MS
+//* content.attachment.url 0.. MS
 * content.attachment.size ^short = "[DocumentEntry.size] Number of bytes of content"
 * content.attachment.title ^short = "[DocumentEntry.title] Label to display in place of the data"
 * content.attachment.url ^short = "[DocumentEntry.URI] Uri where the data can be found"
@@ -92,10 +92,10 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * context.sourcePatientInfo 1..1 MS
 * context.sourcePatientInfo ^short = "[DocumentEntry.sourcePatientId and DocumentEntry.sourcePatientInfo] Patient demographics from source. Must be the same reference as in DocumentReference.subject."
 * extension contains 
-    medcom-document-homecommunityid-extension named homeCommunityid 1..1 MS and
-    medcom-document-version-id-extension named versionid 1..1 MS
+    medcom-document-homecommunityid-extension named homeCommunityid 1..1 MS //and
+//    medcom-document-version-id-extension named versionid 1..1 MS
 * extension[homeCommunityid] ^short = "[DocumentEntry.homeCommunityId] A unique identifier for a community where the DocumentEntry and document can be accessed"
-* extension[versionid] ^short = "Specifies the version of the DocumentReference for a standard."
+//* extension[versionid] ^short = "Specifies the version of the DocumentReference for a standard."
 
 
 
