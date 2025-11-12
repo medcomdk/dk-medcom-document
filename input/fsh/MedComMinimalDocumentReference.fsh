@@ -14,6 +14,3 @@ Description: "A replication of DK Core MinimalDocumentReference"
 * subject 1..1
 * subject only Reference(DkCorePatient)
 * context.sourcePatientInfo only Reference(DkCorePatient)
-
-
-//Autofortolkninger inkl disclaimer
