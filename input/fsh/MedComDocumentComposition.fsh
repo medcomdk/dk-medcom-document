@@ -12,11 +12,22 @@ Id: medcom-document-composition
 Description: "The profile of the MedCom Document Composition containing the minimum allowed content."
 //* meta.language 0..1 MS
 * meta.profile 1..1 MS
+* identifier 1..1 MS 
+* identifier.value 1..1 MS 
+* identifier obeys medcom-uuidv4 //RCH: Skal det være identifier eller identifier.value?
+* identifier ^short = "The Composition identifier" 
 * confidentiality 1..1 MS
 * text MS
 * status = #final
 * status MS
 * type 1..1 MS
+* type.coding 1.. MS
+* type.coding.system MS
+* type.coding.code MS
+* category 1..1 MS 
+* category from $ClassCode (extensible)
+* category.coding.code 1.. MS
+* category.coding.system 1.. MS
 * subject 1.. MS
 * subject only Reference(MedComDocumentPatient)
 * subject ^type.aggregation = #bundled
@@ -40,10 +51,11 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * attester 0..1 MS
 * attester.party 0..1 MS
 * attester.mode MS
-* attester.party only Reference(MedComDocumentPractitioner)
+* attester.party only Reference(MedComDocumentPractitioner) //RCH: Mangler der også her PractitionerRole?
 * attester.party ^type.aggregation = #bundled
 * title MS
 * language 1..1 MS
+* language from $Language (extensible)
 * section 1.. MS
 * section.text MS
 * section.entry MS
@@ -56,7 +68,7 @@ Usage: #example
 // * identifier.value = "1" // ? -The portion of the identifier typically relevant to the user and which is unique within the context of the system.
 * meta.profile = "1.0"
 * status = #final
-* type = $loinc#11488-4 "Consult note"
+* code = $loinc#11488-4 "Consult note"
 // * category = $loinc#LP173421-1 "Report" 
 * subject = Reference(69e475df-20c8-4f54-8cea-9843568205fd)
 // * encounter = Reference(Encounter/xcda)
