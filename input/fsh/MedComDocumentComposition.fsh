@@ -54,6 +54,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * attester.party only Reference(MedComDocumentPractitioner) //RCH: Mangler der også her PractitionerRole?
 * attester.party ^type.aggregation = #bundled
 * title MS
+* title ^short = "The readable title of the document"
 * language 1..1 MS
 * language from $Language (extensible)
 * section 1.. MS
