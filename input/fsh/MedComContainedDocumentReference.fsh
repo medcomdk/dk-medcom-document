@@ -77,7 +77,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * content.attachment.title ^short = "[DocumentEntry.title] The readable title of the document"
 * content.attachment.url ^short = "[DocumentEntry.URI] Uri where the data can be found" //RCH: Hvad kan vi indsætte som eksempel her? Absolut eller relativ reference?
 * context 1.. MS
-* context.event 0..1 MS 
+* context.event 0.. MS 
 * context.event.coding.code 1.. MS
 * context.event.coding.system 1.. MS
 * context.event ^short = "[DocumentEntry.eventCodeList] Main clinical acts documented"

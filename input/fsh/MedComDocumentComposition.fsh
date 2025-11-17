@@ -33,7 +33,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * subject ^type.aggregation = #bundled
 * date 1..1 MS
 * event 0..1 MS
-* event.code 0..1 MS
+* event.code 0.. MS
 * event.period.start 0..1 MS
 * event.period.end 0..1 MS
 * event.detail 0..* MS
