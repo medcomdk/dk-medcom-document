@@ -5,7 +5,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * masterIdentifier 1..1 MS //RCH: Skal den være 1.. hvis den også kan leveres af infrastrukturen?
 * masterIdentifier.value 1..1 MS
 * masterIdentifier ^short = "[DocumentEntry.uniqueId] Master Version Specific Identifier"
-* identifier 1..1 MS
+* identifier 1..1 MS //RCH: Skal den være 1.. hvis den også kan leveres af infrastrukturen?
 * identifier.value 1..1 MS 
 * identifier ^short = "[DocumentEntry.entryUUID] Identifier for the document"
 * identifier obeys uuid
