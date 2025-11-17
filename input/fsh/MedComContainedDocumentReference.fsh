@@ -1,5 +1,5 @@
 Profile: MedComContainedDocumentReference
-Parent: MedComMinimalDocumentReference
+Parent: MedComMinimalDocumentReference //Skal vi nedarve direkte fra HL7 eller indføre i denne IG midlertidigt?
 Id: medcom-contained-documentreference
 Description: "A profile stating the rules, when exchanging a FHIR document in the Danish Healthcare sector using  IHE MHD and IHE XDS based document sharing."
 * masterIdentifier 1..1 MS //RCH: Skal den være 1.. hvis den også kan leveres af infrastrukturen?
