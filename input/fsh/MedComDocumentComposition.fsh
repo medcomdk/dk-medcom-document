@@ -25,7 +25,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * type.coding.system MS
 * type.coding.code MS
 * category 1..1 MS 
-* category from $ClassCode (extensible) //RCH: Er bindingen sat det rigtige sted?
+* category from $ClassCode (extensible)
 * category.coding.code 1.. MS
 * category.coding.system 1.. MS
 * subject 1.. MS
