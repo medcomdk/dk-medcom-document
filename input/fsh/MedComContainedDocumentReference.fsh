@@ -41,7 +41,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * author[institution] only Reference(MedComDocumentOrganization)
 * author[institution] ^short = "[DocumentEntry.author.authorInstitution] The organization who authored the document"
 * author[person] MS
-//* author[person] only Reference(MedComDocumentPractitioner or MedComCorePractitionerRole or Device) //RCH: Practitionerrole igen. Bør en PractitionerRole være med, så en titel kan angives? Og bør vi så lave en documentpractitionerrole profil?
+* author[person] only Reference(MedComDocumentPractitioner or MedComCorePractitionerRole or Device or MedComDocumentPatient) //RCH: Practitionerrole igen. Bør en PractitionerRole være med, så en titel kan angives? Og bør vi så lave en documentpractitionerrole profil?
 * author[person] ^short = "[DocumentEntry.author.authorPerson] The person who authored the document"
 * securityLabel 1.. MS
 * securityLabel.coding 1..* MS
