@@ -2,6 +2,11 @@ Profile: MedComContainedDocumentReference
 Parent: MedComMinimalDocumentReference //Skal vi nedarve direkte fra HL7 eller indføre i denne IG midlertidigt?
 Id: medcom-contained-documentreference
 Description: "A profile stating the rules, when exchanging a FHIR document in the Danish Healthcare sector using  IHE MHD and IHE XDS based document sharing."
+* id 1.. MS
+* text MS
+* text ^short = "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle."
+* text.status MS
+* text.div MS
 * masterIdentifier 1..1 MS //RCH: Skal den være 1.. hvis den også kan leveres af infrastrukturen?
 * masterIdentifier.value 1..1 MS
 * masterIdentifier ^short = "[DocumentEntry.uniqueId] Master Version Specific Identifier"
@@ -100,6 +105,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * context.sourcePatientInfo 1..1 MS
 * context.sourcePatientInfo ^short = "[DocumentEntry.sourcePatientId and DocumentEntry.sourcePatientInfo] Patient demographics from source. Must be the same reference as in DocumentReference.subject."
 * context.sourcePatientInfo only Reference(MedComDocumentPatient)
+* extension MS
 * extension contains 
     medcom-document-homecommunityid-extension named homeCommunityid 1..1 MS
 * extension[homeCommunityid] ^short = "[DocumentEntry.homeCommunityId] A unique identifier for a community where the DocumentEntry and document can be accessed"
