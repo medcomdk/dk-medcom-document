@@ -37,15 +37,16 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * event.period.start 0..1 MS
 * event.period.end 0..1 MS
 * event.detail 0..* MS
+* author only Reference(MedComDocumentPatient or MedComDocumentPractitioner or MedComCorePractitionerRole or DkCoreRelatedPerson or MedComDocumentOrganization or Device) //RCH: Jeg har kopieret denne fra DocRef. Skal de være ens eller skal denne linje ikke med i Composition?
 * author ^slicing.discriminator.type = #type
   * ^slicing.discriminator.path = "$this.resolve()"
   * ^slicing.rules = #closed
 * author contains
     institution 1..1 MS and
     person 0..1 MS 
-* author[institution] only Reference(MedComDocumentOrganization)
+* author[institution] only Reference(MedComDocumentAuthorInstitutionOrganization)
 * author[institution] ^short = "The organization who authored the document"
-* author[person] only Reference(MedComDocumentPractitioner)
+* author[person] only Reference(MedComDocumentPractitioner or MedComCorePractitionerRole or Device or MedComDocumentPatient)
 * author[person] ^short = "The person who authored the document"
 * author ^type.aggregation = #bundled
 * attester 0..1 MS
