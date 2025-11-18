@@ -3,20 +3,27 @@ Parent: MedComDocumentOrganization
 Id: medcom-document-author-institution-organization
 Description: "An Author Institution Organization including requirements for a MedCom Document Organization resource"
 
-* type.coding ^slicing.discriminator[0].type = #value
-* type.coding ^slicing.discriminator[0].path = "system"
-* type.coding ^slicing.rules = #open
+* type ^slicing.discriminator[0].type = #value
+* type ^slicing.discriminator[0].path = "coding.system"
+* type ^slicing.rules = #open
  
-* type.coding 2..* MS
+* type 2..* MS
  
-* type.coding contains
+* type contains
     healthcareFacilityTypeCode 1..1 and
     practiceSettingCode 1..1
- 
-* type.coding[healthcareFacilityTypeCode].system = "http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-HealthcareFacilityTypeCode-VS"
-* type.coding[healthcareFacilityTypeCode].system 1..1 MS
-* type.coding[healthcareFacilityTypeCode].code 1..1 MS
- 
-* type.coding[practiceSettingCode].system = "http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-PracticeSettingCode-VS"
-* type.coding[practiceSettingCode].system 1..1 MS
-* type.coding[practiceSettingCode].code 1..1 MS
+
+* type[healthcareFacilityTypeCode] from $FacilityType
+* type[healthcareFacilityTypeCode] 1..1 MS
+* type[healthcareFacilityTypeCode].coding 1..1 MS
+//* type[healthcareFacilityTypeCode].coding.system = $FacilityType //RCH: Vi skal lave en binding på højrere niveau, i stedet for dette.
+* type[healthcareFacilityTypeCode].coding.system 1..1 MS
+* type[healthcareFacilityTypeCode].coding.code 1..1 MS
+
+* type[practiceSettingCode] from $PracticeSetting
+* type[practiceSettingCode] 1..1 MS 
+* type[practiceSettingCode].coding 1..1 MS
+//* type[practiceSettingCode].coding.system = $PracticeSetting //RCH: Vi skal lave en binding på højrere niveau, i stedet for dette.
+* type[practiceSettingCode].coding.system 1..1 MS
+* type[practiceSettingCode].coding.code 1..1 MS
+
