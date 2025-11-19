@@ -58,15 +58,15 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * subject only Reference(MedComDocumentPatient)
 * subject ^type.aggregation = #contained
 * subject ^short = "[DocumentEntry.sourcePatientInfo, DocumentEntry.sourcePatientId] Who/what is the subject of the document"
-* date 1..
-* date ^short = "[DocumentEntry.creationTime] Creation time of the document"
+* content.attachment.creation ^short = "[DocumentEntry.creationTime] Date attachment was first created"
+* content.attachment.creation 1.. MS
 * content MS
 * content.attachment.contentType ^short = "[DocumentEntry.mimeType] Mime type of the content, with charset etc."
 * content.attachment.contentType 1.. MS
 * content.attachment.contentType from $ContentType
-* language ^short = "[DocumentEntry.languageCode] Human language of the content"
-* language 1.. MS
-* language from $Language (extensible)
+* content.attachment.language ^short = "[DocumentEntry.languageCode] Human language of the content"
+* content.attachment.language 1.. MS
+* content.attachment.language from $Language (extensible)
 //* content.attachment.language //RCH: Hvad gør vi med denne? Den er krav i MHD, og er sproget på selve den kliniske vedhæftning (EKG PDF). Skal vi have samme valueset som language i sig selv?
 * content.attachment.hash 0.. MS
 * content.attachment.hash ^short = "[DocumentEntry.hash] Hash of the data (sha-1)"

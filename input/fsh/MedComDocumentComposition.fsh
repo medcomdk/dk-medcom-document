@@ -33,6 +33,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * subject only Reference(MedComDocumentPatient)
 * subject ^type.aggregation = #bundled
 * date 1..1 MS
+* date ^short = "[DocumentEntry.creationTime] Date attachment was first created"
 * event 0..1 MS
 * event.code MS
 * event.period.start 0..1 MS
