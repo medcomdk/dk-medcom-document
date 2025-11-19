@@ -28,12 +28,13 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * category from $ClassCode (extensible)
 * category.coding.code 1.. MS
 * category.coding.system 1.. MS
+* category ^short = "[DocumentEntry.classCode] Categorization of document"
 * subject 1.. MS
 * subject only Reference(MedComDocumentPatient)
 * subject ^type.aggregation = #bundled
 * date 1..1 MS
 * event 0..1 MS
-* event.code 0.. MS
+* event.code MS
 * event.period.start 0..1 MS
 * event.period.end 0..1 MS
 * event.detail 0..* MS
@@ -58,6 +59,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * title ^short = "The readable title of the document"
 * language 1..1 MS
 * language from $Language (extensible)
+* language ^short = "[DocumentEntry.languageCode] Human language of the content"
 * section 1.. MS
 * section.text MS
 * section.entry MS

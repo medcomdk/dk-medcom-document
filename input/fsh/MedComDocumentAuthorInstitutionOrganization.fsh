@@ -18,12 +18,12 @@ Description: "An Author Institution Organization including requirements for a Me
 * type[healthcareFacilityTypeCode].coding 1..1 MS
 //* type[healthcareFacilityTypeCode].coding.system = $FacilityType //RCH: Vi skal lave en binding på højrere niveau, i stedet for dette.
 * type[healthcareFacilityTypeCode].coding.system 1..1 MS
-* type[healthcareFacilityTypeCode].coding.code 1..1 MS
+* type[healthcareFacilityTypeCode].coding.code 1..1 MS //RCH: Skal dette i narrativet?
 
 * type[practiceSettingCode] from $PracticeSetting
 * type[practiceSettingCode] 1..1 MS 
 * type[practiceSettingCode].coding 1..1 MS
 //* type[practiceSettingCode].coding.system = $PracticeSetting //RCH: Vi skal lave en binding på højrere niveau, i stedet for dette.
 * type[practiceSettingCode].coding.system 1..1 MS
-* type[practiceSettingCode].coding.code 1..1 MS
+* type[practiceSettingCode].coding.code 1..1 MS //RCH: Skal dette i narrativet?
 

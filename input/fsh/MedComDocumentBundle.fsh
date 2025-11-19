@@ -5,7 +5,7 @@ Profile: MedComDocumentBundle
 Parent: Bundle
 Id: medcom-document-bundle
 Description: "The Bundle profile for a document"
-* id 1..
+* id 1.. //RCH: Hvilke krav stiller vi til formen på id, når det skal matche identifier i DocRef? Skal den også leve op til urn:uuid: + uuid?
 * id MS
 * identifier 1..1 MS
 * type MS 

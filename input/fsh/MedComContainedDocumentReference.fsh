@@ -10,10 +10,11 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * masterIdentifier 1..1 MS //RCH: Skal den være 1.. hvis den også kan leveres af infrastrukturen?
 * masterIdentifier.value 1..1 MS
 * masterIdentifier ^short = "[DocumentEntry.uniqueId] Master Version Specific Identifier"
-* identifier 1..1 MS //RCH: Skal den være 1.. hvis den også kan leveres af infrastrukturen?
-* identifier.value 1..1 MS 
-* identifier ^short = "[DocumentEntry.entryUUID] Identifier for the document"
-* identifier obeys uuid
+* identifier[entryUUID] 1..1 MS //RCH: Skal den være 1.. hvis den også kan leveres af infrastrukturen?
+* identifier[entryUUID].value 1..1 MS 
+* identifier[entryUUID].system 1..1
+* identifier[entryUUID] ^short = "[DocumentEntry.entryUUID] Identifier for the document"
+* identifier[entryUUID].value obeys uuid
 * status MS 
 * status ^short = "[DocumentEntry.availabilityStatus] current = active | superseded = deprecated"
 // TypeCode
@@ -31,7 +32,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * category from $ClassCode (extensible)
 * category.coding.code 1.. MS
 * category.coding.system 1.. MS
-* category ^short = "[DocumentEntry.class] Categorization of document"
+* category ^short = "[DocumentEntry.classCode] Categorization of document"
 * author ..2 MS
 * author only Reference(MedComDocumentPatient or MedComDocumentPractitioner or MedComCorePractitionerRole or DkCoreRelatedPerson or MedComDocumentOrganization or Device) //RCH: Practitionerrole igen
 * author ^type.aggregation = #contained
@@ -57,15 +58,16 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * subject only Reference(MedComDocumentPatient)
 * subject ^type.aggregation = #contained
 * subject ^short = "[DocumentEntry.sourcePatientInfo, DocumentEntry.sourcePatientId] Who/what is the subject of the document"
+* date 1..
+* date ^short = "[DocumentEntry.creationTime] Creation time of the document"
 * content MS
 * content.attachment.contentType ^short = "[DocumentEntry.mimeType] Mime type of the content, with charset etc."
 * content.attachment.contentType 1.. MS
 * content.attachment.contentType from $ContentType
-* content.attachment.language ^short = "[DocumentEntry.languageCode] Human language of the content"
-* content.attachment.language 1.. MS
-* content.attachment.language from $Language (extensible)
-* content.attachment.creation ^short = "[DocumentEntry.creationTime] Date attachment was first created"
-* content.attachment.creation 1.. MS
+* language ^short = "[DocumentEntry.languageCode] Human language of the content"
+* language 1.. MS
+* language from $Language (extensible)
+//* content.attachment.language //RCH: Hvad gør vi med denne? Den er krav i MHD, og er sproget på selve den kliniske vedhæftning (EKG PDF). Skal vi have samme valueset som language i sig selv?
 * content.attachment.hash 0.. MS
 * content.attachment.hash ^short = "[DocumentEntry.hash] Hash of the data (sha-1)"
 * content.format ^short = "[DocumentEntry.formatCode] Format/content rules for the document"
@@ -73,8 +75,6 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * content.format.system 1.. MS
 * content.format.code 1.. MS
 * content.format.display 1.. MS
-/* * content.format.coding.code 1.. MS
-* content.format.coding.system 1.. MS */
 * content.attachment.size 0.. MS
 * content.attachment.title 1.. MS
 // * content.attachment.url 0.. MS RCH: Stemmer ikke overens med MHD. Hvad gør vi med denne?
@@ -121,5 +121,5 @@ Expression: "where(type.coding.where(system = 'http://medcomfhir.dk/ig/xdsmetada
 Invariant: uuid
 Description: "General UUID expression"
 Severity: #error
-Expression: "value.matches('[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}')"
+Expression: "value.substring(9).matches('[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}')"
 
