@@ -53,7 +53,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * attester 0..1 MS
 * attester.party 0..1 MS
 * attester.mode MS
-* attester.party only Reference(MedComDocumentPractitioner) //RCH: Mangler der også her PractitionerRole?
+* attester.party only Reference(MedComDocumentPractitioner or MedComCorePractitionerRole or MedComDocumentOrganization or MedComDocumentAuthorInstitutionOrganization)
 * attester.party ^type.aggregation = #bundled
 * title MS
 * title ^short = "The readable title of the document"
