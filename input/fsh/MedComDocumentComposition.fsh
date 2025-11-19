@@ -39,6 +39,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * event.period.start 0..1 MS
 * event.period.end 0..1 MS
 * event.detail 0..* MS
+* evemt.detail ^short = "[DocumentEntry.referenceIdList] Related identifiers or resources"
 * author only Reference(MedComDocumentPatient or MedComDocumentPractitioner or MedComCorePractitionerRole or DkCoreRelatedPerson or MedComDocumentOrganization or Device) //RCH: Jeg har kopieret denne fra DocRef. Skal de være ens eller skal denne linje ikke med i Composition?
 * author ^slicing.discriminator.type = #type
   * ^slicing.discriminator.path = "$this.resolve()"
