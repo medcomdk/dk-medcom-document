@@ -8,7 +8,8 @@ Description: "The Bundle profile for a document"
 * type MS 
 * type = #document
 * type ^short = "Always a document"
-* timestamp 1..1 MS 
+* timestamp 1..1 MS
+* timestamp obeys medcom-datetime-has-time-and-zone
 * entry 1.. MS 
 * entry.fullUrl 1..1 MS
 * entry.resource 1.. MS
