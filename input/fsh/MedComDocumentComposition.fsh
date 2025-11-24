@@ -40,7 +40,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * event.period.end 0..1 MS
 * event.detail 0..* MS
 * event.detail ^short = "[DocumentEntry.referenceIdList] Related identifiers or resources"
-* author only Reference(MedComDocumentPatient or MedComDocumentPractitioner or MedComCorePractitionerRole or DkCoreRelatedPerson or MedComDocumentOrganization or Device) //RCH: Jeg har kopieret denne fra DocRef. Skal de være ens eller skal denne linje ikke med i Composition?
+* author only Reference(MedComDocumentPatient or MedComDocumentPractitioner or MedComDocumentPractitionerRole or DkCoreRelatedPerson or MedComDocumentOrganization or Device) //RCH: Jeg har kopieret denne fra DocRef. Skal de være ens eller skal denne linje ikke med i Composition?
 * author ^slicing.discriminator.type = #type
   * ^slicing.discriminator.path = "$this.resolve()"
   * ^slicing.rules = #closed
@@ -49,13 +49,13 @@ Description: "The profile of the MedCom Document Composition containing the mini
     person 0..1 MS 
 * author[institution] only Reference(MedComDocumentAuthorInstitutionOrganization)
 * author[institution] ^short = "The organization who authored the document"
-* author[person] only Reference(MedComDocumentPractitioner or MedComCorePractitionerRole or Device or MedComDocumentPatient)
+* author[person] only Reference(MedComDocumentPractitioner or MedComDocumentPractitionerRole or Device or MedComDocumentPatient)
 * author[person] ^short = "The person who authored the document"
 * author ^type.aggregation = #bundled
 * attester 0..1 MS
 * attester.party 0..1 MS
 * attester.mode MS
-* attester.party only Reference(MedComDocumentPractitioner or MedComCorePractitionerRole or MedComDocumentOrganization or MedComDocumentAuthorInstitutionOrganization)
+* attester.party only Reference(MedComDocumentPractitioner or MedComDocumentPractitionerRole or MedComDocumentOrganization or MedComDocumentAuthorInstitutionOrganization)
 * attester.party ^type.aggregation = #bundled
 * title MS
 * title ^short = "The readable title of the document"
