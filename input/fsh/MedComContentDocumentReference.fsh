@@ -10,3 +10,5 @@ Description: "A DocumentReference profile to contain actual content of a MedCom 
 * text.div MS
 * status MS 
 * status ^short = "[DocumentEntry.availabilityStatus] current = active | superseded = deprecated"
+* subject 1.. MS //Er det nødvendigt at referere patienten her også?
+* subject only Reference(MedComDocumentPatient)
