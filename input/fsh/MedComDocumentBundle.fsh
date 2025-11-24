@@ -10,7 +10,7 @@ Description: "The Bundle profile for a document"
 * type ^short = "Always a document"
 * timestamp 1..1 MS
 * timestamp obeys medcom-datetime-has-time-and-zone
-* Timestamp ^short = "[DocumentEntry.creationTime] Date and time that the FHIR Document is created."
+* timestamp ^short = "[DocumentEntry.creationTime] Date and time that the FHIR Document is created."
 * entry 1.. MS 
 * entry.fullUrl 1..1 MS
 * entry.resource 1.. MS
