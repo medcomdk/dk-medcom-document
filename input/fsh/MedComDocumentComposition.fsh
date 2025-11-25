@@ -1,6 +1,3 @@
-// This is a simple example of a FSH file.
-// This file can be renamed, and additional FSH files can be added.
-// SUSHI will look for definitions in any file using the .fsh ending.
 Alias: $loinc = http://loinc.org
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $list-order = http://terminology.hl7.org/CodeSystem/list-order
@@ -8,17 +5,17 @@ Alias: $list-empty-reason = http://terminology.hl7.org/CodeSystem/list-empty-rea
 
 Profile: MedComDocumentComposition
 Parent: Composition
-Id: medcom-document-composition
+Id: medcom-document-composition //RCH: Er det nok at omdøbe denne til formatcode, men lade profilen beholde sit navn?
 Description: "The profile of the MedCom Document Composition containing the minimum allowed content."
-//* meta.language 0..1 MS
 * id 1.. MS
 * text MS
 * text ^short = "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle."
 * text.status MS
 * text.div MS
 * meta.profile 1..1 MS
-* identifier 1..1 MS 
-* identifier.value 1..1 MS
+* identifier 1.. MS
+* identifier.system 1.. MS
+* identifier.value 1.. MS
 * identifier ^short = "The Composition identifier" //RCH: Brugen af identifiers skal beskrives et sted 
 * confidentiality 1..1 MS
 * status = #final
