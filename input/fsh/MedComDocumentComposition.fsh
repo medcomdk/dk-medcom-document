@@ -24,6 +24,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * type.coding 1.. MS
 * type.coding.system MS
 * type.coding.code MS
+* type ^short = "[DocumentEntry.typeCode] Kind of document"
 * category 1..1 MS 
 * category from $ClassCode (extensible)
 * category.coding.code 1.. MS
