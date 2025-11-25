@@ -11,13 +11,17 @@ Parent: Composition
 Id: medcom-document-composition
 Description: "The profile of the MedCom Document Composition containing the minimum allowed content."
 //* meta.language 0..1 MS
+* id 1.. MS
+* text MS
+* text ^short = "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle."
+* text.status MS
+* text.div MS
 * meta.profile 1..1 MS
 * identifier 1..1 MS 
 * identifier.value 1..1 MS 
 * identifier obeys medcom-uuidv4 //RCH: Skal det være identifier eller identifier.value?
 * identifier ^short = "The Composition identifier" 
 * confidentiality 1..1 MS
-* text MS
 * status = #final
 * status MS
 * type 1..1 MS
@@ -54,7 +58,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * attester 0..1 MS
 * attester.party 0..1 MS
 * attester.mode MS
-* attester.party only Reference(MedComDocumentPractitioner or MedComDocumentPractitionerRole or MedComDocumentOrganization or MedComDocumentAuthorInstitutionOrganization)
+* attester.party only Reference(MedComDocumentPractitioner or MedComDocumentPractitionerRole or MedComDocumentOrganization or MedComDocumentAuthorInstitutionOrganization) //RCH: Er dette de korrekte valgmuligheder?
 * attester.party ^type.aggregation = #bundled
 * title MS
 * title ^short = "The readable title of the document"
@@ -62,7 +66,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * language from $Language (extensible)
 * language ^short = "[DocumentEntry.languageCode] Human language of the content"
 * section 1.. MS
-* section.text MS
+* section.text MS //RCH: Hvad er dette felt til?
 * section.entry MS
 
 
