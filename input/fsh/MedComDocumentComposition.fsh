@@ -18,9 +18,8 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * text.div MS
 * meta.profile 1..1 MS
 * identifier 1..1 MS 
-* identifier.value 1..1 MS 
-* identifier obeys medcom-uuidv4 //RCH: Skal det være identifier eller identifier.value?
-* identifier ^short = "The Composition identifier" 
+* identifier.value 1..1 MS
+* identifier ^short = "The Composition identifier" //RCH: Brugen af identifiers skal beskrives et sted 
 * confidentiality 1..1 MS
 * status = #final
 * status MS

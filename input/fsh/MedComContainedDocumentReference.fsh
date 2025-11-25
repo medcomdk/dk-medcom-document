@@ -106,10 +106,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * context.sourcePatientInfo ^short = "[DocumentEntry.sourcePatientId and DocumentEntry.sourcePatientInfo] Patient demographics from source. Must be the same reference as in DocumentReference.subject."
 * context.sourcePatientInfo only Reference(MedComDocumentPatient)
 * extension MS
-* extension contains 
-    medcom-document-homecommunityid-extension named homeCommunityid 1..1 MS
-* extension[homeCommunityid] ^short = "[DocumentEntry.homeCommunityId] A unique identifier for a community where the DocumentEntry and document can be accessed"
-
+* extension[versionid] MS
 
 
 /* Invariant: apd-dk-rule-1
