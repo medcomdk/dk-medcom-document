@@ -77,10 +77,10 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * content.format.display 1.. MS
 * content.attachment.size 0.. MS
 * content.attachment.title 1.. MS
-// * content.attachment.url 0.. MS RCH: Stemmer ikke overens med MHD. Hvad gør vi med denne?
+* content.attachment.url MS
 * content.attachment.size ^short = "[DocumentEntry.size] Number of bytes of content"
 * content.attachment.title ^short = "[DocumentEntry.title] The readable title of the document"
-* content.attachment.url ^short = "[DocumentEntry.URI] Uri where the data can be found" //RCH: Hvad kan vi indsætte som eksempel her? Absolut eller relativ reference?
+* content.attachment.url ^short = "[DocumentEntry.URI] Uri where the data can be found."
 * context 1.. MS
 * context.event 0.. MS 
 * context.event.coding.code 1.. MS
