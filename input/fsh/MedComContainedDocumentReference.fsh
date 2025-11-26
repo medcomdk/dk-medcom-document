@@ -67,7 +67,6 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * content.attachment.language ^short = "[DocumentEntry.languageCode] Human language of the content"
 * content.attachment.language 1.. MS
 * content.attachment.language from $Language (extensible)
-//* content.attachment.language //RCH: Hvad gør vi med denne? Den er krav i MHD, og er sproget på selve den kliniske vedhæftning (EKG PDF). Skal vi have samme valueset som language i sig selv?
 * content.attachment.hash 0.. MS
 * content.attachment.hash ^short = "[DocumentEntry.hash] Hash of the data (sha-1)"
 * content.format ^short = "[DocumentEntry.formatCode] Format/content rules for the document"
@@ -93,12 +92,12 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * context.facilityType 1.. MS
 * context.facilityType.coding.code 1.. MS
 * context.facilityType.coding.system 1.. MS
-* context.facilityType.coding.system from $FacilityType (extensible) //RCH: Undersøg om den er ens med DKCores value set
+* context.facilityType.coding.system from $FacilityType (extensible) //RCH: Vi skal bruges vores eget selvom DkCore har et også.
 * context.facilityType ^short = "[DocumentEntry.healthcareFacilityTypeCode] Kind of facility where patient was seen"
 * context.practiceSetting 1.. MS
 * context.practiceSetting.coding.code 1.. MS
 * context.practiceSetting.coding.system 1.. MS
-* context.practiceSetting.coding.system from $PracticeSetting (extensible) //RCH: Undersøg om den er ens med DKCores value set
+* context.practiceSetting.coding.system from $PracticeSetting (extensible) //RCH: Vi skal bruges vores eget selvom DkCore har et også.
 * context.practiceSetting ^short = "[DocumentEntry.practiceSettingCode] Additional details about where the content was created (e.g. clinical specialty)"
 * context.related 0..* MS
 * context.related ^short = "[DocumentEntry.referenceIdList] Related identifiers or resources"
