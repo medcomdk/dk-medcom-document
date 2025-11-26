@@ -46,7 +46,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * author contains
     institution 1..1 MS and
     person 0..1 MS 
-* author[institution] only Reference(MedComDocumentAuthorInstitutionOrganization)
+* author[institution] only Reference(MedComDocumentOrganization)
 * author[institution] ^short = "The organization who authored the document"
 * author[person] only Reference(MedComDocumentPractitioner or MedComDocumentPractitionerRole or Device or MedComDocumentPatient)
 * author[person] ^short = "The person who authored the document"
@@ -54,7 +54,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * attester 0..1 MS
 * attester.party 0..1 MS
 * attester.mode MS
-* attester.party only Reference(MedComDocumentPractitioner or MedComDocumentPractitionerRole or MedComDocumentOrganization or MedComDocumentAuthorInstitutionOrganization) //RCH: Er dette de korrekte valgmuligheder?
+* attester.party only Reference(MedComDocumentPractitioner or MedComDocumentPractitionerRole or MedComDocumentOrganization) //RCH: Er dette de korrekte valgmuligheder?
 * attester.party ^type.aggregation = #bundled
 * title MS
 * title ^short = "The readable title of the document"

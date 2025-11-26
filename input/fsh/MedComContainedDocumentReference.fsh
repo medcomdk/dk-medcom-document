@@ -25,7 +25,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * type.coding.code 1.. MS
 * authenticator 0..1 MS
 * authenticator ^short = "[DocumentEntry.legalAuthenticator] Who authenticated the document"
-* authenticator only Reference(MedComDocumentPractitioner or MedComCorePractitionerRole or MedComDocumentOrganization or MedComDocumentAuthorInstitutionOrganization) //RCH: Mangler patienten og DkCoreRelatedPerson her?
+* authenticator only Reference(MedComDocumentPractitioner or MedComCorePractitionerRole or MedComDocumentOrganization) //RCH: Mangler patienten og DkCoreRelatedPerson her?
 * authenticator ^type.aggregation = #contained
 // ClassCode
 * category 1..1 MS 
@@ -34,7 +34,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * category.coding.system 1.. MS
 * category ^short = "[DocumentEntry.classCode] Categorization of document"
 * author ..2 MS
-* author only Reference(MedComDocumentPractitioner or MedComCorePractitionerRole or MedComDocumentOrganization or MedComDocumentAuthorInstitutionOrganization or MedComDocumentPatient or DkCoreRelatedPerson or Device)
+* author only Reference(MedComDocumentPractitioner or MedComCorePractitionerRole or MedComDocumentOrganization or MedComDocumentPatient or DkCoreRelatedPerson or Device)
 * author ^type.aggregation = #contained
 * author ^short = "[DocumentEntry.author] Who and/or what authored the document"
 * author ^slicing.discriminator.type = #type
@@ -44,7 +44,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
     institution 1..1 and
     person 0..1
 * author[institution] MS
-* author[institution] only Reference(MedComDocumentAuthorInstitutionOrganization)
+* author[institution] only Reference(MedComDocumentOrganization)
 * author[institution] ^short = "[DocumentEntry.author.authorInstitution] The organization who authored the document"
 * author[person] MS
 * author[person] only Reference(MedComDocumentPractitioner or MedComCorePractitionerRole or Device or MedComDocumentPatient) //RCH: Bør vi lave en coonstrain med at en Practitionerrole skal have en practitioner?
