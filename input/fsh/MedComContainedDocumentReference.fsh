@@ -7,14 +7,18 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * text ^short = "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle."
 * text.status MS
 * text.div MS
-* masterIdentifier 1..1 MS //RCH: Skal den være 1.. hvis den også kan leveres af infrastrukturen?
+
+// uniqueId
+* masterIdentifier 1..1 MS
 * masterIdentifier.value 1..1 MS
 * masterIdentifier ^short = "[DocumentEntry.uniqueId] Master Version Specific Identifier"
-* identifier[entryUUID] 1..1 MS //RCH: Skal den være 1.. hvis den også kan leveres af infrastrukturen?
+
+// entryUUID
+* identifier[entryUUID] 1..1 MS
 * identifier[entryUUID].value 1..1 MS 
-* identifier[entryUUID].system 1..1
+* identifier[entryUUID].system 1..1 MS //urn:ietf:rfc:3986
 * identifier[entryUUID] ^short = "[DocumentEntry.entryUUID] Identifier for the document"
-* identifier[entryUUID].value obeys uuid
+* identifier[entryUUID].value obeys medcom-uuid
 * status MS 
 * status ^short = "[DocumentEntry.availabilityStatus] current = active | superseded = deprecated"
 // TypeCode
@@ -23,6 +27,8 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * type.coding 1.. MS
 * type.coding.system 1.. MS
 * type.coding.code 1.. MS
+* type.coding.display 1.. MS
+* type from $TypeCode (required)
 * authenticator 0..1 MS
 * authenticator ^short = "[DocumentEntry.legalAuthenticator] Who authenticated the document"
 * authenticator only Reference(MedComDocumentPractitioner or MedComCorePractitionerRole or MedComDocumentOrganization) //RCH: Mangler patienten og DkCoreRelatedPerson her?
@@ -32,6 +38,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * category from $ClassCode (extensible)
 * category.coding.code 1.. MS
 * category.coding.system 1.. MS
+* category.coding.display 1.. MS
 * category ^short = "[DocumentEntry.classCode] Categorization of document"
 * author ..2 MS
 * author only Reference(MedComDocumentPractitioner or MedComCorePractitionerRole or MedComDocumentOrganization or MedComDocumentPatient or DkCoreRelatedPerson or Device)
@@ -49,8 +56,8 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * author[person] MS
 * author[person] only Reference(MedComDocumentPractitioner or MedComCorePractitionerRole or Device or MedComDocumentPatient) //RCH: Bør vi lave en coonstrain med at en Practitionerrole skal have en practitioner?
 * author[person] ^short = "[DocumentEntry.author.authorPerson] The person who authored the document"
-* securityLabel 1.. MS
-* securityLabel.coding 1..* MS
+* securityLabel 1..1 MS
+* securityLabel.coding 1..1 MS
 * securityLabel.coding.system 1.. MS
 * securityLabel.coding.code 1.. MS
 * securityLabel ^short = "[DocumentEntry.confidentialityCode] Document security-tags"
@@ -60,10 +67,12 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * subject ^short = "[DocumentEntry.sourcePatientInfo, DocumentEntry.sourcePatientId] Who/what is the subject of the document"
 * content.attachment.creation ^short = "[DocumentEntry.creationTime] Date attachment was first created"
 * content.attachment.creation 1.. MS
+* content.attachment.creation obeys medcom-datetime-has-time-zulu
 * content MS
 * content.attachment.contentType ^short = "[DocumentEntry.mimeType] Mime type of the content, with charset etc."
 * content.attachment.contentType 1.. MS
 * content.attachment.contentType from $ContentType
+* content.attachment MS
 * content.attachment.language ^short = "[DocumentEntry.languageCode] Human language of the content"
 * content.attachment.language 1.. MS
 * content.attachment.language from $Language (extensible)
@@ -74,6 +83,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * content.format.system 1.. MS
 * content.format.code 1.. MS
 * content.format.display 1.. MS
+* content.format from $FormatCode (required)
 * content.attachment.size 0.. MS
 * content.attachment.title 1.. MS
 * content.attachment.url MS
@@ -86,22 +96,28 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * context.event.coding.system 1.. MS
 * context.event ^short = "[DocumentEntry.eventCodeList] Main clinical acts documented"
 * context.period MS
-* context.period.start MS
+* context.period.start 1.. MS
 * context.period.end MS
 * context.period ^short = "[DocumentEntry.serviceStartTime, DocumentEntry.serviceStopTime] Time of service that is being documented"
 * context.facilityType 1.. MS
+* context.facilityType.coding 1..1 MS
 * context.facilityType.coding.code 1.. MS
 * context.facilityType.coding.system 1.. MS
-* context.facilityType.coding.system from $FacilityType (extensible) //RCH: Vi skal bruges vores eget selvom DkCore har et også.
+* context.facilityType.coding.display 1.. MS
+* context.facilityType from $FacilityType (required) //RCH: Vi skal bruges vores eget selvom DkCore har et også.
 * context.facilityType ^short = "[DocumentEntry.healthcareFacilityTypeCode] Kind of facility where patient was seen"
 * context.practiceSetting 1.. MS
+* context.practiceSetting.coding 1..1 MS
 * context.practiceSetting.coding.code 1.. MS
 * context.practiceSetting.coding.system 1.. MS
-* context.practiceSetting.coding.system from $PracticeSetting (extensible) //RCH: Vi skal bruges vores eget selvom DkCore har et også.
+* context.practiceSetting.coding.display 1.. MS
+* context.practiceSetting from $PracticeSetting (required) //RCH: Vi skal bruges vores eget selvom DkCore har et også.
 * context.practiceSetting ^short = "[DocumentEntry.practiceSettingCode] Additional details about where the content was created (e.g. clinical specialty)"
 * context.related 0..* MS
 * context.related ^short = "[DocumentEntry.referenceIdList] Related identifiers or resources"
 * context.sourcePatientInfo 1..1 MS
+* context.sourcePatientInfo.reference 1.. MS
+* context.sourcePatientInfo.identifier 1.. MS
 * context.sourcePatientInfo ^short = "[DocumentEntry.sourcePatientId and DocumentEntry.sourcePatientInfo] Patient demographics from source. Must be the same reference as in DocumentReference.subject."
 * context.sourcePatientInfo only Reference(MedComDocumentPatient)
 * extension MS
@@ -113,9 +129,9 @@ Description: "Where formatCode is 'urn:ad:dk:medcom:appointmentsummary:full', th
 Severity: #error
 Expression: "where(type.coding.where(system = 'http://medcomfhir.dk/ig/xdsmetadata/CodeSystem/dk-ihe-typecode-de-regenstrief').code = '56446-8').context.event.coding.code = 'ALAL01'"
 */
-
+/*
 Invariant: uuid
 Description: "General UUID expression"
 Severity: #error
 Expression: "value.substring(9).matches('[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}')"
-
+*/
