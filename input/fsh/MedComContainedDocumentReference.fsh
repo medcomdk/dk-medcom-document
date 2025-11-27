@@ -16,9 +16,9 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 // entryUUID
 * identifier[entryUUID] 1..1 MS
 * identifier[entryUUID].value 1..1 MS 
-* identifier[entryUUID].system 1..1 MS //urn:ietf:rfc:3986
+* identifier[entryUUID].system 1..1 MS //urn:ietf:rfc:3986 https://build.fhir.org/datatypes-examples.html
 * identifier[entryUUID] ^short = "[DocumentEntry.entryUUID] Identifier for the document"
-* identifier[entryUUID].value obeys medcom-uuid
+* identifier[entryUUID].value obeys medcom-uuid-v4-xor-v5
 * status MS 
 * status ^short = "[DocumentEntry.availabilityStatus] current = active | superseded = deprecated"
 // TypeCode

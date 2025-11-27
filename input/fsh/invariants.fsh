@@ -1,10 +1,10 @@
-Invariant: medcom-uuid
-Description: "The value shall correspond to the structure of an UUID version 4"
+Invariant: medcom-uuid-v4-xor-v5
+Description: "The value shall correspond to the structure of an UUID version 4 xor UUID version 5"
 Severity: #error
 Expression: "(
-    ($this.value.is(FHIR.uuid)) or
-    ($this.is(FHIR.uuid))
-)"
+    ($this.value.matches('^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[45][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$')) xor
+    ($this.matches('^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[45][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$'))
+)" //Simpel: [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} https://chatgpt.com/c/6928b70c-514c-8332-8d42-849cf6b4960d
 
 Invariant: medcom-datetime-has-time-offset-zulu
 //"2025-11-27T13:34:56+01:00"

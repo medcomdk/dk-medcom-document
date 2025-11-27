@@ -4,7 +4,7 @@ Id: medcom-document-bundle
 Description: "The Bundle profile for a document"
 * id 1.. 
 * id MS
-* id obeys medcom-uuid //RCH: Hvilke krav stiller vi til formen på id, når det skal matche identifier i DocRef? Skal den også leve op til urn:uuid: + uuid?
+* id obeys medcom-uuid-v4-xor-v5 //RCH: Hvilke krav stiller vi til formen på id, når det skal matche identifier i DocRef? Skal den også leve op til urn:uuid: + uuid?
 * identifier 1..1 MS
 * type MS 
 * type = #document
