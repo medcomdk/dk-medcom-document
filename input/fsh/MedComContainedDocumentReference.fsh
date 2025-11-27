@@ -1,5 +1,5 @@
 Profile: MedComContainedDocumentReference
-Parent: MedComMinimalDocumentReference //Skal vi nedarve direkte fra HL7 eller indføre i denne IG midlertidigt?
+Parent: MedComMinimalDocumentReference //OBS: Nedarv direkte fra DkCore når den udgives
 Id: medcom-contained-documentreference
 Description: "A profile stating the rules, when exchanging a FHIR document in the Danish Healthcare sector using  IHE MHD and IHE XDS based document sharing."
 * id 1.. MS
@@ -16,7 +16,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 // entryUUID
 * identifier[entryUUID] 1..1 MS
 * identifier[entryUUID].value 1..1 MS 
-* identifier[entryUUID].system 1..1 MS //urn:ietf:rfc:3986 https://build.fhir.org/datatypes-examples.html
+* identifier[entryUUID].system 1..1 MS //https://profiles.ihe.net/ITI/MHD/4.2.2/StructureDefinition-IHE.MHD.EntryUUID.Identifier.html
 * identifier[entryUUID] ^short = "[DocumentEntry.entryUUID] Identifier for the document"
 * identifier[entryUUID].value obeys medcom-uuid-v4-xor-v5
 * status MS 
@@ -122,6 +122,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * context.sourcePatientInfo only Reference(MedComDocumentPatient)
 * extension MS
 * extension[versionid] MS
+//* extension[versionid] ^short = "Specifies the version of the DocumentReference profile for a standard."
 
 
 /* Invariant: apd-dk-rule-1
