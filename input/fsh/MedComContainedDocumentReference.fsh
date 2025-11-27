@@ -122,7 +122,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * context.sourcePatientInfo only Reference(MedComDocumentPatient)
 * extension MS
 * extension[versionid] MS
-//* extension[versionid] ^short = "Specifies the version of the DocumentReference profile for a standard."
+* extension[versionid] ^short = "Specifies the version of the DocumentReference profile for a standard."
 
 
 /* Invariant: apd-dk-rule-1
