@@ -31,7 +31,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * type from $TypeCode (required)
 * authenticator 0..1 MS
 * authenticator ^short = "[DocumentEntry.legalAuthenticator] Who authenticated the document"
-* authenticator only Reference(MedComDocumentPractitioner or MedComCorePractitionerRole or MedComDocumentOrganization) //RCH: Mangler patienten og DkCoreRelatedPerson her?
+* authenticator only Reference(MedComDocumentPractitioner or MedComDocumentPractitionerRole or MedComDocumentOrganization) //RCH: Mangler patienten og DkCoreRelatedPerson her?
 * authenticator ^type.aggregation = #contained
 // ClassCode
 * category 1..1 MS 
@@ -41,7 +41,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * category.coding.display 1.. MS
 * category ^short = "[DocumentEntry.classCode] Categorization of document"
 * author ..2 MS
-* author only Reference(MedComDocumentPractitioner or MedComCorePractitionerRole or MedComDocumentOrganization or MedComDocumentPatient or DkCoreRelatedPerson or Device)
+* author only Reference(MedComDocumentPractitioner or MedComDocumentPractitionerRole or MedComDocumentOrganization or MedComDocumentPatient or DkCoreRelatedPerson or Device)
 * author ^type.aggregation = #contained
 * author ^short = "[DocumentEntry.author] Who and/or what authored the document"
 * author ^slicing.discriminator.type = #type
@@ -54,7 +54,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * author[institution] only Reference(MedComDocumentOrganization)
 * author[institution] ^short = "[DocumentEntry.author.authorInstitution] The organization who authored the document"
 * author[person] MS
-* author[person] only Reference(MedComDocumentPractitioner or MedComCorePractitionerRole or Device or MedComDocumentPatient) //RCH: Bør vi lave en coonstrain med at en Practitionerrole skal have en practitioner?
+* author[person] only Reference(MedComDocumentPractitioner or MedComDocumentPractitionerRole or Device or MedComDocumentPatient) //OBS: Link dit PractitionerRole virker ikke
 * author[person] ^short = "[DocumentEntry.author.authorPerson] The person who authored the document"
 * securityLabel 1..1 MS
 * securityLabel.coding 1..1 MS
@@ -87,34 +87,34 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * content.attachment.size 0.. MS
 * content.attachment.title 1.. MS
 * content.attachment.url MS
-* content.attachment.size ^short = "[DocumentEntry.size] Number of bytes of content"
-* content.attachment.title ^short = "[DocumentEntry.title] The readable title of the document"
+* content.attachment.size ^short = "[DocumentEntry.size] Number of bytes of content."
+* content.attachment.title ^short = "[DocumentEntry.title] The readable title of the document."
 * content.attachment.url ^short = "[DocumentEntry.URI] Uri where the data can be found."
 * context 1.. MS
 * context.event 0.. MS 
 * context.event.coding.code 1.. MS
 * context.event.coding.system 1.. MS
-* context.event ^short = "[DocumentEntry.eventCodeList] Main clinical acts documented"
+* context.event ^short = "[DocumentEntry.eventCodeList] Main clinical acts documented."
 * context.period MS
 * context.period.start 1.. MS
 * context.period.end MS
-* context.period ^short = "[DocumentEntry.serviceStartTime, DocumentEntry.serviceStopTime] Time of service that is being documented"
+* context.period ^short = "[DocumentEntry.serviceStartTime, DocumentEntry.serviceStopTime] Time of service that is being documented."
 * context.facilityType 1.. MS
 * context.facilityType.coding 1..1 MS
 * context.facilityType.coding.code 1.. MS
 * context.facilityType.coding.system 1.. MS
 * context.facilityType.coding.display 1.. MS
-* context.facilityType from $FacilityType (required) //RCH: Vi skal bruges vores eget selvom DkCore har et også.
-* context.facilityType ^short = "[DocumentEntry.healthcareFacilityTypeCode] Kind of facility where patient was seen"
+* context.facilityType from $FacilityType (required)
+* context.facilityType ^short = "[DocumentEntry.healthcareFacilityTypeCode] Kind of facility where patient was seen."
 * context.practiceSetting 1.. MS
 * context.practiceSetting.coding 1..1 MS
 * context.practiceSetting.coding.code 1.. MS
 * context.practiceSetting.coding.system 1.. MS
 * context.practiceSetting.coding.display 1.. MS
-* context.practiceSetting from $PracticeSetting (required) //RCH: Vi skal bruges vores eget selvom DkCore har et også.
-* context.practiceSetting ^short = "[DocumentEntry.practiceSettingCode] Additional details about where the content was created (e.g. clinical specialty)"
+* context.practiceSetting from $PracticeSetting (required)
+* context.practiceSetting ^short = "[DocumentEntry.practiceSettingCode] Additional details about where the content was created (e.g. clinical specialty)."
 * context.related 0..* MS
-* context.related ^short = "[DocumentEntry.referenceIdList] Related identifiers or resources"
+* context.related ^short = "[DocumentEntry.referenceIdList] Related identifiers or resources."
 * context.sourcePatientInfo 1..1 MS
 * context.sourcePatientInfo.reference 1.. MS
 * context.sourcePatientInfo.identifier 1.. MS

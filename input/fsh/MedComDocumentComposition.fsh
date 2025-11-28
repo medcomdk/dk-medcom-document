@@ -16,26 +16,31 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * identifier 1.. MS
 * identifier.system 1.. MS
 * identifier.value 1.. MS
-* identifier ^short = "The Composition identifier" //RCH: Brugen af identifiers skal beskrives et sted 
+* identifier ^short = "The Composition identifier" //RCH: Brugen af identifiers skal beskrives et sted - måske bare i en short.
 * confidentiality 1..1 MS
 * status = #final
 * status MS
 * type 1..1 MS
-* type.coding 1.. MS
-* type.coding.system MS
-* type.coding.code MS
 * type ^short = "[DocumentEntry.typeCode] Kind of document"
+* type.coding 1.. MS
+* type.coding.system 1.. MS
+* type.coding.code 1.. MS
+* type.coding.display 1.. MS
+* type from $TypeCode (required) //OBS: Link ser underligt ud i IGen?
 * category 1..1 MS 
 * category from $ClassCode (extensible)
+* category.coding 1..1 MS
 * category.coding.code 1.. MS
 * category.coding.system 1.. MS
 * category ^short = "[DocumentEntry.classCode] Categorization of document"
 * subject 1.. MS
 * subject only Reference(MedComDocumentPatient)
 * subject ^type.aggregation = #bundled
-* event 0..1 MS
+* event 1..1 MS
 * event.code MS
-* event.period.start 0..1 MS
+* event.period 1..1 MS
+* event.period ^short = "[DocumentEntry.serviceStartTime, DocumentEntry.serviceStopTime] Time of service that is being documented."
+* event.period.start 1..1 MS
 * event.period.end 0..1 MS
 * event.detail 0..* MS
 * event.detail ^short = "[DocumentEntry.referenceIdList] Related identifiers or resources"
@@ -57,13 +62,14 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * attester.party only Reference(MedComDocumentPractitioner or MedComDocumentPractitionerRole or MedComDocumentOrganization) //RCH: Er dette de korrekte valgmuligheder?
 * attester.party ^type.aggregation = #bundled
 * title MS
-* title ^short = "The readable title of the document"
+* title ^short = "[DocumentEntry.title] The readable title of the document."
 * language 1..1 MS
 * language from $Language (extensible)
 * language ^short = "[DocumentEntry.languageCode] Human language of the content"
 * section 1.. MS
 * section.text MS //RCH: Hvad er dette felt til?
 * section.entry MS
+* meta.profile ^short = "[DocumentEntry.formatCode] Indicates the FHIR Composition profile name used as the formatCode in the DocumentEntry for the individual MedCom FHIR Document standards."
 
 
 /* Instance: CompositionExample
