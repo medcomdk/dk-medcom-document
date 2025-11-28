@@ -5,14 +5,14 @@ Alias: $list-empty-reason = http://terminology.hl7.org/CodeSystem/list-empty-rea
 
 Profile: MedComDocumentComposition
 Parent: Composition
-Id: medcom-document-composition //RCH: Er det nok at omdøbe denne til formatcode, men lade profilen beholde sit navn?
+Id: medcom-document-composition
 Description: "The profile of the MedCom Document Composition containing the minimum allowed content."
 * id 1.. MS
 * text MS
 * text ^short = "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle."
 * text.status MS
 * text.div MS
-* meta.profile 1..1 MS
+* meta.profile 1..1 MS //RCH: Beslut om profilens navn må ændre sig med versionen - hvis den skal være = formatcode.
 * identifier 1.. MS
 * identifier.system 1.. MS
 * identifier.system ^short = "[DocumentEntry.uniqueId] Sender organization OID (Object Identifier). Example: 1.2.208.184 (MedCom OID)."
@@ -35,6 +35,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * category.coding 1..1 MS
 * category.coding.code 1.. MS
 * category.coding.system 1.. MS
+* category.coding.display 1.. MS
 * category ^short = "[DocumentEntry.classCode] Categorization of document"
 * subject 1.. MS
 * subject only Reference(MedComDocumentPatient)
@@ -74,6 +75,28 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * section.text MS //RCH: Hvad er dette felt til?
 * section.entry MS
 * meta.profile ^short = "[DocumentEntry.formatCode] Indicates the FHIR Composition profile name used as the formatCode in the DocumentEntry for the individual MedCom FHIR Document standards."
+
+* insert ProducerShallPutInNarrative(id)
+* insert ProducerShallPutInNarrative(confidentiality)
+* insert ProducerShallPutInNarrative(status)
+* insert ProducerShallPutInNarrative(type.coding.system)
+* insert ProducerShallPutInNarrative(type.coding.code)
+* insert ProducerShallPutInNarrative(type.coding.display)
+* insert ProducerShallPutInNarrative(category.coding.code)
+* insert ProducerShallPutInNarrative(category.coding.system)
+* insert ProducerShallPutInNarrative(category.coding.display)
+* insert ProducerShallPutInNarrative(subject)
+* insert ProducerShallPutInNarrative(event.code)
+* insert ProducerShallPutInNarrative(event.period.start)
+* insert ProducerShallPutInNarrative(event.period.end)
+* insert ProducerShallPutInNarrative(event.detail)
+* insert ProducerShallPutInNarrative(author[institution])
+* insert ProducerShallPutInNarrative(author[person])
+* insert ProducerShallPutInNarrative(attester.party)
+* insert ProducerShallPutInNarrative(title)
+* insert ProducerShallPutInNarrative(language)
+* insert ProducerShallPutInNarrative(section.entry)
+* insert ProducerShallPutInNarrative(meta.profile)
 
 /* Instance: CompositionExample
 InstanceOf: MedComDocumentComposition

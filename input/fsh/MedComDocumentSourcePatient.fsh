@@ -2,6 +2,11 @@ Profile: MedComDocumentPatient
 Parent: DkCorePatient
 Id: medcom-document-patient
 Description: "A profile including requirements for a MedCom Document Patient."
+* id MS
+* text MS
+* text ^short = "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle."
+* text.status MS
+* text.div MS
 * text MS
 * identifier 1..1 MS
 * identifier[cpr] ^short = "Unique identification number for all citizens in Denmark, called civil person register (CPR-number)."
@@ -14,3 +19,10 @@ Description: "A profile including requirements for a MedCom Document Patient."
 * name[official].family 1.. MS SU
 * birthDate 1.. MS
 * gender 1.. MS
+* insert ProducerShallPutInNarrative(id)
+* insert ProducerShallPutInNarrative(identifier[cpr].value)
+* insert ProducerShallPutInNarrative(identifier[cpr].system)
+* insert ProducerShallPutInNarrative(name[official].family)
+* insert ProducerShallPutInNarrative(name[official].given)
+* insert ProducerShallPutInNarrative(birthDate)
+* insert ProducerShallPutInNarrative(gender)
