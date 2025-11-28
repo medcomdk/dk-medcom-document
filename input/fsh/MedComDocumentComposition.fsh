@@ -15,7 +15,10 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * meta.profile 1..1 MS
 * identifier 1.. MS
 * identifier.system 1.. MS
+* identifier.system ^short = "[DocumentEntry.uniqueId] Sender organization OID (Object Identifier). Example: 1.2.208.184 (MedCom OID)."
 * identifier.value 1.. MS
+* identifier.value obeys medcom-uuid
+* identifier.value ^short = "[DocumentEntry.uniqueId] UUID."
 * identifier ^short = "The Composition identifier" //RCH: Brugen af identifiers skal beskrives et sted - måske bare i en short.
 * confidentiality 1..1 MS
 * status = #final
@@ -59,7 +62,8 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * attester 0..1 MS
 * attester.party 0..1 MS
 * attester.mode MS
-* attester.party only Reference(MedComDocumentPractitioner or MedComDocumentPractitionerRole or MedComDocumentOrganization) //RCH: Er dette de korrekte valgmuligheder?
+* attester.party only Reference(MedComDocumentPractitioner)
+* attester.party ^short = "[DocumentEntry.legalAuthenticator] Who authenticated the document."
 * attester.party ^type.aggregation = #bundled
 * title MS
 * title ^short = "[DocumentEntry.title] The readable title of the document."
@@ -70,7 +74,6 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * section.text MS //RCH: Hvad er dette felt til?
 * section.entry MS
 * meta.profile ^short = "[DocumentEntry.formatCode] Indicates the FHIR Composition profile name used as the formatCode in the DocumentEntry for the individual MedCom FHIR Document standards."
-
 
 /* Instance: CompositionExample
 InstanceOf: MedComDocumentComposition

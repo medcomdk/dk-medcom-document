@@ -18,7 +18,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * identifier[entryUUID].value 1..1 MS 
 * identifier[entryUUID].system 1..1 MS //https://profiles.ihe.net/ITI/MHD/4.2.2/StructureDefinition-IHE.MHD.EntryUUID.Identifier.html
 * identifier[entryUUID] ^short = "[DocumentEntry.entryUUID] Identifier for the document"
-* identifier[entryUUID].value obeys medcom-uuid-v4-xor-v5
+* identifier[entryUUID].value obeys medcom-uuid
 * status MS 
 * status ^short = "[DocumentEntry.availabilityStatus] current = active | superseded = deprecated"
 // TypeCode
@@ -30,8 +30,8 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * type.coding.display 1.. MS
 * type from $TypeCode (required)
 * authenticator 0..1 MS
-* authenticator ^short = "[DocumentEntry.legalAuthenticator] Who authenticated the document"
-* authenticator only Reference(MedComDocumentPractitioner or MedComDocumentPractitionerRole or MedComDocumentOrganization) //RCH: Mangler patienten og DkCoreRelatedPerson her?
+* authenticator ^short = "[DocumentEntry.legalAuthenticator] Who authenticated the document."
+* authenticator only Reference(MedComDocumentPractitioner)
 * authenticator ^type.aggregation = #contained
 // ClassCode
 * category 1..1 MS 
@@ -89,7 +89,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * content.attachment.url MS
 * content.attachment.size ^short = "[DocumentEntry.size] Number of bytes of content."
 * content.attachment.title ^short = "[DocumentEntry.title] The readable title of the document."
-* content.attachment.url ^short = "[DocumentEntry.URI] Uri where the data can be found."
+* content.attachment.url ^short = "[DocumentEntry.URI] URI where the data can be found."
 * context 1.. MS
 * context.event 0.. MS 
 * context.event.coding.code 1.. MS
