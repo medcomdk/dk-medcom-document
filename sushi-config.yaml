@@ -30,8 +30,8 @@ dependencies:
   medcom.fhir.dk.core: dev
   #medcom.fhir.dk.core: 3.0.1
   hl7.fhir.dk.core: 3.4.0
-  hl7.fhir.extensions.r5: 5.2.1
-  ihe.iti.mhd: 4.2.2
+  hl7.fhir.extensions.r5: 4.0.1
+  ihe.iti.mhd: 4.2.3
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can

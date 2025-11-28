@@ -34,9 +34,9 @@ The [MedComDocumentPatient](./StructureDefinition-medcom-document-patient.html) 
 
 The [MedComDocumentPractitioner](./StructureDefinition-medcom-document-practitioner.html) profile inherits from MedComCorePractitioner and further requires a given and family name to be present. 
 
-##### MedComDocumentReference
+##### MedComContainedDocumentReference
 
-The [MedComDocumentReference](./StructureDefinition-medcom-documentreference.html) profile should not be exchanged, but can be used for internal validation of the metadata associated with a document, as the DocumentReference contains the same information as the IHE XDS metadata standard. 
+The [MedComContainedDocumentReference](./StructureDefinition-medcom-contained-documentreference.html) profile should not be exchanged, but can be used for internal validation of the metadata associated with a document, as the DocumentReference contains the same information as the IHE XDS metadata standard. 
 
 #### General document assumptions
 
