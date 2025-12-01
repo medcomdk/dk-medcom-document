@@ -20,6 +20,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * identifier.value obeys medcom-uuid
 * identifier.value ^short = "[DocumentEntry.uniqueId] UUID."
 * identifier ^short = "The Composition identifier" //RCH: Brugen af identifiers skal beskrives et sted - måske bare i en short.
+* date MS
 * confidentiality 1..1 MS
 * status = #final
 * status MS
@@ -89,6 +90,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * insert ProducerShallPutInNarrative(event.code)
 * insert ProducerShallPutInNarrative(event.period.start)
 * insert ProducerShallPutInNarrative(event.period.end)
+* insert ProducerShallPutInNarrative(date)
 * insert ProducerShallPutInNarrative(event.detail)
 * insert ProducerShallPutInNarrative(author[institution])
 * insert ProducerShallPutInNarrative(author[person])
