@@ -49,17 +49,21 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * event.period.end 0..1 MS
 * event.detail 0..* MS
 * event.detail ^short = "[DocumentEntry.referenceIdList] Related identifiers or resources"
-* author only Reference(MedComDocumentPatient or MedComDocumentPractitioner or MedComDocumentPractitionerRole or DkCoreRelatedPerson or MedComDocumentOrganization or Device) //RCH: Jeg har kopieret denne fra DocRef. Skal de være ens eller skal denne linje ikke med i Composition?
-* author ^slicing.discriminator.type = #type
-  * ^slicing.discriminator.path = "$this.resolve()"
-  * ^slicing.rules = #closed
+* author ..2 MS
+* author only Reference(MedComDocumentPatient or MedComDocumentPractitioner or MedComDocumentPractitionerRole or DkCoreRelatedPerson or MedComDocumentOrganization or Device)
+* author ^slicing.discriminator[0].type = #profile
+  * ^slicing.discriminator[0].path = "$this.resolve()"
+  * ^slicing.rules = #open
 * author contains
-    institution 1..1 MS and
-    person 0..1 MS 
+    institution 1..1 MS //and
+//    person 0..1 MS 
+* author ^short = "The slice author:institution ensures one mandatory organizational author.
+Any author element that does not match this slice is interpreted
+as an author:person."
 * author[institution] only Reference(MedComDocumentOrganization)
 * author[institution] ^short = "The organization who authored the document"
-* author[person] only Reference(MedComDocumentPractitioner or MedComDocumentPractitionerRole or Device or MedComDocumentPatient)
-* author[person] ^short = "The person who authored the document"
+//* author[person] only Reference(MedComDocumentPractitioner or MedComDocumentPractitionerRole or Device or MedComDocumentPatient)
+//* author[person] ^short = "The person who authored the document"
 * author ^type.aggregation = #bundled
 * attester 0..1 MS
 * attester.party 0..1 MS
@@ -93,7 +97,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * insert ProducerShallPutInNarrative(date)
 * insert ProducerShallPutInNarrative(event.detail)
 * insert ProducerShallPutInNarrative(author[institution])
-* insert ProducerShallPutInNarrative(author[person])
+//* insert ProducerShallPutInNarrative(author[person])
 * insert ProducerShallPutInNarrative(attester.party)
 * insert ProducerShallPutInNarrative(title)
 * insert ProducerShallPutInNarrative(language)

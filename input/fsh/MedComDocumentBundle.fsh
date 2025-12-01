@@ -4,7 +4,7 @@ Id: medcom-document-bundle
 Description: "The Bundle profile for a document"
 * id 1.. 
 * id MS
-* id obeys medcom-uuid
+* id obeys medcom-document-bundle-id-uuid
 * identifier 1..1 MS
 * type MS 
 * type = #document

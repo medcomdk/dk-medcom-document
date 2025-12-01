@@ -1,10 +1,12 @@
 Invariant: medcom-uuid
-Description: "The value shall correspond to the structure of an UUID version 4 xor UUID version 5"
+Description: "The value shall correspond to the structure of an UUID"
 Severity: #error
-Expression: "(
-    ($this.value.matches('^urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$')) xor
-    ($this.matches('^urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$'))
-)"
+Expression: "$this.matches('(?i)^urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[45][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$')"
+
+Invariant: medcom-document-bundle-id-uuid
+Description: "The value shall correspond to the structure of an UUID"
+Severity: #error
+Expression: "$this.matches('(?i)^[0-9a-f]{8}-[0-9a-f]{4}-[45][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$')"
 
 Invariant: medcom-datetime-has-time-offset-zulu
 //"2025-11-27T13:34:56+01:00" = "2025-11-27T12:34:56.789Z"
