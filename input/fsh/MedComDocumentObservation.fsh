@@ -2,7 +2,7 @@ Profile: MedComDocumentObservation
 Parent: MedComCoreObservation
 Id: medcom-document-observation
 Title: "MedComDocumentObservation"
-Description: "Observation profile usto be used in MedCom FHIR Documents."
+Description: "Observation profile to be used in MedCom FHIR Documents."
 * identifier 1..1 MS 
 * identifier.value 1..1 MS
 * identifier.system 1..1 MS 
