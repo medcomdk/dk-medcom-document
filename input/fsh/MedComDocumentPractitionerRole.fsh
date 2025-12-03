@@ -6,11 +6,5 @@ Description: "Document PractitionerRole resource used to describe the role of a 
 * identifier.value 1..1 MS 
 * identifier.system 1..1 MS
 * identifier ^short = "Globally unique, stable identifier for this resource. The same identifier SHALL be used when this resource is recreated from the same source data." 
-* practitioner 1.. //RCH: Skal denne med? Kan man have en PractitionerRole uden en Practitioner? Og skal det helt over i Core?
 * practitioner only Reference(MedComDocumentPractitioner)
-* organization 1.. //RCH: Skal denne med? Kan man have en PractitionerRole uden en Organization?  Og skal det helt over i Core? (Mindre vigtig end practitioner)
 * organization only Reference(MedComDocumentOrganization)
-* code 1.. //RCH: Skal denne med i Core? Kan man have en role uden titel?
-//Invariant: medcom-core-practitionerrole-code-xor-text indsat i core - skal den være der?
-* insert ProducerShallPutInNarrative(practitioner)
-* insert ProducerShallPutInNarrative(organization)

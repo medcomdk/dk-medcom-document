@@ -159,15 +159,3 @@ as an author person."
 * insert ProducerShallPutInNarrative(context.related)
 * insert ProducerShallPutInNarrative(context.sourcePatientInfo.reference)
 * insert ProducerShallPutInNarrative(context.sourcePatientInfo.identifier)
-
-/* Invariant: apd-dk-rule-1
-Description: "Where formatCode is 'urn:ad:dk:medcom:appointmentsummary:full', the eventCode must be 'ALAL01' (hjertesygdomme)"
-Severity: #error
-Expression: "where(type.coding.where(system = 'http://medcomfhir.dk/ig/xdsmetadata/CodeSystem/dk-ihe-typecode-de-regenstrief').code = '56446-8').context.event.coding.code = 'ALAL01'"
-*/
-/*
-Invariant: uuid
-Description: "General UUID expression"
-Severity: #error
-Expression: "value.substring(9).matches('[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}')"
-*/
