@@ -41,21 +41,18 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * category.coding.display 1.. MS
 * category ^short = "[DocumentEntry.classCode] Categorization of document"
 * author ..2 MS
-* author only Reference(MedComDocumentPractitioner or MedComDocumentPractitionerRole or MedComDocumentOrganization or MedComDocumentPatient or DkCoreRelatedPerson or Device)
-* author ^type.aggregation = #contained
-* author ^short = "[DocumentEntry.author] Who and/or what authored the document"
-* author ^slicing.discriminator.type = #type
-  * ^slicing.discriminator.path = "$this.resolve()"
-  * ^slicing.rules = #closed
+* author only Reference(MedComDocumentOrganization or MedComDocumentPractitionerRole or MedComDocumentPractitioner or MedComDocumentPatient or DkCoreRelatedPerson or Device)
+* author ^slicing.discriminator[0].type = #profile
+  * ^slicing.discriminator[0].path = "$this.resolve()"
+  * ^slicing.rules = #open
 * author contains
-    institution 1..1 and
-    person 0..1
-* author[institution] MS
+    institution 1..1 MS
+* author ^short = "[DocumentEntry.author] The slice author:institution ensures one mandatory organizational author.
+Any author element that does not match this slice is interpreted
+as an author person."
 * author[institution] only Reference(MedComDocumentOrganization)
-* author[institution] ^short = "[DocumentEntry.author.authorInstitution] The organization who authored the document"
-* author[person] MS
-* author[person] only Reference(MedComDocumentPractitioner or MedComDocumentPractitionerRole or Device or MedComDocumentPatient) //OBS: Link dit PractitionerRole virker ikke
-* author[person] ^short = "[DocumentEntry.author.authorPerson] The person who authored the document"
+* author[institution] ^short = "The organization who authored the document."
+* author ^type.aggregation = #bundled
 * securityLabel 1..1 MS
 * securityLabel.coding 1..1 MS
 * securityLabel.coding.system 1.. MS
@@ -126,7 +123,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 
 * insert ProducerShallPutInNarrative(id)
 * insert ProducerShallPutInNarrative(author[institution])
-* insert ProducerShallPutInNarrative(author[person])
+* insert ProducerShallPutInNarrative(author)
 * insert ProducerShallPutInNarrative(subject)
 * insert ProducerShallPutInNarrative(status)
 * insert ProducerShallPutInNarrative(type.coding.system)

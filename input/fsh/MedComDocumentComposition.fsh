@@ -12,14 +12,14 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * text ^short = "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle."
 * text.status MS
 * text.div MS
-* meta.profile 1..1 MS //RCH: Beslut om profilens navn må ændre sig med versionen - hvis den skal være = formatcode.
+* meta.profile 1..1 MS
 * identifier 1.. MS
 * identifier.system 1.. MS
 * identifier.system ^short = "[DocumentEntry.uniqueId] Sender organization OID (Object Identifier). Example: 1.2.208.184 (MedCom OID)."
 * identifier.value 1.. MS
 * identifier.value obeys medcom-uuid
 * identifier.value ^short = "[DocumentEntry.uniqueId] UUID."
-* identifier ^short = "The Composition identifier" //RCH: Brugen af identifiers skal beskrives et sted - måske bare i en short.
+* identifier ^short = "The Composition identifier"
 * date MS
 * confidentiality 1..1 MS
 * status = #final
@@ -50,20 +50,17 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * event.detail 0..* MS
 * event.detail ^short = "[DocumentEntry.referenceIdList] Related identifiers or resources"
 * author ..2 MS
-* author only Reference(MedComDocumentPatient or MedComDocumentPractitioner or MedComDocumentPractitionerRole or DkCoreRelatedPerson or MedComDocumentOrganization or Device)
+* author only Reference(MedComDocumentOrganization or MedComDocumentPractitionerRole or MedComDocumentPractitioner or MedComDocumentPatient or DkCoreRelatedPerson or Device)
 * author ^slicing.discriminator[0].type = #profile
   * ^slicing.discriminator[0].path = "$this.resolve()"
   * ^slicing.rules = #open
 * author contains
-    institution 1..1 MS //and
-//    person 0..1 MS 
-* author ^short = "The slice author:institution ensures one mandatory organizational author.
+    institution 1..1 MS
+* author ^short = "[DocumentEntry.author] The slice author:institution ensures one mandatory organizational author.
 Any author element that does not match this slice is interpreted
-as an author:person."
+as an author person."
 * author[institution] only Reference(MedComDocumentOrganization)
-* author[institution] ^short = "The organization who authored the document"
-//* author[person] only Reference(MedComDocumentPractitioner or MedComDocumentPractitionerRole or Device or MedComDocumentPatient)
-//* author[person] ^short = "The person who authored the document"
+* author[institution] ^short = "The organization who authored the document."
 * author ^type.aggregation = #bundled
 * attester 0..1 MS
 * attester.party 0..1 MS
@@ -77,7 +74,7 @@ as an author:person."
 * language from $Language (extensible)
 * language ^short = "[DocumentEntry.languageCode] Human language of the content"
 * section 1.. MS
-* section.text MS //RCH: Hvad er dette felt til?
+* section.text MS //RCH: Hvad er dette felt til? Det er med fra tidligere, men jeg ved ikke hvad vi bruger det til. Skal det fjernes?
 * section.entry MS
 * meta.profile ^short = "[DocumentEntry.formatCode] Indicates the FHIR Composition profile name used as the formatCode in the DocumentEntry for the individual MedCom FHIR Document standards."
 
@@ -97,7 +94,7 @@ as an author:person."
 * insert ProducerShallPutInNarrative(date)
 * insert ProducerShallPutInNarrative(event.detail)
 * insert ProducerShallPutInNarrative(author[institution])
-//* insert ProducerShallPutInNarrative(author[person])
+* insert ProducerShallPutInNarrative(author)
 * insert ProducerShallPutInNarrative(attester.party)
 * insert ProducerShallPutInNarrative(title)
 * insert ProducerShallPutInNarrative(language)
