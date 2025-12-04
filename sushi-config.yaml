@@ -26,7 +26,7 @@ publisher:
 #
 dependencies:
   medcom.fhir.dk.xdsmetadata: dev
-  medcom.fhir.dk.terminology: 2.0.1
+  medcom.fhir.dk.terminology: 2.0.2
   medcom.fhir.dk.core: dev
   #medcom.fhir.dk.core: 3.0.1
   hl7.fhir.dk.core: 3.4.0
