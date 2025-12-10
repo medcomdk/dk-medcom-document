@@ -31,7 +31,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * type.coding.code 1.. MS
 * type.coding.display 1.. MS
 * type from $TypeCode (required)
-* category 1..1 MS 
+* category ..1 MS 
 * category from $ClassCode (extensible)
 * category.coding 1..1 MS
 * category.coding.code 1.. MS
