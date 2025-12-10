@@ -40,7 +40,7 @@ Besides Terminology and metadata IGs, this IG has a dependency to the [MedComCor
 ### Documentation
 [More information about MedCom Document](https://medcomdk.github.io/dk-medcom-document/) can be found here. MedCom document profiles does not alone constitute a standard.
 
-### Governance and guiance
+### Governance and guidance
 FHIR profiles are managed under MedCom: [Source code](https://github.com/medcomdk/dk-medcom-document).
 
 A description of governance and guidance for MedCom's FHIR standards, can be found on the [MedCom Landing Page](https://medcomdk.github.io/MedComLandingPage).
