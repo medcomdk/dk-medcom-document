@@ -8,6 +8,8 @@ This mapping has been developed to enable the future use of FHIR within the Dani
 
 In the interim, mapping from IHE XDS to DocumentReference can already be used to support validation and quality assurance. Implementers can map the metadata they populate in the IHE XDS format to the corresponding elements in the relevant MedCom FHIR DocumentReference profile. Using FHIR’s native validation tooling, it is possible to verify that the supplied metadata conforms to the expected structure and constraints defined by the profile. This provides an immediate benefit, allowing organisations to prepare for a gradual migration to FHIR while maintaining compatibility with the existing XDS-based infrastructure.
 
+Find the [mapping from IHE XDS metadata to FHIR DocumentReference here](https://medcomdk.github.io/dk-medcom-document/assets/documents/Mapping_from_IHE-XDS_metadata_to_FHIR.html).
+
 #### Contained resources
 
 This profile includes `contained` as part of its name because referenced resources **MUST** be contained inside the DocumentReference instance. The current Danish infrastructure is not designed to store or manage multiple separate FHIR resources, and containment ensures that all necessary metadata is delivered as a single, self-contained unit consistent with the existing XDS-based workflow.
