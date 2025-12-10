@@ -9,5 +9,3 @@ Description: "A profile including requirements for a MedCom Document Practitione
 * name 1..
 * name.given 1.. MS
 * name.family 1.. MS
-* insert ProducerShallPutInNarrative(name.given)
-* insert ProducerShallPutInNarrative(name.family)

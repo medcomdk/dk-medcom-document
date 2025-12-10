@@ -76,6 +76,7 @@ as an author person."
 * section 1.. MS
 * section.text MS //RCH: Hvad er dette felt til? Det er med fra tidligere, men jeg ved ikke hvad vi bruger det til. Skal det fjernes?
 * section.entry MS
+* meta 1.. MS
 * meta.profile ^short = "[DocumentEntry.formatCode] Indicates the FHIR Composition profile name used as the formatCode in the DocumentEntry for the individual MedCom FHIR Document standards."
 
 * insert ProducerShallPutInNarrative(id)
@@ -95,6 +96,7 @@ as an author person."
 * insert ProducerShallPutInNarrative(event.detail)
 * insert ProducerShallPutInNarrative(author[institution])
 * insert ProducerShallPutInNarrative(author)
+* insert ProducerShallPutInNarrative(attester.mode)
 * insert ProducerShallPutInNarrative(attester.party)
 * insert ProducerShallPutInNarrative(title)
 * insert ProducerShallPutInNarrative(language)

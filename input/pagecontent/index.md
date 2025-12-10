@@ -2,7 +2,7 @@
 
 This Implementation Guide (IG) is provided by MedCom to describe the use of FHIR ®© in document based exchange of data in Danish healthcare.
 
-The IG contains profiles which are used to define a general model for MedCom FHIR documents. The use case specific profiles, such as [ConditionList](http://medcomfhir.dk/ig/conditionlist), are maintained in an individuel IG.
+The IG contains profiles which are used to define a general model for MedCom FHIR documents. The use case specific profiles are maintained in individual IGs.
 
 The profiles builds upon the knowledge obtained through the use of CDA in Denmark and the work around [FHIR documents from HL7 International](https://hl7.org/fhir/R4/documents.html).
 
