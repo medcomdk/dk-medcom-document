@@ -9,7 +9,7 @@ Usage: #example
 * identifier.value = "ce6f5308-d71b-4ee8-bc41-cc9ddcc15366"
 
 Instance: 8fa7df76-bec2-4fe2-9a44-750030a0eda0
-InstanceOf: DkCoreOrganization
+InstanceOf: MedComCoreOrganization
 Title: "Author Organization"
 Description: "Instance of an author organization"
 Usage: #example
