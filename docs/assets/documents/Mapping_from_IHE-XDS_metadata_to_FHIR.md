@@ -211,7 +211,7 @@ The table contains:
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">content.format</span></td>
 <td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>meta.profile</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span>meta.profile (Mapping from meta.profile to IHE XDS definition is necessary)</th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
