@@ -237,10 +237,10 @@ The table contains:
 <td class="tg-on52"><span style="background-color:#FFF">serviceStartTime</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R2</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">context.period.start</span></td>
-<td class="tg-on52">0..1</td>
+<td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>event.period.start</th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">0..1</td>
+<td class="tg-on52">1..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">serviceStopTime</span></td>
