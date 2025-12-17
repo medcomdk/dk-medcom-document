@@ -55,6 +55,10 @@ The table contains:
 .tg .tg-ztr9{color:#2c415c;font-weight:bold;text-align:left}
 .tg .tg-1ady{background-color:#9dbad7;color:#333;text-align:left}
 .tg .tg-on52{color:#333;text-align:left}
+
+.tg tbody th{
+  font-weight: normal;
+}
 </style>
 <div style="overflow-x:auto;">
 <table class="tg" id="Tab1">
