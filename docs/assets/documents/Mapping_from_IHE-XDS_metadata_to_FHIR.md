@@ -65,16 +65,16 @@ The table contains:
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">entryUUID <a href="#section1">[1]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">masterIdentifier</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">identifier:entryUUID</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
+<th class="tg-ippy"><span style="font-weight:bold"></span>(MedCom recommends using Bundle.id as EntryUUID)</th>
 <td class="tg-on52"></td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">availabilityStatus <a href="#section1">[1]</a> </span></td>
+<td class="tg-on52"><span style="background-color:#FFF">availabilityStatus (Approved | Deprecated)<a href="#section1">[1]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">status</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">status(current | superseeded)</span></td>
 <td class="tg-on52">1..1</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
@@ -94,9 +94,9 @@ The table contains:
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">category</span></td>
 <td class="tg-on52">1..1</td>
+<th class="tg-ippy"><span style="font-weight:bold"></span>category</th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52"></td>
+<td class="tg-on52">0..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">patientId</span></td>
@@ -119,18 +119,18 @@ The table contains:
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">author.authorInstitution</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">author</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">author:institution(MedComDocumentOrganization)</span></td>
 <td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>author</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span>author:institution(MedComDocumentOrganization)</th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">author.authorPerson</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R2</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">author</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">author(MedComDocumentPractitioner | MedComDocumentPractitionerRole | Device | MedComDocumentPatient | DkCoreRelatedPerson)</span></td>
 <td class="tg-on52">0..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>author</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span>author(MedComDocumentPractitioner | MedComDocumentPractitionerRole | Device | MedComDocumentPatient | DkCoreRelatedPerson)</th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">0..1</td>
 </tr>
@@ -228,10 +228,10 @@ The table contains:
 <td class="tg-on52"><span style="background-color:#FFF">eventCodeList</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R2</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">context.event</span></td>
-<td class="tg-on52">0..1</td>
+<td class="tg-on52">0..*</td>
 <th class="tg-ippy"><span style="font-weight:bold"></span>event.code</th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">0..1</td>
+<td class="tg-on52">0..*</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">serviceStartTime</span></td>
