@@ -22,6 +22,6 @@ Severity: #error
 Expression: "$this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?Z$')"
 
 Invariant: medcom-canonical-semver
-Description: "The canonical SHALL include an explicit semantic version (semver) using the format '|x.y.z' with optional prerelease (-...) and build metadata (+...)."
+Description: "The canonical SHALL include an explicit semantic version (semver) with optional prerelease (-...) and build metadata (+...)."
 Severity: #error
-Expression: "matches('^.*\\|\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$')"
+Expression: "matches('^.*[|][0-9]+[.][0-9]+([.][0-9]+)?(-[0-9A-Za-z-]+([.][0-9A-Za-z-]+)*)?([+][0-9A-Za-z-]+([.][0-9A-Za-z-]+)*)?$')"
