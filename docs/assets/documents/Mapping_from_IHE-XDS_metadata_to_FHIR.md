@@ -18,6 +18,7 @@ The table contains:
 * 6.: Data elements from the MedComDocumentBundle profile.
 * 7.: Optionalities for the data elements in MedComDocumentComposition and MedComDocumentBundle.
 
+
 <style type="text/css">
 /* Tabel – responsiv og læsbar */
 .tg{
