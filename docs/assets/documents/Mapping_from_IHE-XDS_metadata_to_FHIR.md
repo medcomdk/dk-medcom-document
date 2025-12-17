@@ -56,10 +56,10 @@ The table contains:
   <tr>
 <td class="tg-on52"><span style="background-color:#FFF">uniqueId</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">identifier</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">masterIdentifier</span></td>
 <td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <th class="tg-ippy"><span style="font-weight:bold"></span>identifier</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
