@@ -77,7 +77,8 @@ as an author person."
 * section.text MS //RCH: Hvad er dette felt til? Det er med fra tidligere, men jeg ved ikke hvad vi bruger det til. Skal det fjernes?
 * section.entry MS
 * meta 1.. MS
-* meta.profile ^short = "[DocumentEntry.formatCode] Indicates the FHIR Composition profile name used as the formatCode in the DocumentEntry for the individual MedCom FHIR Document standards."
+* meta.profile obeys medcom-canonical-semver
+* meta.profile ^short = "[DocumentEntry.formatCode] Indicates the FHIR Composition profile canonical, including an explicit version `|x.y.z`. The value does not map 1:1 to XDS DocumentEntry.formatCode and SHALL be mapped."
 
 * insert ProducerShallPutInNarrative(id)
 * insert ProducerShallPutInNarrative(confidentiality)
