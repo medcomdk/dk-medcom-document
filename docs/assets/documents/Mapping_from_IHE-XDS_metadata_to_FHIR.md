@@ -299,8 +299,8 @@ The table contains:
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">homeCommunityId <a href="#section1">[1]</a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">extension.homeCommunityId</span></td>
-<td class="tg-on52">1..1</td>
+<td class="tg-on52"><span style="background-color:#FFF"></span></td>
+<td class="tg-on52"></td>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52"></td>
