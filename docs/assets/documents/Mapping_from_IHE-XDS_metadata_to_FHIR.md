@@ -101,9 +101,9 @@ The table contains:
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">patientId</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">subject</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">subject(MedComDocumentPatient)</span></td>
 <td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>subject</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span>subject(MedComDocumentPatient)</th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
