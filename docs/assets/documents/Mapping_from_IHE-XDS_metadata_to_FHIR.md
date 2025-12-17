@@ -272,18 +272,18 @@ The table contains:
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">sourcePatientInfo</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">context.sourcePatientInfo</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">context.sourcePatientInfo(MedComDocumentPatient)</span></td>
 <td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>subject</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span>subject(MedComDocumentPatient)</th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
 <tr>
 <td class="tg-on52"><span style="background-color:#FFF">sourcePatientId</span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">context.sourcePatientInfo</span></td>
+<td class="tg-on52"><span style="background-color:#FFF">context.sourcePatientInfo.identifier</span></td>
 <td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>subject</th>
+<th class="tg-ippy"><span style="font-weight:bold"></span>subject(MedComDocumentPatient.identifier:cpr)</th>
 <th class="tg-ippy"><span style="font-weight:bold"></span></th>
 <td class="tg-on52">1..1</td>
 </tr>
@@ -324,7 +324,7 @@ The table contains:
 <td class="tg-on52"></td>
 </tr>
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">submissionTime <a href="#section1">[1]</a> </span></td>
+<td class="tg-on52"><span style="background-color:#FFF">submissionTime <a href="#section1">[1]<a href="#section3">[3]</a></a> </span></td>
 <td class="tg-on52"><span style="background-color:#FFF">R</span></td>
 <td class="tg-on52"><span style="background-color:#FFF"></span></td>
 <td class="tg-on52"></td>
@@ -339,3 +339,5 @@ The table contains:
 
 <p id="section1">[1] Information for this attribute is not expected to be in the document.</p>
 <p id="section2">[2] According to the IHE XDS metadata standard, this attribute is prohibited for On Demand documents</p>
+<p id="section3">[3] SubmissionTime is not mapped to DocumentReference, Composition, or the message Bundle. The value will be available in the Transaction Bundle once submission via FHIR-based infrastructure is introduced.</p>
+
