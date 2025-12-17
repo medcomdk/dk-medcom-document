@@ -19,28 +19,46 @@ The table contains:
 * 7.: Optionalities for the data elements in MedComDocumentComposition and MedComDocumentBundle.
 
 <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0; width:50%;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-ippy{border-color:#000000;color:#2c415c;text-align:left;vertical-align:top}
-.tg .tg-ztr9{border-color:#000000;color:#2c415c;font-weight:bold;text-align:left;vertical-align:top}
-.tg .tg-1ady{background-color:#9dbad7;border-color:#000000;color:#333333;text-align:left;vertical-align:top}
-.tg .tg-on52{border-color:#000000;color:#333333;text-align:left;vertical-align:top}
+/* Tabel – responsiv og læsbar */
+.tg{
+  border-collapse:collapse;
+  border-spacing:0;
+  width:100%;
+  table-layout:auto;
+}
+
+/* Alle celler */
+.tg td,
+.tg th{
+  border:1px solid #000;
+  font-family:Arial, sans-serif;
+  font-size:14px;
+  padding:10px 8px;
+
+  /* KRITISK: forhindrer at overskrifter klippes */
+  overflow:visible;
+  white-space:normal;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+  hyphens:auto;
+
+  vertical-align:top;
+}
+
+/* Overskrifter tydeligere */
+.tg th{
+  font-weight:bold;
+}
+
+/* Bevar dine eksisterende farver/klasser */
+.tg .tg-ippy{color:#2c415c;text-align:left}
+.tg .tg-ztr9{color:#2c415c;font-weight:bold;text-align:left}
+.tg .tg-1ady{background-color:#9dbad7;color:#333;text-align:left}
+.tg .tg-on52{color:#333;text-align:left}
 </style>
 <div style="overflow-x:auto;">
-<table class="tg" style="undefined;table-layout: fixed; width: 942px" id="Tab1">
+<table class="tg" id="Tab1">
 <caption style="color:#2c415c;font-weight:bold">Table 1: Mapping from IHE-XDS metadata to FHIR DocumentReference, and FHIR Composition.</caption>
-<colgroup>
-<col style="width: 230.88889px">
-<col style="width: 150.88889px">
-<col style="width: 250.88889px">
-<col style="width: 150.88889px">
-<col style="width: 150.88889px">
-<col style="width: 150.88889px">
-<col style="width: 200.88889px">
-</colgroup>
 <thead>
   <tr>
     <th class="tg-ippy"><span style="font-weight:bold">1. IHE-XDS metadata</span></th>
@@ -339,5 +357,5 @@ The table contains:
 
 <p id="section1">[1] Information for this attribute is not expected to be in the document.</p>
 <p id="section2">[2] According to the IHE XDS metadata standard, this attribute is prohibited for On Demand documents</p>
-<p id="section3">[3] SubmissionTime is not mapped to DocumentReference, Composition, or the message Bundle. The value will be available in the Transaction Bundle once submission via FHIR-based infrastructure is introduced.</p>
+<p id="section3">[3] SubmissionTime is not mapped to DocumentReference, Composition, or the Bundle. The value will be available in the Transaction Bundle once submission via FHIR-based infrastructure is introduced.</p>
 
