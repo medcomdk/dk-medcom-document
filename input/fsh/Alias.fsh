@@ -62,6 +62,7 @@ Alias: $PracticeSetting = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ih
 
 Alias: $FacilityType = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-HealthcareFacilityTypeCode-VS
 
+/*
 Alias: $DanishiheOID = urn:oid:1.2.208.184.100.9
 Alias: $SnomedctOID = urn:oid:2.16.840.1.113883.6.96
 Alias: $LoincOID = urn:oid:2.16.840.1.113883.6.1
@@ -73,6 +74,26 @@ Alias: $MedComFormatOID = urn:oid:1.2.208.184.100.10
 Alias: $DanishxdsOID = urn:oid:1.2.208.176.8.1
 Alias: $IANALanguageOID = urn:oid:2.16.840.1.113883.6.121
 Alias: $IANAMediaOID = urn:oid:2.16.840.1.113883.5.79
-
+*/
 Alias: $v3-ActCode3.0.0 = http://terminology.hl7.org/ValueSet/v3-ActCode|3.0.0
 Alias: $sct = http://snomed.info/sct|http://snomed.info/sct/554471000005108 // Danish version - append e.g. /version/20240331 to get a more specific version 
+
+Alias: $DanishXdsOID = urn:oid:1.2.208.184.100.9
+//Alias: $DanishiheOID = urn:oid:1.2.208.184.100.9
+Alias: $SnomedctOID = http://snomed.info/sct|http://snomed.info/sct/554471000005108 //urn:oid:2.16.840.1.113883.6.96
+Alias: $LoincOID = http://loinc.org //urn:oid:2.16.840.1.113883.6.1
+Alias: $MedComOID = urn:oid:1.2.208.184.100.1
+Alias: $SKSOID = urn:oid:1.2.208.176.2.4
+//Alias: $SKSOID = https://www.esundhed.dk/Registre/Landspatientregisteret
+//Alias: $SKSOID = http://dk.ehealth.sundhed.fhir.ig.core1
+Alias: $NPUOID = urn:oid:1.2.208.176.2.1
+Alias: $PROdkOID = urn:oid:1.2.208.176.7.3.1
+Alias: $MedComFormatOID = urn:oid:1.2.208.184.100.10
+Alias: $DanishHomeCommunityOID = urn:oid:1.2.208.176.8.1
+//Alias: $IANALanguageOID = urn:oid:2.16.840.1.113883.6.121
+//Alias: $IANALanguageOID = https://www.iana.org/assignments/language-subtag-registry
+Alias: $IANALanguageOID = urn:ietf:bcp:47 //urn:oid:2.16.840.1.113883.6.121
+Alias: $IANAMediaOID = urn:ietf:bcp:13 //http://terminology.hl7.org/CodeSystem/v3-mediaType //urn:oid:2.16.840.1.113883.5.79
+Alias: $HL7 = http://terminology.hl7.org/CodeSystem/v3-Confidentiality //urn:oid:2.16.840.1.113883.5.25
+Alias: $hoer = urn:ad:dk:medcom:noah:action-categories
+Alias: $DanishPrimaryHealthcareDomainOID = urn:oid:1.2.208.193.100

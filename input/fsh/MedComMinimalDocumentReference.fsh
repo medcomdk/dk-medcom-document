@@ -1,4 +1,4 @@
-Profile: MedComMinimalDocumentReference //OBS: Skal erstattes af afhængighed til DkCore v 3.5.0
+/*Profile: MedComMinimalDocumentReference //OBS: Skal erstattes af afhængighed til DkCore v 3.5.0
 Parent: MinimalDocumentReference
 Id: medcom-minimal-documentreference
 Title: "A replication of HL7 Denmark DK Core MinimalDocumentReference Profile"
@@ -14,3 +14,4 @@ Description: "A replication of DK Core MinimalDocumentReference"
 * subject 1..1
 * subject only Reference(DkCorePatient)
 * context.sourcePatientInfo only Reference(DkCorePatient)
+*/

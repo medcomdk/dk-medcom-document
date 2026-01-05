@@ -1,4 +1,4 @@
-ValueSet: MedComSorPracticeSettingCode
+/*ValueSet: MedComSorPracticeSettingCode
 Id: medcom-core-practice-setting-code
 Title: "Replication og DK SOR Practice Setting Code"
 Description: "Replication of valuesest from DK Core. Values used for the document metadata attribute practiceSettingCode, which is an attribute specifying the clinical specialty where the act that resulted in the document was performed (e.g., Family Practice, Laboratory, Radiology). The value set is based on a subset of the code list from the SOR lookup table 'SOR-Kliniske specialer' (https://sor.sum.dsdn.dk/lookupdata/#clinical_speciality, accessable on Sundhedsdatanettet (SDN)), which is based on SNOMED CT codes."
@@ -58,3 +58,4 @@ Description: "Replication of valuesest from DK Core. Values used for the documen
 * $sct#658201000005103
 * $sct#658141000005108
 * $sct#658181000005104
+*/

@@ -1,5 +1,5 @@
 Profile: MedComContainedDocumentReference
-Parent: MedComMinimalDocumentReference //OBS: Nedarv direkte fra DkCore når den udgives
+Parent: DkCoreMinimalDocumentReference
 Id: medcom-contained-documentreference
 Description: "A profile stating the rules, when exchanging a FHIR document in the Danish Healthcare sector using  IHE MHD and IHE XDS based document sharing."
 * id 1.. MS

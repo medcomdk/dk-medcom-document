@@ -29,7 +29,7 @@ dependencies:
   medcom.fhir.dk.terminology: 2.0.2
   medcom.fhir.dk.core: dev
   #medcom.fhir.dk.core: 3.0.1
-  hl7.fhir.dk.core: 3.4.0
+  hl7.fhir.dk.core: 3.5.0
   hl7.fhir.extensions.r5: 4.0.1
   ihe.iti.mhd: 4.2.3
 #
