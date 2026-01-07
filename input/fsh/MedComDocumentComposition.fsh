@@ -74,7 +74,7 @@ as an author person."
 * language from $Language (extensible)
 * language ^short = "[DocumentEntry.languageCode] Human language of the content"
 * section 1.. MS
-* section.text MS //RCH: Hvad er dette felt til? Det er med fra tidligere, men jeg ved ikke hvad vi bruger det til. Skal det fjernes?
+* section.text MS //RCH MANGLER AFKLARING
 * section.entry MS
 * meta 1.. MS
 * meta.profile obeys medcom-canonical-semver
