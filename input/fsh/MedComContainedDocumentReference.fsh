@@ -118,6 +118,10 @@ as an author person."
 * context.sourcePatientInfo ^short = "[DocumentEntry.sourcePatientId and DocumentEntry.sourcePatientInfo] Patient demographics from source. Must be the same reference as in DocumentReference.subject."
 * context.sourcePatientInfo only Reference(MedComDocumentPatient)
 * extension MS
+* extension contains 
+    medcom-document-homecommunityid-extension named homeCommunityid 0..1 MS
+* extension[homeCommunityid] ^short = "[DocumentEntry.homeCommunityId] A unique identifier for a community where the DocumentEntry and document can be accessed."
+* extension[homeCommunityid].url MS
 * extension[versionid] MS
 * extension[versionid] ^short = "Specifies the version of the DocumentReference profile for a standard."
 
@@ -159,3 +163,6 @@ as an author person."
 * insert ProducerShallPutInNarrative(context.related)
 * insert ProducerShallPutInNarrative(context.sourcePatientInfo.reference)
 * insert ProducerShallPutInNarrative(context.sourcePatientInfo.identifier)
+* insert ProducerShallPutInNarrative(extension[homeCommunityid].valueCoding.system)
+* insert ProducerShallPutInNarrative(extension[homeCommunityid].valueCoding.code)
+* insert ProducerShallPutInNarrative(extension[versionid])
