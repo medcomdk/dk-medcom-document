@@ -3,7 +3,7 @@ Parent: DkCoreMinimalDocumentReference
 Id: medcom-contained-documentreference
 Description: "A profile stating the rules, when exchanging a FHIR document in the Danish Healthcare sector using  IHE MHD and IHE XDS based document sharing."
 * id 1.. MS
-* text MS
+* text 1.. MS
 * text ^short = "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle."
 * text.status MS
 * text.div MS

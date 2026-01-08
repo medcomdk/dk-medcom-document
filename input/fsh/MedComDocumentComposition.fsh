@@ -8,7 +8,7 @@ Parent: Composition
 Id: medcom-document-composition
 Description: "The profile of the MedCom Document Composition containing the minimum allowed content."
 * id 1.. MS
-* text MS
+* text 1.. MS
 * text ^short = "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle."
 * text.status MS
 * text.div MS
