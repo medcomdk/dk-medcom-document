@@ -63,304 +63,338 @@ The table contains:
 </style>
 <div style="overflow-x:auto;">
 <table class="tg" id="Tab1">
-<caption style="color:#2c415c;font-weight:bold">Table 1: Mapping from IHE-XDS metadata to FHIR DocumentReference, and FHIR Composition.</caption>
+<caption style="font-weight:bold">Table 1: Mapping from IHE-XDS metadata to FHIR DocumentReference, and FHIR Composition.</caption>
 <thead>
   <tr>
-    <th class="tg-ippy"><span style="font-weight:bold">1. IHE-XDS metadata</span></th>
-    <th class="tg-ippy"><span style="font-weight:bold">2. Optionality<br/>IHE-XDS metadata</span></th>
-    <th class="tg-ippy"><span style="font-weight:bold">3. MedComDocumentReference</span></th>
-    <th class="tg-ztr9">4. Optionality<br/>MedComDocumentReference</th>
-    <th class="tg-ippy"><span style="font-weight:bold">5. MedComDocumentComposition</span></th>
-    <th class="tg-ippy"><span style="font-weight:bold">6. MedComDocumentBundle</span></th>
-    <th class="tg-ztr9">7. Optionality<br/>MedComDocumentComposition and MedComDocumentBundle</th>
+    <th><span style="font-weight:bold">IHE-XDS metadata</span></th>
+    <th><span style="font-weight:bold">Optionality IHE-XDS metadata</span></th>
+    <th><span style="font-weight:bold">MedComDocumentReference</span></th>
+    <th><span style="font-weight:bold">Cardinality MedComDocumentReference</span></th>
+    <th><span style="font-weight:bold">MedComDocumentComposition</span></th>
+    <th><span style="font-weight:bold">MedComDocumentBundle</span></th>
+    <th><span style="font-weight:bold">Cardinality MedComDocumentComposition and MedComDocumentBundle</span></th>
   </tr>
 </thead>
 <tbody>
-  <tr>
-<td class="tg-on52"><span style="background-color:#FFF">uniqueId</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">masterIdentifier</span></td>
-<td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>identifier</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..1</td>
-</tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">entryUUID <a href="#section1">[1]</a> </span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">identifier:entryUUID</span></td>
-<td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span>(MedCom recommends using Bundle.id as EntryUUID)</th>
-<td class="tg-on52"></td>
+  <td>author</td>
+  <td>R</td>
+  <td>author</td>
+  <td>1..2</td>
+  <td>author</td>
+  <td>N/A</td>
+  <td>1..2</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">availabilityStatus (Approved | Deprecated)<a href="#section1">[1]</a> </span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">status(current | superseeded)</span></td>
-<td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52"></td>
+  <td>author.authorInstitution</td>
+  <td>R</td>
+  <td>author:institution(MedComDocumentOrganization)</td>
+  <td>1..1</td>
+  <td>author:institution(MedComDocumentOrganization)</td>
+  <td>N/A</td>
+  <td>1..1</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">typeCode</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">type</span></td>
-<td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>type</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..1</td>
+  <td>author.authorPerson</td>
+  <td>R2</td>
+  <td>author(MedComDocumentPractitioner | MedComDocumentPractitionerRole | Device | MedComDocumentPatient | DkCoreRelatedPerson)</td>
+  <td>0..1</td>
+  <td>author(MedComDocumentPractitioner | MedComDocumentPractitionerRole | Device | MedComDocumentPatient | DkCoreRelatedPerson)</td>
+  <td>N/A</td>
+  <td>0..1</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">classCode</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">category</span></td>
-<td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>category</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">0..1</td>
+  <td>availabilityStatus (Approved | Deprecated)<a href="#section1">[1]</a></td>
+  <td>R</td>
+  <td>status(current | superseded)</td>
+  <td>1..1</td>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>1..1</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">patientId</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">subject(MedComDocumentPatient)</span></td>
-<td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>subject(MedComDocumentPatient)</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..1</td>
+  <td>classCode</td>
+  <td>R</td>
+  <td>category</td>
+  <td>1..1</td>
+  <td>category</td>
+  <td>N/A</td>
+  <td>0..1</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">author</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">author</span></td>
-<td class="tg-on52">1..2</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>author</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..2</td>
+  <td>confidentialityCode</td>
+  <td>R</td>
+  <td>securityLabel</td>
+  <td>1..1</td>
+  <td>confidentiality</td>
+  <td>N/A</td>
+  <td>1..1</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">author.authorInstitution</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">author:institution(MedComDocumentOrganization)</span></td>
-<td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>author:institution(MedComDocumentOrganization)</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..1</td>
+  <td>creationTime</td>
+  <td>R</td>
+  <td>content.attachment.creation</td>
+  <td>1..1</td>
+  <td>N/A</td>
+  <td>timestamp</td>
+  <td>1..1</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">author.authorPerson</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R2</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">author(MedComDocumentPractitioner | MedComDocumentPractitionerRole | Device | MedComDocumentPatient | DkCoreRelatedPerson)</span></td>
-<td class="tg-on52">0..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>author(MedComDocumentPractitioner | MedComDocumentPractitionerRole | Device | MedComDocumentPatient | DkCoreRelatedPerson)</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">0..1</td>
+  <td>entryUUID<a href="#section1">[1]</a></td>
+  <td>R</td>
+  <td>identifier:entryUUID</td>
+  <td>1..1</td>
+  <td>N/A</td>
+  <td>(MedCom recommends using Bundle.id as EntryUUID)</td>
+  <td>N/A</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">legalAuthenticator</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R2</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">authenticator</span></td>
-<td class="tg-on52">0..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>attester</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">0..1</td>
+  <td>eventCodeList</td>
+  <td>R2</td>
+  <td>context.event</td>
+  <td>0..*</td>
+  <td>event.code</td>
+  <td>N/A</td>
+  <td>0..*</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">confidentialityCode</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">securityLabel</span></td>
-<td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>confidentiality</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..1</td>
+  <td>formatCode</td>
+  <td>R</td>
+  <td>content.format</td>
+  <td>1..1</td>
+  <td>meta.profile (Mapping from meta.profile to IHE XDS definition is necessary)</td>
+  <td>N/A</td>
+  <td>1..1</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">mimeType <a href="#section1">[1]</a> </span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">content.attachment.contentType</span></td>
-<td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52"></td>
+  <td>hash<a href="#section1">[1]</a><a href="#section2">[2]</a></td>
+  <td>R2</td>
+  <!--<td>O</td>-->
+  <td>content.attachment.hash</td>
+  <td>0..1</td>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>N/A</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">languageCode</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">content.attachment.language</span></td>
-<td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>language</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..1</td>
+  <td>healthcareFacilityTypeCode</td>
+  <td>R</td>
+  <td>context.facilityType</td>
+  <td>1..1</td>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>N/A</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">URI <a href="#section1">[1]</a> </span></td>
-<td class="tg-on52"><span style="background-color:#FFF">O</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">content.attachment.url</span></td>
-<td class="tg-on52">0..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52"></td>
+  <td>homeCommunityId <a href="#section1">[1]</a></td>
+  <td>R</td>
+  <td>N/A</td>
+  <td>0..0</td>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>N/A</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">size <a href="#section1">[1]<a href="#section2">[2]</a></a></span></td>
-<td class="tg-on52"><span style="background-color:#FFF">O</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">content.attachment.size</span></td>
-<td class="tg-on52">0..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52"></td>
+  <td>languageCode</td>
+  <td>R</td>
+  <td>content.attachment.language</td>
+  <td>1..1</td>
+  <td>language</td>
+  <td>N/A</td>
+  <td>1..1</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">hash <a href="#section1">[1]</a><a href="#section2">[2]</a></span></td>
-<td class="tg-on52"><span style="background-color:#FFF">O</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">content.attachment.hash</span></td>
-<td class="tg-on52">0..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52"></td>
+  <td>legalAuthenticator</td>
+  <td>R2</td>
+  <td>authenticator</td>
+  <td>0..1</td>
+  <td>attester</td>
+  <td>N/A</td>
+  <td>0..1</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">title</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">content.attachment.title</span></td>
-<td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>title</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..1</td>
+  <td>mimeType <a href="#section1">[1]</a></td>
+  <td>R</td>
+  <td>content.attachment.contentType</td>
+  <td>1..1</td>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>N/A</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">formatCode</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">content.format</span></td>
-<td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>meta.profile (Mapping from meta.profile to IHE XDS definition is necessary)</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..1</td>
+  <td>objectType <a href="#section1">[1]</a></td>
+  <td>R</td>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>N/A</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">creationTime</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">content.attachment.creation</span></td>
-<td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span>timestamp</th>
-<td class="tg-on52">1..1</td>
+  <td>patientId</td>
+  <td>R</td>
+  <td>subject(MedComDocumentPatient)</td>
+  <td>1..1</td>
+  <td>subject(MedComDocumentPatient)</td>
+  <td>N/A</td>
+  <td>1..1</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">eventCodeList</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R2</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">context.event</span></td>
-<td class="tg-on52">0..*</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>event.code</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">0..*</td>
+  <td>practiceSettingCode</td>
+  <td>R</td>
+  <td>context.practiceSetting</td>
+  <td>1..1</td>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>N/A</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">serviceStartTime</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R2</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">context.period.start</span></td>
-<td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>event.period.start</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..1</td>
+  <td>referenceIdList</td>
+  <td>O</td>
+  <td>context.related</td>
+  <td>0..*</td>
+  <td>event.detail</td>
+  <td>N/A</td>
+  <td>0..*</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">serviceStopTime</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R2</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">context.period.end</span></td>
-<td class="tg-on52">0..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>event.period.end</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">0..1</td>
+  <td>repositoryUniqueId <a href="#section1">[1]</a></td>
+  <td>R</td>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>N/A</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">healthcareFacilityTypeCode</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">context.facilityType</span></td>
-<td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52"></td>
+  <td>serviceStartTime</td>
+  <td>R2</td>
+  <td>context.period.start</td>
+  <td>1..1</td>
+  <td>event.period.start</td>
+  <td>N/A</td>
+  <td>1..1</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">practiceSettingCode</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">context.practiceSetting</span></td>
-<td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52"></td>
+  <td>serviceStopTime</td>
+  <td>R2</td>
+  <td>context.period.end</td>
+  <td>0..1</td>
+  <td>event.period.end</td>
+  <td>N/A</td>
+  <td>0..1</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">sourcePatientInfo</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">context.sourcePatientInfo(MedComDocumentPatient)</span></td>
-<td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>subject(MedComDocumentPatient)</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..1</td>
+  <td>size<a href="#section1">[1]</a><a href="#section2">[2]</a></td>
+  <td>R2</td>
+  <!--<td>O</td>-->
+  <td>content.attachment.size</td>
+  <td>0..1</td>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>N/A</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">sourcePatientId</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">context.sourcePatientInfo.identifier</span></td>
-<td class="tg-on52">1..1</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>subject(MedComDocumentPatient.identifier:cpr)</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">1..1</td>
+  <td>sourcePatientId</td>
+  <td>R</td>
+  <td>context.sourcePatientInfo.identifier</td>
+  <td>1..1</td>
+  <td>subject(MedComDocumentPatient.identifier:cpr)</td>
+  <td>N/A</td>
+  <td>1..1</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">referenceIdList</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">O</span></td>
-<td class="tg-on52"><span style="background-color:#FFF">context.related</span></td>
-<td class="tg-on52">0..*</td>
-<th class="tg-ippy"><span style="font-weight:bold"></span>event.detail</th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52">0..*</td>
+  <td>sourcePatientInfo</td>
+  <td>R</td>
+  <td>context.sourcePatientInfo(MedComDocumentPatient)</td>
+  <td>1..1</td>
+  <td>subject(MedComDocumentPatient)</td>
+  <td>N/A</td>
+  <td>1..1</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">homeCommunityId <a href="#section1">[1]</a> </span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF"></span></td>
-<td class="tg-on52"></td>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52"></td>
+  <td>submissionTime <a href="#section1">[1]</a><a href="#section3">[3]</a></td>
+  <td>R</td>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>N/A</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">objectType <a href="#section1">[1]</a> </span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF"></span></td>
-<td class="tg-on52"></td>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52"></td>
+  <td>title</td>
+  <td>R</td>
+  <td>content.attachment.title</td>
+  <td>1..1</td>
+  <td>title</td>
+  <td>N/A</td>
+  <td>1..1</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">repositoryUniqueId <a href="#section1">[1]</a> </span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF"></span></td>
-<td class="tg-on52"></td>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52"></td>
+  <td>typeCode</td>
+  <td>R</td>
+  <td>type</td>
+  <td>1..1</td>
+  <td>type</td>
+  <td>N/A</td>
+  <td>1..1</td>
 </tr>
+
 <tr>
-<td class="tg-on52"><span style="background-color:#FFF">submissionTime <a href="#section1">[1]<a href="#section3">[3]</a></a> </span></td>
-<td class="tg-on52"><span style="background-color:#FFF">R</span></td>
-<td class="tg-on52"><span style="background-color:#FFF"></span></td>
-<td class="tg-on52"></td>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<th class="tg-ippy"><span style="font-weight:bold"></span></th>
-<td class="tg-on52"></td>
+  <td>uniqueId</td>
+  <td>R</td>
+  <td>masterIdentifier</td>
+  <td>1..1</td>
+  <td>identifier</td>
+  <td>N/A</td>
+  <td>1..1</td>
 </tr>
+
+<tr>
+  <td>URI <a href="#section1">[1]</a></td>
+  <td>O</td>
+  <td>content.attachment.url</td>
+  <td>0..1</td>
+  <td>N/A</td>
+  <td>N/A</td>
+  <td>N/A</td>
+</tr>
+
 </tbody>
 </table>
+
 </div>
 <br><br>
 
 <p id="section1">[1] Information for this attribute is not expected to be in the document.</p>
 <p id="section2">[2] According to the IHE XDS metadata standard, this attribute is prohibited for On Demand documents</p>
 <p id="section3">[3] SubmissionTime is not mapped to DocumentReference, Composition, or the Bundle. The value will be available in the Transaction Bundle once submission via FHIR-based infrastructure is introduced.</p>
-
