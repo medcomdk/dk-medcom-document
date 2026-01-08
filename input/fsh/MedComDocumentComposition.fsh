@@ -30,9 +30,9 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * type.coding.system 1.. MS
 * type.coding.code 1.. MS
 * type.coding.display 1.. MS
-* type from $TypeCode (required)
+* type from MedCom-ihe-core-typecode-VS-TEMP (required) //Must be changed back to XDS metadata IG when ValueSet is fixed
 * category ..1 MS 
-* category from $ClassCode (extensible)
+* category from MedCom-ihe-core-classcode-VS-TEMP (extensible) //Must be changed back to XDS metadata IG when ValueSet is fixed
 * category.coding 1..1 MS
 * category.coding.code 1.. MS
 * category.coding.system 1.. MS
@@ -71,7 +71,7 @@ as an author person."
 * title MS
 * title ^short = "[DocumentEntry.title] The readable title of the document."
 * language 1..1 MS
-* language from $Language (extensible)
+* language from MedCom-ihe-core-languagecode-VS-TEMP (extensible) //Must be changed back to XDS metadata IG when ValueSet is fixed
 * language ^short = "[DocumentEntry.languageCode] Human language of the content"
 * section 1.. MS
 * section.text MS //RCH MANGLER AFKLARING

@@ -25,7 +25,7 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  medcom.fhir.dk.xdsmetadata: dev
+  medcom.fhir.dk.xdsmetadata: 1.0.1
   medcom.fhir.dk.terminology: 2.0.2
   medcom.fhir.dk.core: dev
   #medcom.fhir.dk.core: 3.0.1

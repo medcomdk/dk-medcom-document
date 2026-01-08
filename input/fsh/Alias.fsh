@@ -51,7 +51,7 @@ Alias: $ContentType = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-co
 Alias: $Language = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-languagecode-VS
 
 //Alias: $FormatCode = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-apd-formatcode-VS
-Alias: $FormatCode = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-formatcode-VS
+//Alias: $FormatCode = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-formatcode-VS
 
 Alias: $TypeCode =  http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-typecode-VS
                     
@@ -82,7 +82,7 @@ Alias: $DanishXdsOID = urn:oid:1.2.208.184.100.9
 //Alias: $DanishiheOID = urn:oid:1.2.208.184.100.9
 Alias: $SnomedctOID = http://snomed.info/sct|http://snomed.info/sct/554471000005108 //urn:oid:2.16.840.1.113883.6.96
 Alias: $LoincOID = http://loinc.org //urn:oid:2.16.840.1.113883.6.1
-Alias: $MedComOID = urn:oid:1.2.208.184.100.1
+//Alias: $MedComOID = urn:oid:1.2.208.184.100.1
 Alias: $SKSOID = urn:oid:1.2.208.176.2.4
 //Alias: $SKSOID = https://www.esundhed.dk/Registre/Landspatientregisteret
 //Alias: $SKSOID = http://dk.ehealth.sundhed.fhir.ig.core1
@@ -97,3 +97,7 @@ Alias: $IANAMediaOID = urn:ietf:bcp:13 //http://terminology.hl7.org/CodeSystem/v
 Alias: $HL7 = http://terminology.hl7.org/CodeSystem/v3-Confidentiality //urn:oid:2.16.840.1.113883.5.25
 Alias: $hoer = urn:ad:dk:medcom:noah:action-categories
 Alias: $DanishPrimaryHealthcareDomainOID = urn:oid:1.2.208.193.100
+
+Alias: $IHEClassCodeTEMP = http://medcomfhir.dk/ig/document/CodeSystem/MedCom-ihe-classcode-CS-TEMP
+Alias: $IHEMessageCodesTEMP = http://medcomfhir.dk/ig/document/CodeSystem/MedCom-message-codes-CS-TEMP
+Alias: $IHEFormatCodeTEMP = http://medcomfhir.dk/ig/document/CodeSystem/MedCom-ihe-formatcode-CS-TEMP

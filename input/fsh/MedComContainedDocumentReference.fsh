@@ -28,14 +28,14 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * type.coding.system 1.. MS
 * type.coding.code 1.. MS
 * type.coding.display 1.. MS
-* type from $TypeCode (required)
+* type from MedCom-ihe-core-typecode-VS-TEMP (required) //Must be changed back to XDS metadata IG when ValueSet is fixed
 * authenticator 0..1 MS
 * authenticator ^short = "[DocumentEntry.legalAuthenticator] Who authenticated the document."
 * authenticator only Reference(MedComDocumentPractitioner)
 * authenticator ^type.aggregation = #contained
 // ClassCode
 * category 1..1 MS 
-* category from $ClassCode (extensible)
+* category from MedCom-ihe-core-classcode-VS-TEMP (extensible) //Must be changed back to XDS metadata IG when ValueSet is fixed
 * category.coding.code 1.. MS
 * category.coding.system 1.. MS
 * category.coding.display 1.. MS
@@ -68,11 +68,11 @@ as an author person."
 * content MS
 * content.attachment.contentType ^short = "[DocumentEntry.mimeType] Mime type of the content, with charset etc."
 * content.attachment.contentType 1.. MS
-* content.attachment.contentType from $ContentType
+* content.attachment.contentType from MedCom-ihe-core-mimetype-VS-TEMP //Must be changed back to XDS metadata IG when ValueSet is fixed
 * content.attachment MS
 * content.attachment.language ^short = "[DocumentEntry.languageCode] Human language of the content"
 * content.attachment.language 1.. MS
-* content.attachment.language from $Language (extensible)
+* content.attachment.language from MedCom-ihe-core-languagecode-VS-TEMP (extensible) //Must be changed back to XDS metadata IG when ValueSet is fixed
 * content.attachment.hash 0.. MS
 * content.attachment.hash ^short = "[DocumentEntry.hash] Hash of the data (sha-1)"
 * content.format ^short = "[DocumentEntry.formatCode] Format/content rules for the document"
@@ -80,7 +80,7 @@ as an author person."
 * content.format.system 1.. MS
 * content.format.code 1.. MS
 * content.format.display 1.. MS
-* content.format from $FormatCode (required)
+* content.format from MedCom-ihe-core-formatcode-VS-TEMP (required) //Must be changed back to XDS metadata IG when ValueSet is fixed
 * content.attachment.size 0.. MS
 * content.attachment.title 1.. MS
 * content.attachment.url MS
@@ -101,14 +101,14 @@ as an author person."
 * context.facilityType.coding.code 1.. MS
 * context.facilityType.coding.system 1.. MS
 * context.facilityType.coding.display 1.. MS
-* context.facilityType from $FacilityType (required)
+* context.facilityType from MedCom-ihe-core-HealthcareFacilityTypeCode-VS-TEMP (required) //Must be changed back to XDS metadata IG when ValueSet is fixed
 * context.facilityType ^short = "[DocumentEntry.healthcareFacilityTypeCode] Kind of facility where patient was seen."
 * context.practiceSetting 1.. MS
 * context.practiceSetting.coding 1..1 MS
 * context.practiceSetting.coding.code 1.. MS
 * context.practiceSetting.coding.system 1.. MS
 * context.practiceSetting.coding.display 1.. MS
-* context.practiceSetting from $PracticeSetting (required)
+* context.practiceSetting from MedCom-ihe-core-PracticeSettingCode-VS-TEMP (required)
 * context.practiceSetting ^short = "[DocumentEntry.practiceSettingCode] Additional details about where the content was created (e.g. clinical specialty)."
 * context.related 0..* MS
 * context.related ^short = "[DocumentEntry.referenceIdList] Related identifiers or resources."
