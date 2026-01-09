@@ -72,7 +72,7 @@ The table contains:
     <th><span style="font-weight:bold">Cardinality MedComDocumentReference</span></th>
     <th><span style="font-weight:bold">MedComDocumentComposition</span></th>
     <th><span style="font-weight:bold">MedComDocumentBundle</span></th>
-    <th><span style="font-weight:bold">Cardinality MedComDocumentComposition and MedComDocumentBundle</span></th>
+    <th><span style="font-weight:bold">Cardinality MedComDocumentComposition or MedComDocumentBundle</span></th>
   </tr>
 </thead>
 <tbody>
@@ -114,7 +114,7 @@ The table contains:
   <td>1..1</td>
   <td>N/A</td>
   <td>N/A</td>
-  <td>1..1</td>
+  <td>N/A</td>
 </tr>
 
 <tr>
