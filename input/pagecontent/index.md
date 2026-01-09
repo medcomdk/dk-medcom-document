@@ -47,9 +47,95 @@ FHIR profiles are managed under MedCom: [Source code](https://github.com/medcomd
 
 A description of governance and guidance for MedCom's FHIR standards, can be found on the [MedCom Landing Page](https://medcomdk.github.io/MedComLandingPage).
 
-The MedCom FHIR landing page provides a overview of governance requirements that apply to MedCom’s FHIR standards. This includes fx the mandatory rules for interpreting MustSupport, the formal validation requirements that implementers must follow, the expectations for producing narrative texts and governance for how MedCom Terminology is versioned. In addition, the governance section outlines the rules for MedCom FHIR Messaging and Document Sharing, including requirements for fx message flow and envelope usage.
+The MedCom FHIR landing page provides a overview of governance requirements that apply to MedCom’s FHIR standards. This includes e.g. the mandatory rules for interpreting MustSupport, the formal validation requirements that implementers must follow, the expectations for producing narrative texts and governance for how MedCom Terminology is versioned. In addition, the governance section outlines the rules for MedCom FHIR Messaging and Document Sharing, including requirements for e.g. message flow and envelope usage.
 
 The landing page also offers help to developers to understand how to work with MedCom’s FHIR standards. This includes a guide of how to read an Implementation Guide. Users will also find instructions on how to use some of the required tools, such as validation setup and how to use Touchstone.
+
+### Temporary representations of code systems and valuesets from the MedCom XDS Metadata IG
+Due to inconsistencies between MedCom’s XDS Metadata Standard and FHIR representations of code systems and value sets, selected code systems and value sets from the MedCom XDS Metadata Standard IG are temporarily included in this Implementation Guide with necessary adaptations. They will be removed from this IG once these issues are resolved in version 2.0 of the MedCom XDS Metadata Standard.
+
+The affected code systems are listed below:
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-fymr">OID</th>
+    <th class="tg-7btt">Name</th>
+    <th class="tg-fymr">Description from OID-registry</th>
+    <th class="tg-7btt">Owner</th>
+    <th class="tg-fymr">CodeSystem reference</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">2.16.840.1.113883.6.96</td>
+    <td class="tg-c3ow">SCT</td>
+    <td class="tg-0pky">Systematized Nomenclature Of MEDicine (SNOMED) Clinical Terms (CT)</td>
+    <td class="tg-c3ow">IHTSDO</td>
+    <td class="tg-0pky">http://snomed.info/sct|http://snomed.info/sct/554471000005108</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2.16.840.1.113883.6.1</td>
+    <td class="tg-c3ow">LOINC</td>
+    <td class="tg-0pky">Logical Observation Identifier Names and Codes (LOINC)</td>
+    <td class="tg-c3ow">Regenstrief Institute</td>
+    <td class="tg-0pky">http://loinc.org</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2.16.840.1.113883.5.79</td>
+    <td class="tg-c3ow">mediaType</td>
+    <td class="tg-0pky">mediaType</td>
+    <td class="tg-c3ow">HL7</td>
+    <td class="tg-0pky">urn:ietf:bcp:13</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2.16.840.1.113883.6.121</td>
+    <td class="tg-c3ow">ieft3066</td>
+    <td class="tg-0pky">Tags for the Identification of Languages</td>
+    <td class="tg-c3ow">HL7</td>
+    <td class="tg-0pky">urn:ietf:bcp:47</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2.16.840.1.113883.5.25</td>
+    <td class="tg-c3ow">Confidentiality</td>
+    <td class="tg-0pky">Confidentiality</td>
+    <td class="tg-c3ow">HL7</td>
+    <td class="tg-0pky">http://terminology.hl7.org/CodeSystem/v3-Confidentiality</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1.2.208.184.100.9</td>
+    <td class="tg-c3ow">classcode</td>
+    <td class="tg-0pky">Danish Integrating the Healthcare Enterprise (IHE) metadata class codes</td>
+    <td class="tg-c3ow">MedCom</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1.2.208.184.100.1</td>
+    <td class="tg-c3ow">message-codes</td>
+    <td class="tg-0pky">Message codes administered by MedCom</td>
+    <td class="tg-c3ow">MedCom</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1.2.208.184.100.10</td>
+    <td class="tg-c3ow">formatcode</td>
+    <td class="tg-0pky">Danish Integrating the Healthcare Enterprise (IHE) metadata format codes</td>
+    <td class="tg-c3ow">MedCom</td>
+    <td class="tg-0pky"></td>
+  </tr>
+</tbody>
+</table>
 
 ### Contact
 
