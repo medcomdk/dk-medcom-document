@@ -172,7 +172,7 @@ The table contains:
   <td>R</td>
   <td>content.format</td>
   <td>1..1</td>
-  <td>meta.profile (Mapping from meta.profile to IHE XDS definition is necessary)</td>
+  <td>meta.profile</td>
   <td>N/A</td>
   <td>1..1</td>
 </tr>
