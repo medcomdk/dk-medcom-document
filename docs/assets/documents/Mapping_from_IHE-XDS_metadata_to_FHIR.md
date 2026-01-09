@@ -383,7 +383,7 @@ The table contains:
   <td>URI <a href="#section1">[1]</a></td>
   <td>O</td>
   <td>content.attachment.url</td>
-  <td>0..1</td>
+  <td>1..1</td>
   <td>N/A</td>
   <td>N/A</td>
   <td>N/A</td>
