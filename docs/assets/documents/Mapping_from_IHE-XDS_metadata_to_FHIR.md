@@ -153,7 +153,7 @@ The table contains:
   <td>identifier:entryUUID</td>
   <td>1..1</td>
   <td>N/A</td>
-  <td>*MedCom recommends using Bundle.id as EntryUUID*</td>
+  <td>(MedCom recommends using Bundle.id as EntryUUID)</td>
   <td>N/A</td>
 </tr>
 
