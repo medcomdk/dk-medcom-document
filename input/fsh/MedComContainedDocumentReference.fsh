@@ -10,6 +10,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 
 // uniqueId
 * masterIdentifier 1..1 MS
+* masterIdentifier.system MS
 * masterIdentifier.value 1..1 MS
 * masterIdentifier ^short = "[DocumentEntry.uniqueId] Master Version Specific Identifier"
 
@@ -17,14 +18,14 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * identifier[entryUUID] 1..1 MS
 * identifier[entryUUID].value 1..1 MS 
 * identifier[entryUUID].system 1..1 MS //https://profiles.ihe.net/ITI/MHD/4.2.2/StructureDefinition-IHE.MHD.EntryUUID.Identifier.html
-* identifier[entryUUID] ^short = "[DocumentEntry.entryUUID] Identifier for the document"
+* identifier[entryUUID] ^short = "[DocumentEntry.entryUUID] Identifier for the document."
 * identifier[entryUUID].value obeys medcom-uuid
 * status MS 
-* status ^short = "[DocumentEntry.availabilityStatus] current = active | superseded = deprecated"
+* status ^short = "[DocumentEntry.availabilityStatus] current = active | superseded = deprecated."
 // TypeCode
 * type 1.. MS
-* type ^short = "[DocumentEntry.typeCode] Kind of document"
-* type.coding 1.. MS
+* type ^short = "[DocumentEntry.typeCode] Kind of document."
+* type.coding 1..1 MS
 * type.coding.system 1.. MS
 * type.coding.code 1.. MS
 * type.coding.display 1.. MS
@@ -39,7 +40,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * category.coding.code 1.. MS
 * category.coding.system 1.. MS
 * category.coding.display 1.. MS
-* category ^short = "[DocumentEntry.classCode] Categorization of document"
+* category ^short = "[DocumentEntry.classCode] Categorization of document."
 * author ..2 MS
 * author only Reference(MedComDocumentOrganization or MedComDocumentPractitionerRole or MedComDocumentPractitioner or MedComDocumentPatient or DkCoreRelatedPerson or Device)
 * author ^slicing.discriminator[0].type = #profile
@@ -57,12 +58,12 @@ as an author person."
 * securityLabel.coding 1..1 MS
 * securityLabel.coding.system 1.. MS
 * securityLabel.coding.code 1.. MS
-* securityLabel ^short = "[DocumentEntry.confidentialityCode] Document security-tags"
+* securityLabel ^short = "[DocumentEntry.confidentialityCode] Document security-tags."
 * subject MS
 * subject only Reference(MedComDocumentPatient)
 * subject ^type.aggregation = #contained
-* subject ^short = "[DocumentEntry.sourcePatientInfo, DocumentEntry.sourcePatientId] Who/what is the subject of the document"
-* content.attachment.creation ^short = "[DocumentEntry.creationTime] Date attachment was first created"
+* subject ^short = "[DocumentEntry.sourcePatientInfo, DocumentEntry.sourcePatientId] Who/what is the subject of the document."
+* content.attachment.creation ^short = "[DocumentEntry.creationTime] Date attachment was first created."
 * content.attachment.creation 1.. MS
 * content.attachment.creation obeys medcom-datetime-has-time-zulu
 * content MS
@@ -70,12 +71,12 @@ as an author person."
 * content.attachment.contentType 1.. MS
 * content.attachment.contentType from MedCom-ihe-core-mimetype-VS-TEMP //Must be changed back to XDS metadata IG when ValueSet is fixed
 * content.attachment MS
-* content.attachment.language ^short = "[DocumentEntry.languageCode] Human language of the content"
+* content.attachment.language ^short = "[DocumentEntry.languageCode] Human language of the content."
 * content.attachment.language 1.. MS
 * content.attachment.language from MedCom-ihe-core-languagecode-VS-TEMP (extensible) //Must be changed back to XDS metadata IG when ValueSet is fixed
 * content.attachment.hash 0.. MS
-* content.attachment.hash ^short = "[DocumentEntry.hash] Hash of the data (sha-1)"
-* content.format ^short = "[DocumentEntry.formatCode] Format/content rules for the document"
+* content.attachment.hash ^short = "[DocumentEntry.hash] Hash of the data (sha-1)."
+* content.format ^short = "[DocumentEntry.formatCode] Format/content rules for the document."
 * content.format 1.. MS
 * content.format.system 1.. MS
 * content.format.code 1.. MS
@@ -166,3 +167,5 @@ as an author person."
 * insert ProducerShallPutInNarrative(extension[homeCommunityid].valueCoding.system)
 * insert ProducerShallPutInNarrative(extension[homeCommunityid].valueCoding.code)
 * insert ProducerShallPutInNarrative(extension[versionid])
+* insert ProducerShallPutInNarrative(masterIdentifier.system)
+* insert ProducerShallPutInNarrative(masterIdentifier.value)
