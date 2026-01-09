@@ -26,8 +26,12 @@ publisher:
 #
 dependencies:
   medcom.fhir.dk.xdsmetadata: 1.0.1
-  medcom.fhir.dk.core: 2.4.0
-  hl7.fhir.dk.core: 3.2.0
+  medcom.fhir.dk.terminology: 2.0.2
+  medcom.fhir.dk.core: dev
+  #medcom.fhir.dk.core: 3.0.1
+  hl7.fhir.dk.core: 3.5.0
+  hl7.fhir.extensions.r5: 4.0.1
+  ihe.iti.mhd: 4.2.3
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -73,12 +77,15 @@ dependencies:
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-  Table of Contents: toc.html
   Home: index.html
   Profiles: profiles.html
   Extensions: extensions.html
   Artifacts: artifacts.html
-  Downloads: downloads.html
+  More:
+    Table of Contents: toc.html
+    Downloads: downloads.html
+    Dependencies: dependencies.html
+
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
