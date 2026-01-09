@@ -74,7 +74,6 @@ as an author person."
 * language from MedCom-ihe-core-languagecode-VS-TEMP (extensible) //Must be changed back to XDS metadata IG when ValueSet is fixed
 * language ^short = "[DocumentEntry.languageCode] Human language of the content"
 * section 1.. MS
-* section.text MS //RCH MANGLER AFKLARING
 * section.entry MS
 * meta 1.. MS
 * meta.profile obeys medcom-canonical-semver
