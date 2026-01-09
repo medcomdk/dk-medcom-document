@@ -26,7 +26,7 @@ Description: "The profile of the MedCom Document Composition containing the mini
 * status MS
 * type 1..1 MS
 * type ^short = "[DocumentEntry.typeCode] Kind of document"
-* type.coding 1.. MS
+* type.coding 1..1 MS
 * type.coding.system 1.. MS
 * type.coding.code 1.. MS
 * type.coding.display 1.. MS
