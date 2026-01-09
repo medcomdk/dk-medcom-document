@@ -167,5 +167,3 @@ as an author person."
 * insert ProducerShallPutInNarrative(extension[homeCommunityid].valueCoding.system)
 * insert ProducerShallPutInNarrative(extension[homeCommunityid].valueCoding.code)
 * insert ProducerShallPutInNarrative(extension[versionid])
-* insert ProducerShallPutInNarrative(masterIdentifier.system)
-* insert ProducerShallPutInNarrative(masterIdentifier.value)
