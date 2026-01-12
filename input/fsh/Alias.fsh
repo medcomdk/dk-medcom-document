@@ -101,3 +101,7 @@ Alias: $DanishPrimaryHealthcareDomainOID = urn:oid:1.2.208.193.100
 Alias: $IHEClassCodeTEMP = http://medcomfhir.dk/ig/document/CodeSystem/MedCom-ihe-classcode-CS-TEMP
 Alias: $IHEMessageCodesTEMP = http://medcomfhir.dk/ig/document/CodeSystem/MedCom-message-codes-CS-TEMP
 Alias: $IHEFormatCodeTEMP = http://medcomfhir.dk/ig/document/CodeSystem/MedCom-ihe-formatcode-CS-TEMP
+
+Alias: $ObsStatusCodeSystem = http://hl7.org/fhir/observation-status
+Alias: $MedComObsExtValueAttachment = http://medcomfhir.dk/ig/core/StructureDefinition/medcom-observation-value-attachment-extension
+Alias: $PractitionerRole = http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ
