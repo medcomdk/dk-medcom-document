@@ -1,6 +1,6 @@
 //Instances from the EKG Recording Standard used as examples
 
-Instance: 0a74554f-ded3-4bc7-bef1-535699565c5a
+Instance: 0a74554f-ded3-4bc7-bef1-535699565c5b
 InstanceOf: MedComDocumentBundle
 Usage: #example
 Title: "Bundle instance"
@@ -9,8 +9,8 @@ Description: "Bundle instance"
 * timestamp = 2025-02-10T10:18:00+01:00
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3e9fadb1-04e6-42ce-82d3-546f89e2f0fa"
-* entry[+].fullUrl = "http://medcomfhir.dk/ig/ekgrecording/Composition/384ca229-c562-4a26-a035-c0c38108e036"
-* entry[=].resource = 384ca229-c562-4a26-a035-c0c38108e036 
+* entry[+].fullUrl = "http://medcomfhir.dk/ig/ekgrecording/Composition/384ca229-c562-4a26-a035-c0c38108e037"
+* entry[=].resource = 384ca229-c562-4a26-a035-c0c38108e037 
 * entry[+].fullUrl = "http://medcomfhir.dk/ig/ekgrecording/Observation/ef810168-ee8c-4f14-9012-6aff6c1d86e7"
 * entry[=].resource = ef810168-ee8c-4f14-9012-6aff6c1d86e7
 * entry[+].fullUrl = "http://medcomfhir.dk/ig/ekgrecording/Patient/379ebb53-11e3-42ac-b9db-0bad0ece46d1"
@@ -22,7 +22,7 @@ Description: "Bundle instance"
 * entry[+].fullUrl = "http://medcomfhir.dk/ig/ekgrecording/Organization/f8d0eb07-5336-4005-9081-b065f9a82663"
 * entry[=].resource = f8d0eb07-5336-4005-9081-b065f9a82663
 
-Instance: 384ca229-c562-4a26-a035-c0c38108e036
+Instance: 384ca229-c562-4a26-a035-c0c38108e037
 InstanceOf: MedComDocumentComposition
 Description: "Composition example for EKG"
 Usage: #example
@@ -48,7 +48,7 @@ Usage: #example
 * section[0].entry[0] = Reference(ef810168-ee8c-4f14-9012-6aff6c1d86e7)
 * date = "2025-02-10T10:15:00+01:00"
 * language = #da "Danish"
-* meta.profile = "http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-composition|1.0"
+* meta.profile = "http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-document-composition|1.0"
 //OBS: attester, event.code, event.detail bruges ikke i EKG - skriv det i profilteksten.
 
 

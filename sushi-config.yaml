@@ -88,6 +88,7 @@ menu:
   Artifacts: artifacts.html
   More:
     Table of Contents: toc.html
+    Profiling unstructured content: unstructuredclinicalcontent.html
     Downloads: downloads.html
     Dependencies: dependencies.html
 
