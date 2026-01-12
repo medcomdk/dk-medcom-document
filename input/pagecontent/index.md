@@ -54,7 +54,7 @@ The landing page also offers help to developers to understand how to work with M
 ### Temporary representations of code systems and valuesets from the MedCom XDS Metadata IG
 Due to inconsistencies between MedCom’s XDS Metadata Standard and FHIR representations of code systems and value sets, selected code systems and value sets from the MedCom XDS Metadata Standard IG are temporarily included in this Implementation Guide with necessary adaptations. They will be removed from this IG once these issues are resolved in version 2.0 of the MedCom XDS Metadata Standard.
 
-The affected code systems are listed below:
+The affected code systems are listed below (value sets using these code systems are included as well):
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -131,6 +131,13 @@ The affected code systems are listed below:
     <td class="tg-0pky">1.2.208.184.100.10</td>
     <td class="tg-c3ow">formatcode</td>
     <td class="tg-0pky">Danish Integrating the Healthcare Enterprise (IHE) metadata format codes</td>
+    <td class="tg-c3ow">MedCom</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">-</td>
+    <td class="tg-c3ow">homeCommunityId</td>
+    <td class="tg-0pky">-</td>
     <td class="tg-c3ow">MedCom</td>
     <td class="tg-0pky"></td>
   </tr>
