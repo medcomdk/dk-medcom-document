@@ -455,3 +455,26 @@ Description: "_TEMP MedCom Message Codes, which includes document type codes (Da
 * #PMR "Pregnancy Measurement Report"
 /*   * ^property[+].code = #effectiveDate
   * ^property[=].valueDateTime = "2025-12-01" */
+
+CodeSystem: MedComIHE_HomeCommunityId_TEMP
+Id: MedCom-ihe-homeCommunityId-CS-TEMP
+Title: "_TEMP IHE XDS Affinity Domain"
+Description: "_TEMPIHE XDS Affinity Domains who has agreed to share healthcare related documents in Denmark"
+* ^experimental = false
+* ^version = "1.0.2"
+* ^status = #active
+* ^date = "2020-08-21"
+* ^caseSensitive = false
+* #1.2.208.176.8.1 "Common Danish IHE XDS domain. Integrating the Healthcare Enterprise (IHE) cross[X]-enterprise Document Sharing (XDS) domain" 
+* #1.2.208.193.100 "Primary healthcare domain"
+
+ValueSet: MedComIHE_CoreDkHomeCommunityId_TEMP
+Id: MedCom-ihe-core-homeCommunityId-VS-TEMP
+Title: "_TEMP IHE HomeCommunityId"
+Description: "_TEMP List of operational and in production home communities (XCA) in Danish Document Sharing"
+* ^experimental = false
+* ^version = "1.0.2"
+* ^status = #active
+* ^date = "2020-08-21"
+* MedComIHE_HomeCommunityId_TEMP#1.2.208.176.8.1 "Common Danish IHE XDS domain. Integrating the Healthcare Enterprise (IHE) cross[X]-enterprise Document Sharing (XDS) domain"
+* MedComIHE_HomeCommunityId_TEMP#1.2.208.193.100 "Primary healthcare domain"
