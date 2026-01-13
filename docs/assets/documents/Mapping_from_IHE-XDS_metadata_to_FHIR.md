@@ -201,8 +201,8 @@ The table contains:
 <tr>
   <td>homeCommunityId <a href="#section1">[1]</a></td>
   <td>R</td>
-  <td>N/A</td>
-  <td>0..0</td>
+  <td>extension:homeCommunityid</td>
+  <td>0..1</td>
   <td>N/A</td>
   <td>N/A</td>
   <td>N/A</td>
