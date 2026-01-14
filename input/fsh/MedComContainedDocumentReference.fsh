@@ -65,7 +65,7 @@ as an author person."
 * subject ^short = "[DocumentEntry.sourcePatientInfo, DocumentEntry.sourcePatientId] Who/what is the subject of the document."
 * content.attachment.creation ^short = "[DocumentEntry.creationTime] Date attachment was first created."
 * content.attachment.creation 1.. MS
-* content.attachment.creation obeys medcom-datetime-has-time-zulu
+* content.attachment.creation obeys medcom-datetime-has-time-offset-zulu
 * content MS
 * content.attachment.contentType ^short = "[DocumentEntry.mimeType] Mime type of the content, with charset etc."
 * content.attachment.contentType 1.. MS
