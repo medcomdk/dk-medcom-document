@@ -32,7 +32,7 @@ Description: "A profile stating the rules, when exchanging a FHIR document in th
 * type from MedCom-ihe-core-typecode-VS-TEMP (required) //Must be changed back to XDS metadata IG when ValueSet is fixed
 * authenticator 0..1 MS
 * authenticator ^short = "[DocumentEntry.legalAuthenticator] Who authenticated the document."
-* authenticator only Reference(MedComDocumentPractitioner)
+//* authenticator only Reference(MedComDocumentPractitioner)
 * authenticator ^type.aggregation = #contained
 // ClassCode
 * category 1..1 MS 
