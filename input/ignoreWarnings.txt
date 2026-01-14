@@ -11,6 +11,12 @@
 %Reference is external which isn't supported by the specified aggregation mode(s) for the reference (bundled)%
 
 
-# This code is talen from SOR, and can therefore not be changed, even when it generates an error for now.
+# This code is taken from SOR, and can therefore not be changed, even when it generates an error for now.
 %The code '56781000005109' is not valid in the system http://snomed.info/sct version http://snomed.info/sct/554471000005108 (56781000005109)%
 %The code '557881000005104' is not valid in the system http://snomed.info/sct version http://snomed.info/sct/554471000005108 (557881000005104)%
+
+# Expected slicing message that is ignorable.
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0-ballot-tc1 (this may not be a problem, but you should check that it's not intended to match a slice)%
+
+# Noise
+%The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0-ballot-tc1 is deprecated with the note: 'Use additionalBinding extension or element instead'%

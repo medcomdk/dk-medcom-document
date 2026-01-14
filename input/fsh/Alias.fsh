@@ -5,7 +5,7 @@ Alias: $RequestPriority = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-ca
 
 Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation
 
-Alias: $QrdTypeCode = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-dk-ihe-qrd-typecode-VS
+Alias: $sno = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-dk-ihe-qrd-typecode-VS
 Alias: $QrdEventCode = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-dk-ihe-qrd-eventcodelist-VS
 Alias: $QrdHomeCommunityID = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-qrd-homeCommunityId-VS
 Alias: $QrdFormatCode = http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-qrd-formatcode-VS
