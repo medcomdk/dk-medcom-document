@@ -121,7 +121,7 @@ as an author person."
 * extension MS
 * extension contains 
     medcom-document-homecommunityid-extension named homeCommunityid 0..1 MS
-* extension[homeCommunityid].valueCoding from $IHEHomeCommunityIdTEMP (required)
+* extension[homeCommunityid].valueCoding from $IHEHomeCommunityIdTEMP (extensible)
 * extension[homeCommunityid] ^short = "[DocumentEntry.homeCommunityId] A unique identifier for a community where the DocumentEntry and document can be accessed."
 * extension[homeCommunityid].url MS
 * extension[versionid] MS
