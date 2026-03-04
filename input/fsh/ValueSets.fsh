@@ -164,6 +164,7 @@ Description: "_TEMP ValueSet containing TypeCode."
 * $IHEMessageCodesTEMP#PRF "Pregnancy Referral Form"
 * $IHEMessageCodesTEMP#PSCR "Pregnancy Shared Care Report"
 * $IHEMessageCodesTEMP#PMR "Pregnancy Measurement Report"
+* $IHEMessageCodesTEMP#CON "Consultation Note"
 /* * #CMR from system $IHEMessageCodesTEMP
 * #PDC from system $IHEMessageCodesTEMP
 * #MADC from system $IHEMessageCodesTEMP
@@ -387,6 +388,7 @@ Description: "_TEMP Danish Integrating the Healthcare Enterprise (IHE) metadata 
 * #urn:ad:dk:medcom:ekg-v1.0:full "DK EKG schema"
 /*   * ^property[+].code = #effectiveDate
   * ^property[=].valueDateTime = "2026-01-01" */
+* #urn:ad:dk:medcom:con-v1.0:full "DK CON schema"
 
 
 CodeSystem: MedComIHE_ClassCode_TEMP
@@ -455,6 +457,7 @@ Description: "_TEMP MedCom Message Codes, which includes document type codes (Da
 * #PMR "Pregnancy Measurement Report"
 /*   * ^property[+].code = #effectiveDate
   * ^property[=].valueDateTime = "2025-12-01" */
+* #CON "Consultation Note"
 
 CodeSystem: MedComIHE_HomeCommunityId_TEMP
 Id: MedCom-ihe-homeCommunityId-CS-TEMP
