@@ -141,9 +141,9 @@ Id: MedCom-ihe-core-typecode-VS-TEMP
 Title: "IHE TypeCode_TEMP"
 Description: "_TEMP ValueSet containing TypeCode."
 * ^experimental = false
-* ^version = "1.1.0"
+* ^version = "1.1.1"
 * ^status = #active
-* ^date = "2026-01-01"
+* ^date = "2026-03-10"
 * $LoincOID#53576-5 "Personal health monitoring report Document"
 * $LoincOID#74468-0 "Questionnaire Form Definition Document"
 * $LoincOID#56446-8 "Appointment Summary Document" 
@@ -164,7 +164,7 @@ Description: "_TEMP ValueSet containing TypeCode."
 * $IHEMessageCodesTEMP#PRF "Pregnancy Referral Form"
 * $IHEMessageCodesTEMP#PSCR "Pregnancy Shared Care Report"
 * $IHEMessageCodesTEMP#PMR "Pregnancy Measurement Report"
-* $IHEMessageCodesTEMP#CON "Consultation Note"
+* $sct#866144008 "Encounter note"
 /* * #CMR from system $IHEMessageCodesTEMP
 * #PDC from system $IHEMessageCodesTEMP
 * #MADC from system $IHEMessageCodesTEMP
@@ -210,9 +210,9 @@ Id: MedCom-ihe-core-formatcode-VS-TEMP
 Title: "IHE FormatCode_TEMP"
 Description: "_TEMP ValueSet containing FormatCodes defines by MedCom."
 * ^experimental = false
-* ^version = "1.1.0"
+* ^version = "1.1.1"
 * ^status = #active
-* ^date = "2026-01-01"
+* ^date = "2026-03-10"
 * include codes from system $IHEFormatCodeTEMP
 
 ValueSet: MedComIHE_CoreClassCode_TEMP
@@ -236,9 +236,9 @@ Id: MedCom-ihe-formatcode-CS-TEMP
 Title: "DK IHE FormatCode_TEMP"
 Description: "_TEMP Danish Integrating the Healthcare Enterprise (IHE) metadata format codes"
 * ^experimental = false
-* ^version = "1.1.0"
+* ^version = "1.1.1"
 * ^status = #active
-* ^date = "2026-01-01"
+* ^date = "2026-03-10"
 * ^caseSensitive = false
 * ^identifier.value = "1.2.208.184.100.10"
 //* ^url = "urn:oid:1.2.208.184.100.10"
@@ -388,7 +388,7 @@ Description: "_TEMP Danish Integrating the Healthcare Enterprise (IHE) metadata 
 * #urn:ad:dk:medcom:ekg-v1.0:full "DK EKG schema"
 /*   * ^property[+].code = #effectiveDate
   * ^property[=].valueDateTime = "2026-01-01" */
-* #urn:ad:dk:medcom:con-v1.0:full "DK CON schema"
+* #urn:ad:dk:medcom:ecn-v1.0:full "DK ECN schema"
 
 
 CodeSystem: MedComIHE_ClassCode_TEMP
