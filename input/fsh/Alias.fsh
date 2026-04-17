@@ -76,11 +76,11 @@ Alias: $IANALanguageOID = urn:oid:2.16.840.1.113883.6.121
 Alias: $IANAMediaOID = urn:oid:2.16.840.1.113883.5.79
 */
 Alias: $v3-ActCode3.0.0 = http://terminology.hl7.org/ValueSet/v3-ActCode|3.0.0
-Alias: $sct = http://snomed.info/sct // Danish version - append e.g.  to get a more specific version 
+Alias: $sct = http://snomed.info/sct // Danish version - append e.g. /version/20240331 to get a more specific version 
 
 Alias: $DanishXdsOID = urn:oid:1.2.208.184.100.9
 //Alias: $DanishiheOID = urn:oid:1.2.208.184.100.9
-Alias: $SnomedctOID = http://snomed.info/sct|http://snomed.info/sct/554471000005108/version/20240331 //urn:oid:2.16.840.1.113883.6.96
+Alias: $SnomedctOID = http://snomed.info/sct|http://snomed.info/sct/554471000005108 //urn:oid:2.16.840.1.113883.6.96
 Alias: $LoincOID = http://loinc.org //urn:oid:2.16.840.1.113883.6.1
 //Alias: $MedComOID = urn:oid:1.2.208.184.100.1
 Alias: $SKSOID = urn:oid:1.2.208.176.2.4
