@@ -3,8 +3,8 @@ canonical: http://medcomfhir.dk/ig/document
 name: MedComDocument
 title: DK MedCom Document
 description: The DK MedCom Document IG
-status: active # draft | active | retired | unknown
-version: 2.0.1
+status: draft # draft | active | retired | unknown
+version: 2.0.2
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
