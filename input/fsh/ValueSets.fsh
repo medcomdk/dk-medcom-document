@@ -210,9 +210,9 @@ Id: MedCom-ihe-core-formatcode-VS-TEMP
 Title: "IHE FormatCode_TEMP"
 Description: "_TEMP ValueSet containing FormatCodes defines by MedCom."
 * ^experimental = false
-* ^version = "1.1.1"
+* ^version = "1.2.1"
 * ^status = #active
-* ^date = "2026-03-10"
+* ^date = "2026-04-28"
 * include codes from system $IHEFormatCodeTEMP
 
 ValueSet: MedComIHE_CoreClassCode_TEMP
@@ -388,7 +388,12 @@ Description: "_TEMP Danish Integrating the Healthcare Enterprise (IHE) metadata 
 * #urn:ad:dk:medcom:ekg-v1.0:full "DK EKG schema"
 /*   * ^property[+].code = #effectiveDate
   * ^property[=].valueDateTime = "2026-01-01" */
+
 * #urn:ad:dk:medcom:ecn-v1.0:full "DK ECN schema"
+
+* #urn:ad:dk:medcom:ekg-v2.0:full "DK EKG schema"
+/*   * ^property[+].code = #effectiveDate
+  * ^property[=].valueDateTime = "2026-04-28" */
 
 
 CodeSystem: MedComIHE_ClassCode_TEMP
