@@ -388,6 +388,8 @@ Description: "_TEMP Danish Integrating the Healthcare Enterprise (IHE) metadata 
 * #urn:ad:dk:medcom:ekg-v1.0:full "DK EKG schema"
 /*   * ^property[+].code = #effectiveDate
   * ^property[=].valueDateTime = "2026-01-01" */
+  * ^property[+].code = #deprecationDate
+  * ^property[=].valueDateTime = "2026-04-28"
 
 * #urn:ad:dk:medcom:ecn-v1.0:full "DK ECN schema"
 
