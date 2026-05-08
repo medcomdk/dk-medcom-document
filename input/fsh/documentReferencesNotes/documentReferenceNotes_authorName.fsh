@@ -15,9 +15,9 @@ Usage: #example
 * category = urn:oid:1.2.208.184.100.9#001 "Klinisk rapport"
 * subject = Reference(cee69158-0e0b-4c37-b7b3-28e42345383c)
 * author = Reference(d39a8251-db8e-4b92-ae80-c89857fd1af9)
-* securityLabel = urn:oid:2.16.840.1.113883.4.642.3.25#N "Normal"
-* content.attachment.contentType = #application/fhir+json
-* content.attachment.language = #da-DK
+* securityLabel = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "Normal"
+* content.attachment.contentType = urn:oid:2.16.840.1.113883.5.79#application/fhir+json
+* content.attachment.language = urn:oid:2.16.840.1.113883.6.121#da-DK
 * content.attachment.url = "DOC001.XML"
 * content.attachment.title = "Journalnotat for 0506889996"
 * content.attachment.creation = "2025-08-27T12:00:00+02:00"
