@@ -7,8 +7,8 @@ InstanceOf: DocumentReference
 * extension[=].valueCoding = urn:oid:1.2.208.176.8.1#1.2.208.176.8.1 "Common Danish IHE XDS domain. Integrating the Healthcare Enterprise (IHE) cross[X]-enterprise Document Sharing (XDS) domain"
 * extension[+].url = "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-version-id-extension"
 * extension[=].valueString = "2.0.0"
-* masterIdentifier.value = "urn:uuid:b69e7177-4d43-4a9b-bb48-c825dd01cb54"
-* identifier.value = "urn:uuid:215e7dee-0d01-4fcd-8ebf-02a8d385be4c" //Denne identifier skal udskiftes med uuid for bundle.identifier
+* masterIdentifier.value = "urn:uuid:561615d3-3058-497c-a5e2-50740a500b2a" //Samme som identifier.value
+* identifier.value = "urn:uuid:561615d3-3058-497c-a5e2-50740a500b2a" //Denne identifier skal udskiftes med uuid for bundle.identifier
 * status = #current
 * type = http://loinc.org#11524-6 "EKG study"
 * category = urn:oid:1.2.208.184.100.9#001 "Klinisk rapport"
@@ -19,7 +19,7 @@ InstanceOf: DocumentReference
 * content.attachment.language = urn:oid:2.16.840.1.113883.6.121#da-DK
 * content.attachment.url = "DOC001.XML"
 * content.attachment.title = "Elektrokardiogram-12-aflednings"
-* content.attachment.creation = "2026-03-24T11:06:43+01:00" //Indsæt Bundle.timestamp
+* content.attachment.creation = "2026-03-24T11:06:43+01:00" //Indsæt Bundle.timestamp (behøves ikke i testfiler)
 * content.format = urn:oid:1.2.208.184.100.10#urn:ad:dk:medcom:ekg-v2.0:full "DK EKG schema"
 * context.facilityType = urn:oid:2.16.840.1.113883.6.96#394761003 "almen lægepraksis"
 * context.practiceSetting = urn:oid:2.16.840.1.113883.6.96#408443003 "almen medicin"
