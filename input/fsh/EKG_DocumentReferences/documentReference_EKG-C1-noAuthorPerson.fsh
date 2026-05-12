@@ -19,7 +19,7 @@ InstanceOf: DocumentReference
 * content.attachment.language = urn:oid:2.16.840.1.113883.6.121#da-DK
 * content.attachment.url = "DOC001.XML"
 * content.attachment.title = "Elektrokardiogram-12-aflednings"
-* content.attachment.creation = "2025-08-27T12:00:00+02:00" //Indsæt Bundle.timestamp
+* content.attachment.creation = "2026-03-24T11:06:43+01:00" //Indsæt Bundle.timestamp
 * content.format = urn:oid:1.2.208.184.100.10#urn:ad:dk:medcom:ekg-v2.0:full "DK EKG schema"
 * context.facilityType = urn:oid:2.16.840.1.113883.6.96#394761003 "almen lægepraksis"
 * context.practiceSetting = urn:oid:2.16.840.1.113883.6.96#408443003 "almen medicin"
