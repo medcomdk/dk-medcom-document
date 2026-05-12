@@ -1,4 +1,4 @@
-Instance: 29ce8615-6bcd-42b4-b0ff-48c53e4e5040
+Instance: 44638fdf-4fd2-4e38-83cb-00b92403ffaf
 InstanceOf: MedComDocumentOrganization
 Title: "Organization"
 Description: "Instance of an author organization"
@@ -6,7 +6,7 @@ Description: "Instance of an author organization"
 * identifier[SOR-ID].value = "61741000016007"
 * name = "Lægerne Hasseris Bymidte"
 
-Instance: a6c7f8a9-701c-4d57-98c3-c8aa3928b682
+Instance: f98285ec-c3bc-4283-a840-0e276cd4bb1c
 InstanceOf: MedComDocumentPatient
 Title: "Patient"
 Description: "Instance of a patient"
