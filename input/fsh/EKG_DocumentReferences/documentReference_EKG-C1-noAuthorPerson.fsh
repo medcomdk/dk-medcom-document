@@ -8,7 +8,7 @@ InstanceOf: DocumentReference
 * extension[+].url = "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-version-id-extension"
 * extension[=].valueString = "2.0.0"
 * masterIdentifier.value = "urn:uuid:b69e7177-4d43-4a9b-bb48-c825dd01cb54"
-* identifier.value = "urn:uuid:215e7dee-0d01-4fcd-8ebf-02a8d385be4c" //Denne identifier skal udskiftes med uuid for bundle
+* identifier.value = "urn:uuid:215e7dee-0d01-4fcd-8ebf-02a8d385be4c" //Denne identifier skal udskiftes med uuid for bundle.identifier
 * status = #current
 * type = http://loinc.org#11524-6 "EKG study"
 * category = urn:oid:1.2.208.184.100.9#001 "Klinisk rapport"
