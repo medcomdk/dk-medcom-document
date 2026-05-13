@@ -14,7 +14,7 @@ Description: "Instance of a patient"
 
 //PractitionerRole
 Instance: 613a8bdb-5f05-483c-bc9b-9bf8f4b12915
-InstanceOf: MedComDocumentPractitionerRole
+InstanceOf: MedComCorePractitionerRole
 Title: "PractitionerRole"
 Description: "PractitionerRole with a role and reference to a practitioner and an organization"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -100,7 +100,7 @@ Description: "Instance of a patient"
 
 //PractitionerRole with text role
 Instance: ab05bfa2-2031-41ab-bc35-d278f1ea8786
-InstanceOf: MedComDocumentPractitionerRole
+InstanceOf: MedComCorePractitionerRole
 Title: "PractitionerRole"
 Description: "PractitionerRole with a role and reference to a practitioner and an organization"
 * identifier.system = "urn:ietf:rfc:3986"
