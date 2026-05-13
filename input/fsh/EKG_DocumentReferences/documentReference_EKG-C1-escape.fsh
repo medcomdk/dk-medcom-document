@@ -1,4 +1,4 @@
-Instance: 2c00d4c0-d2ba-4bc2-af83-5c32b3bbc3f7
+Instance: 0100d4c0-d2ba-4bc2-af83-5c32b3bbc3f7
 InstanceOf: DocumentReference
 * meta.profile = "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-documentreference"
 * contained[0] = 44638fdf-4fd2-4e38-83cb-00b92403ffaf

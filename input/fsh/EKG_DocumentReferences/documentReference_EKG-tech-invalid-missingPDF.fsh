@@ -1,4 +1,4 @@
-Instance: 6bf8690e-13b0-4ccb-9975-766b4c35563f
+Instance: 14f8690e-13b0-4ccb-9975-766b4c35563f
 InstanceOf: DocumentReference
 * meta.profile = "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-documentreference"
 * contained[0] = 44638fdf-4fd2-4e38-83cb-00b92403ffaf
