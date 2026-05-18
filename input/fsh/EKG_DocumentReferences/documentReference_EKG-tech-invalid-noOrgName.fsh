@@ -1,3 +1,4 @@
+//This examples has a - (bindestreg) as organization name.
 Instance: 16f30821-6182-4e6b-b07a-ac940d424e23
 InstanceOf: DocumentReference
 * meta.profile = "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-documentreference"
