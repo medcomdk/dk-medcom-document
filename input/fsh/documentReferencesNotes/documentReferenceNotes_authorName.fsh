@@ -8,7 +8,7 @@ Usage: #example
 * extension[=].valueCoding = urn:oid:1.2.208.176.8.1#1.2.208.176.8.1 "Common Danish IHE XDS domain. Integrating the Healthcare Enterprise (IHE) cross[X]-enterprise Document Sharing (XDS) domain"
 * extension[+].url = "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-version-id-extension"
 * extension[=].valueString = "1.0.0"
-* masterIdentifier.value = "urn:uuid:b69e7177-4d43-4a9b-bb48-c825dd01cb54"
+* masterIdentifier.value = "urn:uuid:215e7dee-0d01-4fcd-8ebf-02a8d385be4c"
 * identifier.value = "urn:uuid:215e7dee-0d01-4fcd-8ebf-02a8d385be4c" //Denne identifier skal udskiftes med uuid for bundle
 * status = #current
 * type = $sct#866144008 "Encounter note"
@@ -16,7 +16,7 @@ Usage: #example
 * subject = Reference(cee69158-0e0b-4c37-b7b3-28e42345383c)
 * author = Reference(d39a8251-db8e-4b92-ae80-c89857fd1af9)
 * securityLabel = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "Normal"
-* content.attachment.contentType = urn:oid:2.16.840.1.113883.5.79#application/fhir+json
+* content.attachment.contentType = urn:oid:2.16.840.1.113883.5.79#application/fhir+xml
 * content.attachment.language = urn:oid:2.16.840.1.113883.6.121#da-DK
 * content.attachment.url = "DOC001.XML"
 * content.attachment.title = "Journalnotat for 0506889996"
@@ -25,6 +25,8 @@ Usage: #example
 * context.facilityType = urn:oid:2.16.840.1.113883.6.96#394761003 "almen lægepraksis"
 * context.practiceSetting = urn:oid:2.16.840.1.113883.6.96#408443003 "almen medicin"
 * context.sourcePatientInfo = Reference(cee69158-0e0b-4c37-b7b3-28e42345383c)
+* context.period.start = "2025-08-27T12:00:00+02:00"
+* context.period.end = "2025-08-27T12:30:00+02:00"
 
 Instance: d39a8251-db8e-4b92-ae80-c89857fd1af9
 InstanceOf: MedComDocumentOrganization
