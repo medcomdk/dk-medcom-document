@@ -19,10 +19,10 @@ InstanceOf: DocumentReference
 * content.attachment.language = urn:oid:2.16.840.1.113883.6.121#da-DK
 * content.attachment.url = "DOC001.XML"
 * content.attachment.title = "Elektrokardiogram-12-aflednings"
-* content.attachment.creation = "2026-03-24T11:06:43+01:00" //Indsæt Bundle.timestamp (behøves ikke i testfiler)
+* content.attachment.creation = "2026-05-10T12:16:18+02:00" //Indsæt Bundle.timestamp (behøves ikke i testfiler)
 * content.format = urn:oid:1.2.208.184.100.10#urn:ad:dk:medcom:ekg-v2.0:full "DK EKG schema"
-* context.period.start = "2026-03-24T12:13:14+01:00"
-* context.period.end  = "2026-03-24T11:15:16Z"
+* context.period.start = "2026-05-10T08:06:07+02:00"
+* context.period.end  = "2026-05-10T08:06:07+02:00"
 * context.facilityType = urn:oid:2.16.840.1.113883.6.96#394761003 "almen lægepraksis"
 * context.practiceSetting = urn:oid:2.16.840.1.113883.6.96#408443003 "almen medicin"
 * context.sourcePatientInfo = Reference(f98285ec-c3bc-4283-a840-0e276cd4bb1c)
