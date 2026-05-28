@@ -15,7 +15,7 @@ InstanceOf: DocumentReference
 * subject = Reference(ccc3f30d-c5e2-4329-b2ec-6b6f233244b2)
 * author = Reference(44638fdf-4fd2-4e38-83cb-00b92403ffaf)
 * securityLabel = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "Normal"
-* content.attachment.contentType = urn:oid:2.16.840.1.113883.5.79#application/fhir+json
+* content.attachment.contentType = urn:oid:2.16.840.1.113883.5.79#application/fhir+xml
 * content.attachment.language = urn:oid:2.16.840.1.113883.6.121#da-DK
 * content.attachment.url = "DOC001.XML"
 * content.attachment.title = "Elektrokardiogram-12-aflednings"
