@@ -1,15 +1,25 @@
+<<<<<<< Updated upstream
+id: medcom.fhir.dk.document
+canonical: http://medcomfhir.dk/ig/document
+name: MedComDocument
+title: DK MedCom Document
+description: The DK MedCom Document IG
+status: active # draft | active | retired | unknown
+version: 2.0.2
+=======
 # ╭─────────────────────────Commonly Used ImplementationGuide Properties───────────────────────────╮
 # │  The properties below are used to create the ImplementationGuide resource. The most commonly   │
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: medcom.fhir.dk.referrallm
-canonical: http://medcomfhir.dk/ig/referrallm
-name: DK MedCom 
+id: medcom.fhir.dk.template
+canonical: http://medcomfhir.dk/ig/template
+name: DK MedCom template
 # title: Example Title
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
 version: 0.1.0
+>>>>>>> Stashed changes
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -20,6 +30,35 @@ publisher:
   email: fhir@medcom.dk
 
 dependencies:
+<<<<<<< Updated upstream
+  medcom.fhir.dk.xdsmetadata: 1.0.1
+  medcom.fhir.dk.terminology: 2.0.2
+  medcom.fhir.dk.core: 4.0.0
+  hl7.fhir.dk.core: 3.5.0
+  hl7.fhir.extensions.r5: 4.0.1
+  ihe.iti.mhd: 4.2.3
+
+parameters:
+  apply-contact: true
+  apply-jurisdiction: true
+  apply-publisher: true
+  pin-canonicals: pin-multiples
+  excludettl: true
+  show-inherited-invariants: false
+  special-url: [urn:oid:1.2.208.184.100.9, urn:oid:2.16.840.1.113883.6.96, urn:oid:2.16.840.1.113883.6.1, urn:oid:1.2.208.184.100.1, urn:oid:1.2.208.176.2.4, urn:oid:1.2.208.176.2.1, urn:oid:1.2.208.176.7.3.1, urn:oid:1.2.208.184.100.10, urn:oid:1.2.208.176.8.1, urn:oid:2.16.840.1.113883.6.121, urn:oid:2.16.840.1.113883.5.79]
+
+menu:
+  Home: index.html
+  Profiles: profiles.html
+  Extensions: extensions.html
+  Artifacts: artifacts.html
+  More:
+    Table of Contents: toc.html
+    Downloads: downloads.html
+    Dependencies: dependencies.html
+    Profiling unstructured content: unstructuredclinicalcontent.html
+
+=======
 # hl7.fhir.r4.core: 4.0.1
   hl7.fhir.uv.extensions.r4: 5.3.0
   medcom.fhir.dk.core: 2.1.0
@@ -196,5 +235,6 @@ menu:
 # The instanceOptions property is used to configure certain aspects of how SUSHI processes instances.
 # See the individual option definitions below for more detail.
 #
+>>>>>>> Stashed changes
 instanceOptions:
   manualSliceOrdering: true # true | false
