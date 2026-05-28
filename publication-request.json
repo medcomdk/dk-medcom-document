@@ -1,10 +1,10 @@
 {
-    "package-id": "medcom.fhir.dk.referrallm",
-    "version": "0.1.0",
-    "path": "http://medcomfhir.dk/ig/referrallm/0.1.0",
+    "package-id": "medcom.fhir.dk.document",
+    "version": "2.0.2",
+    "path": "http://medcomfhir.dk/ig/document/2.0.2",
     "status": "release",
-    "sequence": "Release 0.1.0",
+    "sequence": "Release 2.x.x",
     "mode" : "milestone",
     "descmd": "@release-notes.md",
-    "desc": "Release 0.1.0 - see release notes"
+    "desc": "Release 2.0.2 - see release notes"
 }
