@@ -1,4 +1,4 @@
-Instance: e01a45f2-43de-4a59-9acd-a5d89f11703e
+Instance: e01b45f2-43de-4a59-9acd-a5d89f11703e
 InstanceOf: DocumentReference
 * meta.profile = "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-documentreference"
 * contained[0] = 44638fdf-4fd2-4e38-83cb-00b92403ffaf
@@ -7,8 +7,8 @@ InstanceOf: DocumentReference
 * extension[=].valueCoding = urn:oid:1.2.208.176.8.1#1.2.208.176.8.1 "Common Danish IHE XDS domain. Integrating the Healthcare Enterprise (IHE) cross[X]-enterprise Document Sharing (XDS) domain"
 * extension[+].url = "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-version-id-extension"
 * extension[=].valueString = "2.0.0"
-* masterIdentifier.value = "urn:uuid:e01a6fec-96ab-4719-9353-28253d55c39d" //Samme som identifier.value
-* identifier.value = "urn:uuid:e01a6fec-96ab-4719-9353-28253d55c39d" //Denne identifier skal udskiftes med uuid for bundle.identifier
+* masterIdentifier.value = "urn:uuid:e01b6fec-96ab-4719-9353-28253d55c39d" //Samme som identifier.value
+* identifier.value = "urn:uuid:e01b6fec-96ab-4719-9353-28253d55c39d" //Denne identifier skal udskiftes med uuid for bundle.identifier
 * status = #current
 * type = http://loinc.org#11524-6 "EKG study"
 * category = urn:oid:1.2.208.184.100.9#001 "Klinisk rapport"
