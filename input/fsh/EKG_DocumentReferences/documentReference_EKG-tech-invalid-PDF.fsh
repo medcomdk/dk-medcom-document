@@ -7,8 +7,8 @@ InstanceOf: DocumentReference
 * extension[=].valueCoding = urn:oid:1.2.208.176.8.1#1.2.208.176.8.1 "Common Danish IHE XDS domain. Integrating the Healthcare Enterprise (IHE) cross[X]-enterprise Document Sharing (XDS) domain"
 * extension[+].url = "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-version-id-extension"
 * extension[=].valueString = "2.0.0"
-* masterIdentifier.value = "urn:uuid:e17a4bc1-3cea-43b0-9fc1-46b5295e7203" //Samme som identifier.value
-* identifier.value = "urn:uuid:e17a4bc1-3cea-43b0-9fc1-46b5295e7203" //Denne identifier skal udskiftes med uuid for bundle.identifier
+* masterIdentifier.value = "urn:uuid:e17b4bc1-3cea-43b0-9fc1-46b5295e7203" //Samme som identifier.value
+* identifier.value = "urn:uuid:e17b4bc1-3cea-43b0-9fc1-46b5295e7203" //Denne identifier skal udskiftes med uuid for bundle.identifier
 * status = #current
 * type = http://loinc.org#11524-6 "EKG study"
 * category = urn:oid:1.2.208.184.100.9#001 "Klinisk rapport"
